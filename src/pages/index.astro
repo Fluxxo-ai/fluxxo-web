@@ -1,0 +1,302 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import FAQ from '../components/FAQ.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<Layout
+  title="Fluxxo — Agencia de Marketing Digital para Pymes en España"
+  description="Sistema de marketing digital automatizado que trabaja 24/7 para conseguirte más clientes. Gestión de redes sociales, reputación online y captación de leads desde 447€/mes. Sin permanencias."
+>
+  <Nav />
+
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-glow-1"></div>
+      <div class="hero-glow-2"></div>
+      <div class="hero-line hero-line-1"></div>
+      <div class="hero-line hero-line-2"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <h1 class="hero-h1">
+          Más clientes para<br />
+          tu negocio con<br />
+          <span class="accent">marketing digital<br />automatizado</span>
+        </h1>
+        <p class="hero-sub">
+          Tu sistema de marketing que trabaja <strong>24 horas al día, 7 días a la semana</strong> para conseguirte clientes, gestionar tu reputación y publicar contenido en redes. Sin agencias caras. Sin perder el tiempo.
+        </p>
+        <div class="hero-btns">
+          <a href="#contacto" class="btn-primary">Quiero más clientes →</a>
+          <a href="#servicios" class="btn-secondary">Cómo funciona</a>
+        </div>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric-card featured">
+          <div class="metric-value"><em>3</em>× más leads</div>
+          <div class="metric-label">Media en primeros 90 días</div>
+          <div class="metric-bar"><div class="metric-fill" style="width:75%"></div></div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">−<em>70</em>%</div>
+          <div class="metric-label">Coste vs agencia tradicional</div>
+          <div class="metric-bar"><div class="metric-fill" style="width:70%"></div></div>
+        </div>
+        <div class="metrics-small">
+          <div class="metric-small">
+            <div class="metric-small-value"><em>24</em>/7</div>
+            <div class="metric-small-label">Sistema activo</div>
+          </div>
+          <div class="metric-small">
+            <div class="metric-small-value"><em>48</em>h</div>
+            <div class="metric-small-label">Para empezar</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span class="scroll-hint-text">scroll</span>
+      <div class="scroll-hint-arrow">↓</div>
+    </div>
+  </section>
+
+  <div class="ticker">
+    <div class="ticker-track">
+      <div class="ticker-item">
+        <em>Gestión de redes sociales</em><span class="ticker-sep">·</span>
+        Reputación online<span class="ticker-sep">·</span>
+        <em>Captación de leads</em><span class="ticker-sep">·</span>
+        Email marketing<span class="ticker-sep">·</span>
+        <em>Contenido para redes</em><span class="ticker-sep">·</span>
+        Análisis de competencia<span class="ticker-sep">·</span>
+        <em>Publicidad digital</em><span class="ticker-sep">·</span>
+        WhatsApp Business<span class="ticker-sep">·</span>
+        <em>SEO y posicionamiento</em><span class="ticker-sep">·</span>
+        Reporting mensual<span class="ticker-sep">·</span>
+      </div>
+      <div class="ticker-item">
+        <em>Gestión de redes sociales</em><span class="ticker-sep">·</span>
+        Reputación online<span class="ticker-sep">·</span>
+        <em>Captación de leads</em><span class="ticker-sep">·</span>
+        Email marketing<span class="ticker-sep">·</span>
+        <em>Contenido para redes</em><span class="ticker-sep">·</span>
+        Análisis de competencia<span class="ticker-sep">·</span>
+        <em>Publicidad digital</em><span class="ticker-sep">·</span>
+        WhatsApp Business<span class="ticker-sep">·</span>
+        <em>SEO y posicionamiento</em><span class="ticker-sep">·</span>
+        Reporting mensual<span class="ticker-sep">·</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="servicios" class="section">
+    <div class="section-inner">
+      <div class="section-tag reveal">Lo que hacemos</div>
+      <h2 class="section-title reveal">Todo el marketing de tu negocio,<br /><span class="dim">gestionado para ti.</span></h2>
+      <p class="section-sub reveal">Un sistema completo que se encarga de conseguirte clientes, cuidar tu imagen online y mantener activas tus redes sociales. Sin que tengas que hacer nada.</p>
+      <div class="services-grid reveal">
+        <div class="service-cell">
+          <div class="service-icon">✍️</div>
+          <div class="service-name">Contenido para redes sociales</div>
+          <div class="service-desc">Publicaciones semanales para Instagram, LinkedIn, Facebook, TikTok y Google Business. Con textos, imágenes y vídeos incluidos</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-icon">⭐</div>
+          <div class="service-name">Gestión de reseñas y reputación</div>
+          <div class="service-desc">Monitorizamos y respondemos tus reseñas de Google en minutos. Detectamos valoraciones negativas al instante para actuar rápido</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-icon">⚡</div>
+          <div class="service-name">Captación y seguimiento de leads</div>
+          <div class="service-desc">Respondemos a tus contactos en segundos, los cualificamos y agendamos llamadas automáticamente. Nunca pierdas una oportunidad</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-icon">💬</div>
+          <div class="service-name">Ventas por WhatsApp</div>
+          <div class="service-desc">Un asistente disponible 24/7 en WhatsApp Business que responde dudas, envía información y agenda citas por ti</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-icon">📣</div>
+          <div class="service-name">Creatividades para anuncios</div>
+          <div class="service-desc">Generamos textos, imágenes y vídeos para tus campañas en Meta, Google y TikTok Ads. Listos para publicar cada semana</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-icon">🔍</div>
+          <div class="service-name">Análisis de competencia</div>
+          <div class="service-desc">Cada semana recibes un informe con lo que están haciendo tus competidores: sus anuncios, cambios en SEO y nuevas ofertas</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-icon">📊</div>
+          <div class="service-name">Informe mensual de resultados</div>
+          <div class="service-desc">Cada mes recibes un resumen claro de todo lo conseguido: leads, publicaciones, reseñas y recomendaciones para el siguiente mes</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-icon">📧</div>
+          <div class="service-name">Email marketing</div>
+          <div class="service-desc">Newsletters, secuencias de bienvenida y campañas de email personalizadas para mantener el contacto con tus clientes</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-icon">🔎</div>
+          <div class="service-name">SEO y posicionamiento web</div>
+          <div class="service-desc">Artículos optimizados para que Google te encuentre, análisis de palabras clave y mejoras técnicas en tu web</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-icon">📱</div>
+          <div class="service-name">Gestión de publicidad digital</div>
+          <div class="service-desc">Gestionamos tus campañas de pago en Meta, Google y TikTok para conseguir el máximo retorno de tu inversión publicitaria</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resultados" class="section">
+    <div class="section-inner">
+      <div class="section-tag reveal">Resultados</div>
+      <h2 class="section-title reveal">Números que<br /><span class="dim">hablan por nosotros.</span></h2>
+      <p class="section-sub reveal">Resultados reales conseguidos con nuestros clientes en los primeros 90 días de activación del sistema.</p>
+      <div class="results-grid">
+        <div class="result-card reveal reveal-delay-1">
+          <div class="result-sector">Sector legal</div>
+          <div class="result-number">+<em>127</em>%</div>
+          <div class="result-desc">Incremento de consultas online en 60 días</div>
+          <div class="result-stats">
+            <div class="result-stat">Contactos/mes antes <span>8</span></div>
+            <div class="result-stat">Contactos/mes después <span class="accent">18</span></div>
+            <div class="result-stat">Coste por contacto <span class="positive">−48%</span></div>
+          </div>
+        </div>
+        <div class="result-card reveal reveal-delay-2">
+          <div class="result-sector">Sector salud</div>
+          <div class="result-number"><em>4.6</em>★</div>
+          <div class="result-desc">Valoración media en Google tras activar el sistema</div>
+          <div class="result-stats">
+            <div class="result-stat">Reseñas antes <span>23</span></div>
+            <div class="result-stat">Reseñas después <span class="accent">81</span></div>
+            <div class="result-stat">Tiempo de respuesta <span class="positive">2 min</span></div>
+          </div>
+        </div>
+        <div class="result-card reveal reveal-delay-3">
+          <div class="result-sector">Formación online</div>
+          <div class="result-number">−<em>62</em>%</div>
+          <div class="result-desc">Reducción del coste de conseguir cada nuevo cliente</div>
+          <div class="result-stats">
+            <div class="result-stat">Coste por cliente antes <span>340€</span></div>
+            <div class="result-stat">Coste por cliente después <span class="accent">129€</span></div>
+            <div class="result-stat">Retorno de la inversión <span class="positive">5.4×</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-tag reveal">El proceso</div>
+      <h2 class="section-title reveal">Empiezas a ver resultados<br /><span class="dim">en menos de 48 horas.</span></h2>
+      <div class="process-grid">
+        <div class="process-step reveal reveal-delay-1">
+          <div class="step-circle">01</div>
+          <div class="step-title">Nos cuentas tu negocio</div>
+          <div class="step-desc">Rellenas un formulario de 20 minutos con la información de tu negocio. Sin reuniones eternas ni esperas.</div>
+        </div>
+        <div class="process-step reveal reveal-delay-2">
+          <div class="step-circle">02</div>
+          <div class="step-title">Configuramos tu sistema</div>
+          <div class="step-desc">Adaptamos todo al lenguaje de tu sector, tus competidores y tus objetivos específicos.</div>
+        </div>
+        <div class="process-step reveal reveal-delay-3">
+          <div class="step-circle">03</div>
+          <div class="step-title">Tú apruebas todo</div>
+          <div class="step-desc">Revisas el primer ciclo antes de publicar nada. Nada sale sin tu visto bueno.</div>
+        </div>
+        <div class="process-step reveal reveal-delay-4">
+          <div class="step-circle">04</div>
+          <div class="step-title">El sistema trabaja solo</div>
+          <div class="step-desc">A partir de aquí, el sistema gestiona tu marketing. Tú recibes un informe mensual y te centras en tu negocio.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="planes" class="section">
+    <div class="section-inner">
+      <div class="section-tag reveal">Planes y precios</div>
+      <h2 class="section-title reveal">Una inversión que<br /><span class="dim">se paga sola.</span></h2>
+      <p class="section-sub reveal">Una agencia tradicional cobra entre 1.500€ y 4.000€/mes por servicios equivalentes. Nosotros lo hacemos mejor, más rápido y desde 447€/mes.</p>
+      <div class="plans-grid reveal">
+        <div class="plan-card">
+          <div class="plan-head">
+            <div class="plan-name-label">Fluxxo Launch</div>
+            <div class="plan-price"><sup>€</sup>447<sub>/mes</sub></div>
+            <div class="plan-annual">→ 397€/mes pagando anual · ahorras 600€/año</div>
+            <div class="plan-vs">Equivale a más de 1.500€/mes en agencia tradicional</div>
+          </div>
+          <div class="plan-body">
+            <div class="plan-feat">Contenido semanal para Instagram, LinkedIn y Facebook</div>
+            <div class="plan-feat">Gestión de reseñas y reputación en Google</div>
+            <div class="plan-feat">Email marketing básico</div>
+            <div class="plan-feat">Informe mensual de resultados</div>
+            <div class="plan-feat">Portal del cliente con aprobación de contenido</div>
+            <div class="plan-feat">Soporte por email en 48h</div>
+          </div>
+          <a href="#contacto" class="plan-btn btn-plan-secondary">Empezar con Launch</a>
+        </div>
+        <div class="plan-card featured">
+          <span class="popular-badge">El más elegido</span>
+          <div class="plan-head featured-head">
+            <div class="plan-name-label">Fluxxo Scale</div>
+            <div class="plan-price"><sup>€</sup>797<sub>/mes</sub></div>
+            <div class="plan-annual">→ 697€/mes pagando anual · ahorras 1.200€/año</div>
+            <div class="plan-vs">Equivale a más de 2.500€/mes en agencia tradicional</div>
+          </div>
+          <div class="plan-body">
+            <div class="plan-feat">Todo lo del plan Launch</div>
+            <div class="plan-feat">TikTok y Google Business incluidos</div>
+            <div class="plan-feat">Captación y seguimiento automático de leads</div>
+            <div class="plan-feat">Creatividades para anuncios en redes</div>
+            <div class="plan-feat">Análisis semanal de tu competencia</div>
+            <div class="plan-feat">Email marketing avanzado con secuencias</div>
+            <div class="plan-feat">Reunión mensual de estrategia (60 min)</div>
+            <div class="plan-feat">Soporte prioritario en 24h</div>
+          </div>
+          <a href="#contacto" class="plan-btn btn-plan-primary">Empezar con Scale</a>
+        </div>
+        <div class="plan-card">
+          <div class="plan-head">
+            <div class="plan-name-label">Fluxxo Dominate</div>
+            <div class="plan-price"><sup>€</sup>1.397<sub>/mes</sub></div>
+            <div class="plan-annual">→ 1.197€/mes pagando anual · ahorras 2.400€/año</div>
+            <div class="plan-vs">Equivale a más de 4.000€/mes en agencia tradicional</div>
+          </div>
+          <div class="plan-body">
+            <div class="plan-feat">Todo lo del plan Scale</div>
+            <div class="plan-feat">Asistente de ventas 24/7 en WhatsApp</div>
+            <div class="plan-feat">Gestión de publicidad digital (Meta + Google)</div>
+            <div class="plan-feat">SEO y artículos de blog optimizados</div>
+            <div class="plan-feat">Todos los servicios adicionales incluidos</div>
+            <div class="plan-feat">Reunión quincenal + acceso directo por WhatsApp</div>
+            <div class="plan-feat">Soporte VIP el mismo día</div>
+          </div>
+          <a href="#contacto" class="plan-btn btn-plan-secondary">Empezar con Dominate</a>
+        </div>
+      </div>
+      <div class="addons-label">Servicios adicionales disponibles en cualquier plan</div>
+      <div class="addons-grid reveal">
+        <div class="addon"><div class="addon-icon">⚡</div><div><div class="addon-name">Captación de leads</div><div class="addon-price">+199€/mes</div></div></div>
+        <div class="addon"><div class="addon-icon">💬</div><div><div class="addon-name">WhatsApp ventas</div><div class="addon-price">+249€/mes</div></div></div>
+        <div class="addon"><div class="addon-icon">📣</div><div><div class="addon-name">Creatividades para anuncios</div><div class="addon-price">+149€/mes</div></div></div>
+        <div class="addon"><div class="addon-icon">🤖</div><div><div class="addon-name">Chatbot para tu web</div><div class="addon-price">+199€/mes</div></div></div>
+        <div class="addon"><div class="addon-icon">🎯</div><div><div class="addon-name">Seguimiento de contactos</div><div class="addon-price">+149€/mes</div></div></div>
+        <div class="addon"><div class="addon-icon">📱</div><div><div class="addon-name">Gestión publicidad digital</div><div class="addon-price">+299€/mes</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <FAQ />
+  <ContactForm />
+  <Footer />
+</Layout>

@@ -1,0 +1,58 @@
+---
+const faqs = [
+  {
+    q: "¿Cuánto tiempo tarda en estar todo funcionando?",
+    a: "48 horas desde que nos das la información de tu negocio. Rellenas un formulario de 20 minutos y en dos días el sistema está publicando contenido y gestionando tu reputación."
+  },
+  {
+    q: "¿Tengo que revisar lo que se publica?",
+    a: "Sí, siempre. Nosotros preparamos todo el contenido y te lo enviamos para que des tu visto bueno. Nada se publica sin que tú lo hayas aprobado primero."
+  },
+  {
+    q: "¿Puedo cancelar cuando quiera?",
+    a: "Sí. Sin permanencias ni penalizaciones. Puedes cambiar de plan o cancelar con 30 días de aviso. Queremos que te quedes porque estás consiguiendo resultados, no porque estés atrapado."
+  },
+  {
+    q: "¿Para qué tipo de negocios es Fluxxo?",
+    a: "Trabajamos con cualquier negocio de servicios que quiera conseguir más clientes: despachos de abogados, clínicas, academias, inmobiliarias, asesorías, restaurantes y muchos más. Si tienes clientes, podemos ayudarte a conseguir más."
+  },
+  {
+    q: "¿Qué diferencia hay entre Fluxxo y una agencia de marketing tradicional?",
+    a: "Una agencia tradicional cobra entre 1.500€ y 4.000€/mes, trabaja en horario de oficina y tarda semanas en entregar resultados. Fluxxo funciona las 24 horas del día, entrega contenido cada semana y cuesta entre 3 y 5 veces menos."
+  },
+  {
+    q: "¿Cómo puedo ver lo que se está haciendo para mi negocio?",
+    a: "Tienes acceso a un portal exclusivo donde puedes ver en todo momento el contenido preparado para la semana, las reseñas gestionadas, los contactos recibidos y el informe mensual completo con todos los resultados."
+  }
+];
+---
+
+<section id="faq" class="section">
+  <div class="section-inner">
+    <div class="section-tag reveal">Preguntas frecuentes</div>
+    <h2 class="section-title reveal">Todo lo que necesitas<br /><span class="dim">saber antes de empezar.</span></h2>
+    <div class="faq-list reveal">
+      {faqs.map((item) => (
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q-text">{item.q}</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer"><div class="faq-answer-inner">{item.a}</div></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach((el) => {
+    el.addEventListener('click', () => {
+      const item = el.closest('.faq-item');
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach((i) => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>

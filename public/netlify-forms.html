@@ -1,0 +1,14 @@
+<!--
+  Este archivo existe solo para que Netlify detecte el formulario "contacto"
+  durante el build y active las notificaciones por email.
+  No es una página visitable; Netlify lo escanea automáticamente.
+-->
+<form name="contacto" netlify netlify-honeypot="bot-field" hidden>
+  <input type="text" name="nombre" />
+  <input type="text" name="negocio" />
+  <input type="email" name="email" />
+  <input type="tel" name="telefono" />
+  <input type="text" name="sector" />
+  <input type="text" name="problema" />
+  <input name="bot-field" />
+</form>

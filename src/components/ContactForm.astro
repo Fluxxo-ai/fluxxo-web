@@ -1,0 +1,108 @@
+---
+---
+<section id="contacto" class="lead-section">
+  <div class="lead-glow"></div>
+  <div class="lead-inner">
+    <div class="section-tag" style="display:inline-flex;margin-bottom:1.25rem">Empieza hoy</div>
+    <h2 class="lead-title">Tu competencia ya<br />está usando <em>esto.</em></h2>
+    <p class="lead-sub">Déjanos tus datos y en menos de 24 horas te explicamos exactamente cómo podemos conseguirte más clientes.</p>
+
+    <form
+      class="lead-form"
+      id="leadForm"
+      name="contacto"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="contacto" />
+      <p style="display:none">
+        <label>No rellenar si eres humano: <input name="bot-field" /></label>
+      </p>
+
+      <div class="form-row">
+        <div class="form-group" style="margin-bottom:0">
+          <label class="form-label" for="nombre">Nombre</label>
+          <input class="form-input" type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+        </div>
+        <div class="form-group" style="margin-bottom:0">
+          <label class="form-label" for="negocio">Negocio</label>
+          <input class="form-input" type="text" id="negocio" name="negocio" placeholder="Nombre de tu negocio" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group" style="margin-bottom:0">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="tu@negocio.com" required />
+        </div>
+        <div class="form-group" style="margin-bottom:0">
+          <label class="form-label" for="telefono">Teléfono</label>
+          <input class="form-input" type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="sector">Sector</label>
+        <select class="form-select" id="sector" name="sector" required>
+          <option value="" disabled selected>¿A qué se dedica tu negocio?</option>
+          <option>Legal / Despacho de abogados</option>
+          <option>Salud / Clínica privada</option>
+          <option>Inmobiliario</option>
+          <option>Formación / Academia</option>
+          <option>Construcción / Reforma</option>
+          <option>Asesoría financiera</option>
+          <option>Restauración</option>
+          <option>Otro sector</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="problema">¿Cuál es tu principal problema con el marketing ahora mismo?</label>
+        <input class="form-input" type="text" id="problema" name="problema" placeholder="Ej: No tengo tiempo, no consigo clientes nuevos, no sé qué publicar..." />
+      </div>
+      <button class="form-submit" type="submit">Quiero que me contactéis →</button>
+      <p class="form-note">Sin compromiso · Te respondemos en menos de 24 horas · Tus datos están seguros</p>
+      <p class="form-error" id="formError">Ha habido un problema enviando el formulario. Inténtalo de nuevo o escríbenos directamente.</p>
+    </form>
+
+    <div class="form-success" id="formSuccess">
+      <div class="form-success-icon">✓</div>
+      <h3>¡Recibido!</h3>
+      <p>Gracias por tus datos. Te contactaremos en menos de 24 horas.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('leadForm') as HTMLFormElement | null;
+  const success = document.getElementById('formSuccess');
+  const errorMsg = document.getElementById('formError');
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errorMsg?.classList.remove('visible');
+      const submitBtn = form.querySelector('.form-submit') as HTMLButtonElement | null;
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Enviando...'; }
+
+      try {
+        const formData = new FormData(form);
+        const body = new URLSearchParams(formData as any).toString();
+
+        const res = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body,
+        });
+
+        if (res.ok) {
+          form.style.display = 'none';
+          success?.classList.add('visible');
+        } else {
+          throw new Error('Submit failed');
+        }
+      } catch (err) {
+        errorMsg?.classList.add('visible');
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Quiero que me contactéis →'; }
+      }
+    });
+  }
+</script>

@@ -1,0 +1,86 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const related = allPosts
+  .filter((p) => p.id !== post.id)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+
+const formattedDate = post.data.pubDate.toLocaleDateString('es-ES', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+---
+
+<Layout
+  title={`${post.data.title} | Blog Fluxxo`}
+  description={post.data.excerpt}
+>
+  <Nav />
+
+  <div class="article-hero">
+    <div class="article-hero-inner">
+      <a href="/blog/" class="article-back">← Volver al blog</a>
+      <div class="blog-tag" style="margin-top:1.5rem">{post.data.category}</div>
+      <h1 class="article-title">{post.data.title}</h1>
+      <div class="article-meta">
+        <span>Fluxxo Team</span>
+        <span class="article-meta-sep">·</span>
+        <span>{formattedDate}</span>
+        <span class="article-meta-sep">·</span>
+        <span>{post.data.readTime}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-body-wrap">
+    <article class="article-body">
+      <div class="article-cover">{post.data.icon}</div>
+      <Content />
+
+      <div class="article-cta">
+        <h3>¿Quieres que esto funcione para tu negocio?</h3>
+        <p>Automatizamos tu marketing digital para que tengas presencia constante sin dedicarle tiempo.</p>
+        <a href="/#contacto" class="btn-primary">Quiero más clientes →</a>
+      </div>
+    </article>
+  </div>
+
+  {related.length > 0 && (
+    <div class="article-related">
+      <div class="section-inner">
+        <div class="blog-grid-title">Sigue leyendo</div>
+        <div class="blog-grid-3">
+          {related.map((p) => (
+            <a href={`/blog/${p.id}/`} class="blog-card-mid">
+              <div class="blog-thumb-mid">{p.data.icon}</div>
+              <div class="blog-body-mid">
+                <div class="blog-tag">{p.data.category}</div>
+                <div class="blog-title-mid">{p.data.title}</div>
+                <div class="blog-excerpt-mid">{p.data.excerpt}</div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <Footer />
+</Layout>

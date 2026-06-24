@@ -1,0 +1,71 @@
+---
+---
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-wordmark">flu<em>xx</em>o</div>
+        <p class="footer-desc">Marketing digital automatizado para negocios que quieren crecer sin perder el tiempo.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/fluxxoai" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn de Fluxxo">in</a>
+          <a href="https://www.instagram.com/fluxxoai" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram de Fluxxo">ig</a>
+          <a href="https://www.facebook.com/fluxxoai" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook de Fluxxo">fb</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Servicios</div>
+        <div class="footer-links">
+          <a href="/#servicios" class="footer-link">Contenido para redes</a>
+          <a href="/#servicios" class="footer-link">Gestión de reseñas</a>
+          <a href="/#servicios" class="footer-link">Captación de leads</a>
+          <a href="/#servicios" class="footer-link">WhatsApp ventas</a>
+          <a href="/#servicios" class="footer-link">Publicidad digital</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Empresa</div>
+        <div class="footer-links">
+          <a href="/" class="footer-link">Inicio</a>
+          <a href="/nosotros/" class="footer-link">Nosotros</a>
+          <a href="/#planes" class="footer-link">Precios</a>
+          <a href="/blog/" class="footer-link">Blog</a>
+          <a href="/#contacto" class="footer-link">Contacto</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Legal</div>
+        <div class="footer-links">
+          <a href="/legal/aviso-legal/" class="footer-link">Aviso legal</a>
+          <a href="/legal/privacidad/" class="footer-link">Política de privacidad</a>
+          <a href="/legal/cookies/" class="footer-link">Política de cookies</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Fluxxo AI · fluxxoai.com · España</span>
+      <span class="footer-copy">Marketing digital automatizado para pymes</span>
+    </div>
+  </div>
+</footer>
+
+<div class="floating-cta" id="floatingCta">
+  <a href="/#contacto" class="floating-btn">
+    <span class="floating-btn-dot"></span>
+    Quiero más clientes →
+  </a>
+</div>
+
+<script>
+  const floatingCta = document.getElementById('floatingCta');
+  window.addEventListener('scroll', () => {
+    if (floatingCta) {
+      floatingCta.classList.toggle('visible', window.scrollY > window.innerHeight * 0.3);
+    }
+  });
+
+  // Scroll reveal animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>

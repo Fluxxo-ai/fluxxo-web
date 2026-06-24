@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Nosotros — Fluxxo | Marketing digital para pymes"
+  description="Conoce la historia, misión y valores de Fluxxo, la agencia de marketing digital automatizado para pymes en España."
+>
+  <Nav />
+
+  <section class="hero" style="min-height:50vh;padding:8rem 2.5rem 4rem">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-glow-1"></div>
+    </div>
+    <div style="position:relative;z-index:2;max-width:1200px;margin:0 auto;width:100%">
+      <div class="section-tag" style="margin-bottom:1.25rem">Nuestra historia</div>
+      <h1 style="font-size:clamp(40px,5vw,64px);font-weight:500;letter-spacing:-0.045em;line-height:1.05;margin-bottom:1rem">
+        Nacimos hartos de ver<br /><span style="color:var(--blue)">cómo las pymes lo tienen<br />más difícil.</span>
+      </h1>
+      <p style="font-size:17px;color:var(--gray-1);line-height:1.8;max-width:560px;font-weight:300">Agencias caras, contratos largos, resultados que nunca llegan. Había que cambiar eso.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="nosotros-grid">
+        <div class="nosotros-left">
+          <p class="nosotros-mision">"El marketing inteligente no debería ser solo para las grandes empresas. <em>Cualquier negocio merece crecer.</em>"</p>
+          <p class="nosotros-body">Fluxxo nació en 2024 con una idea clara: usar la inteligencia artificial para democratizar el marketing digital. Vimos que miles de negocios en España —clínicas, despachos, academias, inmobiliarias— invertían fortunas en agencias que tardaban semanas en entregar un post y que nunca rendían cuentas.</p>
+          <p class="nosotros-body">Decidimos construir algo diferente. Un sistema que trabaja <strong>24 horas al día</strong>, que entrega resultados desde la primera semana y que cuesta entre 3 y 5 veces menos que una agencia tradicional. Sin reuniones eternas. Sin contratos de permanencia. Sin excusas.</p>
+          <p class="nosotros-body">Hoy ayudamos a más de 20 negocios en España a conseguir más clientes cada mes. Y acabamos de empezar.</p>
+          <div class="nosotros-firma">
+            <div class="firma-avatar">D</div>
+            <div>
+              <div class="firma-name">Daniel</div>
+              <div class="firma-role">Fundador · Fluxxo</div>
+            </div>
+          </div>
+        </div>
+        <div class="valores-grid">
+          <div style="font-size:11px;font-weight:600;color:var(--gray-3);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px;font-family:var(--mono)">Nuestros valores</div>
+          <div class="valor-card">
+            <div class="valor-icon">⚡</div>
+            <div>
+              <div class="valor-title">Resultados por encima de todo</div>
+              <div class="valor-desc">No vendemos humo. Si el sistema no te consigue más clientes, algo está mal y lo arreglamos. Los números mandan.</div>
+            </div>
+          </div>
+          <div class="valor-card">
+            <div class="valor-icon">🔍</div>
+            <div>
+              <div class="valor-title">Transparencia total</div>
+              <div class="valor-desc">Sabes exactamente qué se está haciendo para tu negocio, cuándo y por qué. Sin cajas negras ni jerga de agencia.</div>
+            </div>
+          </div>
+          <div class="valor-card">
+            <div class="valor-icon">🤝</div>
+            <div>
+              <div class="valor-title">Tu tiempo es sagrado</div>
+              <div class="valor-desc">Montamos Fluxxo para que tú no tengas que dedicar horas al marketing. Si te estamos quitando tiempo, estamos fallando.</div>
+            </div>
+          </div>
+          <div class="valor-card">
+            <div class="valor-icon">🚀</div>
+            <div>
+              <div class="valor-title">Tecnología que trabaja para ti</div>
+              <div class="valor-desc">La IA no es una moda para nosotros. Es la herramienta que hace posible dar un servicio de primer nivel a un precio justo.</div>
+            </div>
+          </div>
+          <div class="valor-card">
+            <div class="valor-icon">📈</div>
+            <div>
+              <div class="valor-title">Crecemos contigo</div>
+              <div class="valor-desc">Tu éxito es el nuestro. Cuantos más clientes consigas, mejor. Por eso nos importa tanto que el sistema funcione de verdad.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lead-section" style="padding:5rem 2.5rem">
+    <div class="lead-glow"></div>
+    <div class="lead-inner" style="text-align:center;position:relative;z-index:2">
+      <div class="section-tag" style="display:inline-flex;margin-bottom:1.25rem">¿Conectamos?</div>
+      <h2 class="lead-title" style="margin-bottom:1rem">¿Quieres saber si<br />Fluxxo es para <em>ti?</em></h2>
+      <p class="lead-sub" style="margin-bottom:2rem">Cuéntanos en qué estás y te decimos sin compromiso si podemos ayudarte.</p>
+      <a href="/#contacto" class="btn-primary" style="margin:0 auto;display:inline-flex">Hablar con el equipo →</a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

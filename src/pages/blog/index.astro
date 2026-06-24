@@ -1,0 +1,87 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const sorted = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const featured = sorted.find((p) => p.data.featured) ?? sorted[0];
+const rest = sorted.filter((p) => p.id !== featured?.id);
+---
+
+<Layout
+  title="Blog — Marketing digital para pymes | Fluxxo"
+  description="Artículos prácticos sobre cómo conseguir más clientes, gestionar tu reputación online y sacar el máximo partido al marketing digital."
+>
+  <Nav />
+
+  <div class="blog-hero">
+    <div class="blog-hero-inner">
+      <div class="section-tag" style="margin-bottom:1.25rem">Blog</div>
+      <h1>Consejos de marketing digital<br /><span class="dim">para hacer crecer tu negocio.</span></h1>
+      <p>Artículos prácticos sobre cómo conseguir más clientes, gestionar tu reputación online y sacar el máximo partido al marketing digital.</p>
+    </div>
+  </div>
+
+  <div class="blog-main">
+    {featured && (
+      <div class="blog-featured">
+        <a href={`/blog/${featured.id}/`} class="blog-card-big">
+          <div class="blog-thumb-big">{featured.data.icon}</div>
+          <div class="blog-body-big">
+            <div class="blog-tag">{featured.data.category}</div>
+            <div class="blog-title-big">{featured.data.title}</div>
+            <div class="blog-excerpt-big">{featured.data.excerpt}</div>
+            <div class="blog-meta"><span>Fluxxo Team</span><span>{featured.data.readTime}</span></div>
+          </div>
+        </a>
+        <div class="blog-sidebar">
+          {rest.slice(0, 3).map((post) => (
+            <a href={`/blog/${post.id}/`} class="blog-card-sm">
+              <div class="blog-thumb-sm">{post.data.icon}</div>
+              <div class="blog-body-sm">
+                <div class="blog-tag" style="font-size:9px;margin-bottom:6px">{post.data.category}</div>
+                <div class="blog-title-sm">{post.data.title}</div>
+                <div class="blog-excerpt-sm">{post.data.excerpt}</div>
+                <div class="blog-meta-sm"><span>Fluxxo Team</span><span>{post.data.readTime}</span></div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {rest.length > 3 && (
+      <div>
+        <div class="blog-grid-title">Más artículos</div>
+        <div class="blog-grid-3">
+          {rest.slice(3).map((post) => (
+            <a href={`/blog/${post.id}/`} class="blog-card-mid">
+              <div class="blog-thumb-mid">{post.data.icon}</div>
+              <div class="blog-body-mid">
+                <div class="blog-tag">{post.data.category}</div>
+                <div class="blog-title-mid">{post.data.title}</div>
+                <div class="blog-excerpt-mid">{post.data.excerpt}</div>
+                <div class="blog-meta"><span>Fluxxo Team</span><span>{post.data.readTime}</span></div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <div class="newsletter-strip">
+      <div class="newsletter-left">
+        <h3>Recibe los mejores artículos <em>cada semana.</em></h3>
+        <p>Sin spam. Solo contenido útil para hacer crecer tu negocio.</p>
+      </div>
+      <div class="newsletter-form">
+        <input class="newsletter-input" type="email" placeholder="tu@negocio.com" />
+        <button class="newsletter-btn">Suscribirme →</button>
+      </div>
+    </div>
+  </div>
+
+  <Footer />
+</Layout>
