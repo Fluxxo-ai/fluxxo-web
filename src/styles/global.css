@@ -311,4 +311,9 @@ a{text-decoration:none;color:inherit}
   .newsletter-strip{flex-direction:column;align-items:flex-start}
   .newsletter-form{flex-direction:column;width:100%}
   .newsletter-input{width:100%}
-}
+}/* CLIENTS SECTION */
+.clients-section{padding:4rem 2.5rem}
+.clients-grid{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap;padding:2rem 0}
+.client-logo-item{display:flex;align-items:center;justify-content:center;opacity:0.55;transition:opacity 0.3s ease}
+.client-logo-item:hover{opacity:1}
+.client-logo-img{height:40px;width:auto;max-width:150px;object-fit:contain;filter:brightness(10)}
