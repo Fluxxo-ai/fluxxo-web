@@ -7,11 +7,12 @@ import ContactForm from '../components/ContactForm.astro';
 ---
 
 <Layout
-  title="Fluxxo — Agencia de Marketing Digital para Pymes en España"
-  description="Sistema de marketing digital automatizado que trabaja 24/7 para conseguirte más clientes. Gestión de redes sociales, reputación online y captación de leads desde 447€/mes. Sin permanencias."
+  title="Agencia de Marketing Automatizado e Inteligencia Artificial para Empresas | Fluxxo"
+  description="Captamos clientes, automatizamos procesos y optimizamos resultados mediante publicidad digital, automatización e IA. Desde 447€/mes. Sin permanencias."
 >
   <Nav />
 
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-bg">
       <div class="hero-grid"></div>
@@ -23,16 +24,16 @@ import ContactForm from '../components/ContactForm.astro';
     <div class="hero-inner">
       <div class="hero-left">
         <h1 class="hero-h1">
-          Más clientes para<br />
-          tu negocio con<br />
-          <span class="accent">marketing digital<br />automatizado</span>
+          Agencia de marketing<br />
+          automatizado e <span class="accent">inteligencia<br />artificial</span> para empresas<br />
+          que quieren conseguir<br />más clientes
         </h1>
         <p class="hero-sub">
-          Tu sistema de marketing que trabaja <strong>24 horas al día, 7 días a la semana</strong> para conseguirte clientes, gestionar tu reputación y publicar contenido en redes. Sin agencias caras. Sin perder el tiempo.
+          Captamos clientes, automatizamos procesos y optimizamos resultados mediante <strong>publicidad digital, automatización e IA.</strong>
         </p>
         <div class="hero-btns">
-          <a href="#contacto" class="btn-primary">Quiero más clientes →</a>
-          <a href="#servicios" class="btn-secondary">Cómo funciona</a>
+          <a href="#contacto" class="btn-primary">Solicitar auditoría gratuita →</a>
+          <a href="#servicios" class="btn-secondary">Ver servicios</a>
         </div>
       </div>
       <div class="hero-metrics">
@@ -64,6 +65,7 @@ import ContactForm from '../components/ContactForm.astro';
     </div>
   </section>
 
+  <!-- TICKER -->
   <div class="ticker">
     <div class="ticker-track">
       <div class="ticker-item">
@@ -71,11 +73,11 @@ import ContactForm from '../components/ContactForm.astro';
         Reputación online<span class="ticker-sep">·</span>
         <em>Captación de leads</em><span class="ticker-sep">·</span>
         Email marketing<span class="ticker-sep">·</span>
-        <em>Contenido para redes</em><span class="ticker-sep">·</span>
-        Análisis de competencia<span class="ticker-sep">·</span>
         <em>Publicidad digital</em><span class="ticker-sep">·</span>
-        WhatsApp Business<span class="ticker-sep">·</span>
-        <em>SEO y posicionamiento</em><span class="ticker-sep">·</span>
+        Análisis de competencia<span class="ticker-sep">·</span>
+        <em>WhatsApp IA</em><span class="ticker-sep">·</span>
+        SEO estratégico<span class="ticker-sep">·</span>
+        <em>Automatizaciones avanzadas</em><span class="ticker-sep">·</span>
         Reporting mensual<span class="ticker-sep">·</span>
       </div>
       <div class="ticker-item">
@@ -83,21 +85,22 @@ import ContactForm from '../components/ContactForm.astro';
         Reputación online<span class="ticker-sep">·</span>
         <em>Captación de leads</em><span class="ticker-sep">·</span>
         Email marketing<span class="ticker-sep">·</span>
-        <em>Contenido para redes</em><span class="ticker-sep">·</span>
-        Análisis de competencia<span class="ticker-sep">·</span>
         <em>Publicidad digital</em><span class="ticker-sep">·</span>
-        WhatsApp Business<span class="ticker-sep">·</span>
-        <em>SEO y posicionamiento</em><span class="ticker-sep">·</span>
+        Análisis de competencia<span class="ticker-sep">·</span>
+        <em>WhatsApp IA</em><span class="ticker-sep">·</span>
+        SEO estratégico<span class="ticker-sep">·</span>
+        <em>Automatizaciones avanzadas</em><span class="ticker-sep">·</span>
         Reporting mensual<span class="ticker-sep">·</span>
       </div>
     </div>
   </div>
 
+  <!-- SERVICIOS -->
   <section id="servicios" class="section">
     <div class="section-inner">
       <div class="section-tag reveal">Lo que hacemos</div>
       <h2 class="section-title reveal">Todo el marketing de tu negocio,<br /><span class="dim">gestionado para ti.</span></h2>
-      <p class="section-sub reveal">Un sistema completo que se encarga de conseguirte clientes, cuidar tu imagen online y mantener activas tus redes sociales. Sin que tengas que hacer nada.</p>
+      <p class="section-sub reveal">Un sistema completo que capta clientes, cuida tu imagen online y mantiene activas tus redes sociales. Sin que tengas que dedicarle tiempo.</p>
       <div class="services-grid reveal">
         <div class="service-cell">
           <div class="service-icon">✍️</div>
@@ -116,8 +119,8 @@ import ContactForm from '../components/ContactForm.astro';
         </div>
         <div class="service-cell">
           <div class="service-icon">💬</div>
-          <div class="service-name">Ventas por WhatsApp</div>
-          <div class="service-desc">Un asistente disponible 24/7 en WhatsApp Business que responde dudas, envía información y agenda citas por ti</div>
+          <div class="service-name">WhatsApp IA</div>
+          <div class="service-desc">Un asistente de IA disponible 24/7 en WhatsApp Business que responde dudas, envía información y agenda citas por ti</div>
         </div>
         <div class="service-cell">
           <div class="service-icon">📣</div>
@@ -141,7 +144,7 @@ import ContactForm from '../components/ContactForm.astro';
         </div>
         <div class="service-cell">
           <div class="service-icon">🔎</div>
-          <div class="service-name">SEO y posicionamiento web</div>
+          <div class="service-name">SEO estratégico</div>
           <div class="service-desc">Artículos optimizados para que Google te encuentre, análisis de palabras clave y mejoras técnicas en tu web</div>
         </div>
         <div class="service-cell">
@@ -153,26 +156,27 @@ import ContactForm from '../components/ContactForm.astro';
     </div>
   </section>
 
+  <!-- RESULTADOS -->
   <section id="resultados" class="section">
     <div class="section-inner">
       <div class="section-tag reveal">Resultados</div>
       <h2 class="section-title reveal">Números que<br /><span class="dim">hablan por nosotros.</span></h2>
-      <p class="section-sub reveal">Resultados reales conseguidos con nuestros clientes en los primeros 90 días de activación del sistema.</p>
+      <p class="section-sub reveal">Resultados conseguidos con nuestros clientes en los primeros 90 días de activación del sistema.</p>
       <div class="results-grid">
         <div class="result-card reveal reveal-delay-1">
-          <div class="result-sector">Sector legal</div>
-          <div class="result-number">+<em>127</em>%</div>
-          <div class="result-desc">Incremento de consultas online en 60 días</div>
+          <div class="result-sector">Deporte y entretenimiento · Prisma Padel</div>
+          <div class="result-number">+<em>312</em>%</div>
+          <div class="result-desc">Incremento de inscripciones al evento en 45 días</div>
           <div class="result-stats">
-            <div class="result-stat">Contactos/mes antes <span>8</span></div>
-            <div class="result-stat">Contactos/mes después <span class="accent">18</span></div>
-            <div class="result-stat">Coste por contacto <span class="positive">−48%</span></div>
+            <div class="result-stat">Alcance orgánico antes <span>bajo</span></div>
+            <div class="result-stat">Alcance tras campaña <span class="accent">+18.000</span></div>
+            <div class="result-stat">Coste por inscripción <span class="positive">−54%</span></div>
           </div>
         </div>
         <div class="result-card reveal reveal-delay-2">
-          <div class="result-sector">Sector salud</div>
-          <div class="result-number"><em>4.6</em>★</div>
-          <div class="result-desc">Valoración media en Google tras activar el sistema</div>
+          <div class="result-sector">Sector salud · Clínica Dental</div>
+          <div class="result-number"><em>5</em>★</div>
+          <div class="result-desc">Valoración perfecta en Google mantenida con gestión activa de reseñas</div>
           <div class="result-stats">
             <div class="result-stat">Reseñas antes <span>23</span></div>
             <div class="result-stat">Reseñas después <span class="accent">81</span></div>
@@ -180,9 +184,9 @@ import ContactForm from '../components/ContactForm.astro';
           </div>
         </div>
         <div class="result-card reveal reveal-delay-3">
-          <div class="result-sector">Formación online</div>
+          <div class="result-sector">Reformas del hogar · Gen Builders</div>
           <div class="result-number">−<em>62</em>%</div>
-          <div class="result-desc">Reducción del coste de conseguir cada nuevo cliente</div>
+          <div class="result-desc">Reducción del coste de adquisición de cada nuevo cliente</div>
           <div class="result-stats">
             <div class="result-stat">Coste por cliente antes <span>340€</span></div>
             <div class="result-stat">Coste por cliente después <span class="accent">129€</span></div>
@@ -193,6 +197,7 @@ import ContactForm from '../components/ContactForm.astro';
     </div>
   </section>
 
+  <!-- PROCESO -->
   <section class="section">
     <div class="section-inner">
       <div class="section-tag reveal">El proceso</div>
@@ -200,103 +205,148 @@ import ContactForm from '../components/ContactForm.astro';
       <div class="process-grid">
         <div class="process-step reveal reveal-delay-1">
           <div class="step-circle">01</div>
-          <div class="step-title">Nos cuentas tu negocio</div>
-          <div class="step-desc">Rellenas un formulario de 20 minutos con la información de tu negocio. Sin reuniones eternas ni esperas.</div>
+          <div class="step-title">Auditoría de tu negocio</div>
+          <div class="step-desc">Analizamos tu situación actual, tu competencia y las oportunidades de crecimiento específicas para tu sector.</div>
         </div>
         <div class="process-step reveal reveal-delay-2">
           <div class="step-circle">02</div>
           <div class="step-title">Configuramos tu sistema</div>
-          <div class="step-desc">Adaptamos todo al lenguaje de tu sector, tus competidores y tus objetivos específicos.</div>
+          <div class="step-desc">Adaptamos todo al lenguaje de tu sector, tus competidores y tus objetivos específicos de captación y automatización.</div>
         </div>
         <div class="process-step reveal reveal-delay-3">
           <div class="step-circle">03</div>
           <div class="step-title">Tú apruebas todo</div>
-          <div class="step-desc">Revisas el primer ciclo antes de publicar nada. Nada sale sin tu visto bueno.</div>
+          <div class="step-desc">Revisas el primer ciclo antes de publicar nada. Nada sale sin tu visto bueno, siempre.</div>
         </div>
         <div class="process-step reveal reveal-delay-4">
           <div class="step-circle">04</div>
           <div class="step-title">El sistema trabaja solo</div>
-          <div class="step-desc">A partir de aquí, el sistema gestiona tu marketing. Tú recibes un informe mensual y te centras en tu negocio.</div>
+          <div class="step-desc">A partir de aquí, el sistema gestiona tu marketing 24/7. Tú recibes un informe mensual y te centras en tu negocio.</div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- PLANES -->
   <section id="planes" class="section">
     <div class="section-inner">
       <div class="section-tag reveal">Planes y precios</div>
       <h2 class="section-title reveal">Una inversión que<br /><span class="dim">se paga sola.</span></h2>
       <p class="section-sub reveal">Una agencia tradicional cobra entre 1.500€ y 4.000€/mes por servicios equivalentes. Nosotros lo hacemos mejor, más rápido y desde 447€/mes.</p>
       <div class="plans-grid reveal">
+
+        <!-- LAUNCH -->
         <div class="plan-card">
           <div class="plan-head">
             <div class="plan-name-label">Fluxxo Launch</div>
+            <div class="plan-tagline">Construye una presencia digital sólida y automatiza las tareas básicas de marketing.</div>
             <div class="plan-price"><sup>€</sup>447<sub>/mes</sub></div>
-            <div class="plan-annual">→ 397€/mes pagando anual · ahorras 600€/año</div>
-            <div class="plan-vs">Equivale a más de 1.500€/mes en agencia tradicional</div>
+            <div class="plan-annual">→ 397€/mes pagando anualmente</div>
+            <div class="plan-save">Ahorra 600€/año</div>
           </div>
           <div class="plan-body">
-            <div class="plan-feat">Contenido semanal para Instagram, LinkedIn y Facebook</div>
-            <div class="plan-feat">Gestión de reseñas y reputación en Google</div>
+            <div class="plan-feat">Sesión estratégica inicial</div>
+            <div class="plan-feat">Redes sociales (Instagram, LinkedIn, Facebook)</div>
+            <div class="plan-feat">Gestión de reseñas y reputación</div>
             <div class="plan-feat">Email marketing básico</div>
-            <div class="plan-feat">Informe mensual de resultados</div>
-            <div class="plan-feat">Portal del cliente con aprobación de contenido</div>
-            <div class="plan-feat">Soporte por email en 48h</div>
+            <div class="plan-feat">Informes mensuales de resultados</div>
+            <div class="plan-feat">Portal del cliente</div>
+            <div class="plan-feat">Soporte por email</div>
           </div>
+          <p class="plan-cta-text">Ahorra tiempo y profesionaliza tu presencia digital.</p>
           <a href="#contacto" class="plan-btn btn-plan-secondary">Empezar con Launch</a>
         </div>
+
+        <!-- SCALE -->
         <div class="plan-card featured">
           <span class="popular-badge">El más elegido</span>
           <div class="plan-head featured-head">
             <div class="plan-name-label">Fluxxo Scale</div>
+            <div class="plan-tagline">Sistema de captación automatizada para empresas que quieren crecer de forma predecible.</div>
             <div class="plan-price"><sup>€</sup>797<sub>/mes</sub></div>
-            <div class="plan-annual">→ 697€/mes pagando anual · ahorras 1.200€/año</div>
-            <div class="plan-vs">Equivale a más de 2.500€/mes en agencia tradicional</div>
+            <div class="plan-annual">→ 697€/mes pagando anualmente</div>
+            <div class="plan-save">Ahorra 1.200€/año</div>
           </div>
           <div class="plan-body">
-            <div class="plan-feat">Todo lo del plan Launch</div>
-            <div class="plan-feat">TikTok y Google Business incluidos</div>
-            <div class="plan-feat">Captación y seguimiento automático de leads</div>
-            <div class="plan-feat">Creatividades para anuncios en redes</div>
-            <div class="plan-feat">Análisis semanal de tu competencia</div>
+            <div class="plan-feat">Todo lo de Launch</div>
+            <div class="plan-feat">Captación de leads automatizada</div>
+            <div class="plan-feat">Creatividades para anuncios</div>
+            <div class="plan-feat">TikTok marketing</div>
+            <div class="plan-feat">Análisis de competencia semanal</div>
             <div class="plan-feat">Email marketing avanzado con secuencias</div>
-            <div class="plan-feat">Reunión mensual de estrategia (60 min)</div>
-            <div class="plan-feat">Soporte prioritario en 24h</div>
+            <div class="plan-feat">Seguimiento automatizado de leads</div>
+            <div class="plan-feat">Optimización continua de campañas</div>
+            <div class="plan-feat">Reunión estratégica mensual</div>
           </div>
+          <p class="plan-cta-text">Genera oportunidades de negocio de forma constante.</p>
           <a href="#contacto" class="plan-btn btn-plan-primary">Empezar con Scale</a>
         </div>
+
+        <!-- DOMINATE -->
         <div class="plan-card">
           <div class="plan-head">
             <div class="plan-name-label">Fluxxo Dominate</div>
+            <div class="plan-tagline">Sistema completo de crecimiento con captación, conversión y optimización avanzada.</div>
             <div class="plan-price"><sup>€</sup>1.397<sub>/mes</sub></div>
-            <div class="plan-annual">→ 1.197€/mes pagando anual · ahorras 2.400€/año</div>
-            <div class="plan-vs">Equivale a más de 4.000€/mes en agencia tradicional</div>
+            <div class="plan-annual">→ 1.247€/mes pagando anualmente</div>
+            <div class="plan-save">Ahorra 1.800€/año</div>
           </div>
           <div class="plan-body">
-            <div class="plan-feat">Todo lo del plan Scale</div>
-            <div class="plan-feat">Asistente de ventas 24/7 en WhatsApp</div>
-            <div class="plan-feat">Gestión de publicidad digital (Meta + Google)</div>
-            <div class="plan-feat">SEO y artículos de blog optimizados</div>
-            <div class="plan-feat">Todos los servicios adicionales incluidos</div>
-            <div class="plan-feat">Reunión quincenal + acceso directo por WhatsApp</div>
-            <div class="plan-feat">Soporte VIP el mismo día</div>
+            <div class="plan-feat">Todo lo de Scale</div>
+            <div class="plan-feat">Gestión de Paid Ads (Meta + Google)</div>
+            <div class="plan-feat">WhatsApp IA 24/7</div>
+            <div class="plan-feat">SEO estratégico</div>
+            <div class="plan-feat">Dashboard de resultados en tiempo real</div>
+            <div class="plan-feat">Optimización continua de conversiones</div>
+            <div class="plan-feat">Reuniones estratégicas quincenales</div>
+            <div class="plan-feat">Auditoría trimestral de crecimiento</div>
+            <div class="plan-feat">Soporte prioritario</div>
+            <div class="plan-feat">Automatizaciones avanzadas</div>
           </div>
+          <p class="plan-cta-text">Escala tu marketing con un sistema completo de captación y automatización.</p>
           <a href="#contacto" class="plan-btn btn-plan-secondary">Empezar con Dominate</a>
         </div>
+
       </div>
+
       <div class="addons-label">Servicios adicionales disponibles en cualquier plan</div>
       <div class="addons-grid reveal">
         <div class="addon"><div class="addon-icon">⚡</div><div><div class="addon-name">Captación de leads</div><div class="addon-price">+199€/mes</div></div></div>
-        <div class="addon"><div class="addon-icon">💬</div><div><div class="addon-name">WhatsApp ventas</div><div class="addon-price">+249€/mes</div></div></div>
+        <div class="addon"><div class="addon-icon">💬</div><div><div class="addon-name">WhatsApp IA</div><div class="addon-price">+249€/mes</div></div></div>
         <div class="addon"><div class="addon-icon">📣</div><div><div class="addon-name">Creatividades para anuncios</div><div class="addon-price">+149€/mes</div></div></div>
         <div class="addon"><div class="addon-icon">🤖</div><div><div class="addon-name">Chatbot para tu web</div><div class="addon-price">+199€/mes</div></div></div>
-        <div class="addon"><div class="addon-icon">🎯</div><div><div class="addon-name">Seguimiento de contactos</div><div class="addon-price">+149€/mes</div></div></div>
+        <div class="addon"><div class="addon-icon">🔎</div><div><div class="addon-name">SEO estratégico</div><div class="addon-price">+199€/mes</div></div></div>
         <div class="addon"><div class="addon-icon">📱</div><div><div class="addon-name">Gestión publicidad digital</div><div class="addon-price">+299€/mes</div></div></div>
       </div>
     </div>
   </section>
 
   <FAQ />
+
+  <!-- CLIENTES -->
+  <section class="section clients-section">
+    <div class="section-inner">
+      <div class="section-tag reveal">Marcas que han confiado en nuestro equipo</div>
+      <div class="clients-grid reveal">
+        <div class="client-logo-item">
+          <img src="/logos/floridablanca.png" alt="Clínica Dental Floridablanca" class="client-logo-img" />
+        </div>
+        <div class="client-logo-item">
+          <img src="/logos/dr_rivera.png" alt="Dr. Pedro Rivera Clínica Dental" class="client-logo-img" />
+        </div>
+        <div class="client-logo-item">
+          <img src="/logos/gen_builders.png" alt="Gen Builders" class="client-logo-img" />
+        </div>
+        <div class="client-logo-item">
+          <img src="/logos/prisma.png" alt="Prisma Padel" class="client-logo-img" />
+        </div>
+        <div class="client-logo-item">
+          <img src="/logos/swisscolors.png" alt="Swisscolors" class="client-logo-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
   <ContactForm />
   <Footer />
 </Layout>

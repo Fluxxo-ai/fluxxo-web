@@ -3,17 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 ---
-
-<Layout
-  title="Página no encontrada — Fluxxo"
-  description="La página que buscas no existe."
->
+<Layout title="Página no encontrada — Fluxxo" description="La página que buscas no existe.">
   <Nav />
   <section class="hero" style="min-height:60vh">
-    <div class="hero-bg">
-      <div class="hero-grid"></div>
-      <div class="hero-glow-1"></div>
-    </div>
+    <div class="hero-bg"><div class="hero-grid"></div><div class="hero-glow-1"></div></div>
     <div style="position:relative;z-index:2;max-width:600px;margin:0 auto;text-align:center">
       <div class="section-tag" style="margin-bottom:1.25rem">Error 404</div>
       <h1 class="hero-h1" style="font-size:clamp(32px,4vw,48px)">Esta página<br /><span class="accent">no existe.</span></h1>

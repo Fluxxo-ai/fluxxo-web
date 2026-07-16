@@ -22,9 +22,7 @@ const related = allPosts
   .slice(0, 3);
 
 const formattedDate = post.data.pubDate.toLocaleDateString('es-ES', {
-  day: 'numeric',
-  month: 'long',
-  year: 'numeric',
+  day: 'numeric', month: 'long', year: 'numeric',
 });
 ---
 
@@ -53,11 +51,10 @@ const formattedDate = post.data.pubDate.toLocaleDateString('es-ES', {
     <article class="article-body">
       <div class="article-cover">{post.data.icon}</div>
       <Content />
-
       <div class="article-cta">
-        <h3>¿Quieres que esto funcione para tu negocio?</h3>
-        <p>Automatizamos tu marketing digital para que tengas presencia constante sin dedicarle tiempo.</p>
-        <a href="/#contacto" class="btn-primary">Quiero más clientes →</a>
+        <h3>¿Quieres que esto funcione para tu empresa?</h3>
+        <p>Automatizamos tu marketing digital para que captures más clientes sin dedicarle tiempo.</p>
+        <a href="/#contacto" class="btn-primary">Solicitar auditoría gratuita →</a>
       </div>
     </article>
   </div>
