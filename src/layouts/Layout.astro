@@ -9,6 +9,9 @@ interface Props {
 
 const { title, description, ogImage = '/og-default.jpg' } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const GTM_ID = 'GTM-5LG96ZPM';
+const GA4_ID = 'G-DWERH2TNT7';
 ---
 
 <!DOCTYPE html>
@@ -21,20 +24,52 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <link rel="canonical" href={canonicalURL} />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
+  <!-- Open Graph -->
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:type" content="website" />
   <meta property="og:image" content={new URL(ogImage, Astro.site)} />
 
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Calendly widget -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+
+  <!-- Google Tag Manager -->
+  <script define:vars={{ GTM_ID }}>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer',GTM_ID);
+  </script>
+
+  <!-- Google Analytics 4 (directa, como respaldo si GTM no está configurado aún) -->
+  <script define:vars={{ GA4_ID }} async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}></script>
+  <script define:vars={{ GA4_ID }}>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', GA4_ID);
+  </script>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
   <slot />
 </body>
 </html>
