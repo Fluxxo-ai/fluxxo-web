@@ -3,9 +3,9 @@
 <section id="contacto" class="lead-section">
   <div class="lead-glow"></div>
   <div class="lead-inner">
-    <div class="section-tag" style="display:inline-flex;margin-bottom:1.25rem">Empieza hoy</div>
-    <h2 class="lead-title">Tu competencia ya<br />está usando <em>esto.</em></h2>
-    <p class="lead-sub">Déjanos tus datos y en menos de 24 horas te explicamos exactamente cómo podemos conseguirte más clientes.</p>
+    <div class="section-tag" style="display:inline-flex;margin-bottom:1.25rem">Auditoría gratuita</div>
+    <h2 class="lead-title">Tu competencia ya está<br /><em>automatizando su marketing</em></h2>
+    <p class="lead-sub">Déjanos tus datos y analizaremos tu negocio para detectar oportunidades de crecimiento, automatización y captación de clientes.</p>
 
     <form
       class="lead-form"
@@ -55,18 +55,31 @@
         </select>
       </div>
       <div class="form-group">
-        <label class="form-label" for="problema">¿Cuál es tu principal problema con el marketing ahora mismo?</label>
-        <input class="form-input" type="text" id="problema" name="problema" placeholder="Ej: No tengo tiempo, no consigo clientes nuevos, no sé qué publicar..." />
+        <label class="form-label" for="problema">¿Cuál es tu principal reto de marketing ahora mismo?</label>
+        <input class="form-input" type="text" id="problema" name="problema" placeholder="Ej: No consigo clientes nuevos, no tengo tiempo para el marketing..." />
       </div>
-      <button class="form-submit" type="submit">Quiero que me contactéis →</button>
-      <p class="form-note">Sin compromiso · Te respondemos en menos de 24 horas · Tus datos están seguros</p>
-      <p class="form-error" id="formError">Ha habido un problema enviando el formulario. Inténtalo de nuevo o escríbenos directamente.</p>
+      <button class="form-submit" type="submit">Solicitar auditoría gratuita →</button>
+      <p class="form-note">Sin compromiso · Te respondemos en menos de 24h · Tus datos están seguros</p>
+      <p class="form-error" id="formError">Ha habido un problema al enviar el formulario. Inténtalo de nuevo o escríbenos directamente.</p>
     </form>
 
+    <!-- Mensaje de éxito + Calendly -->
     <div class="form-success" id="formSuccess">
       <div class="form-success-icon">✓</div>
-      <h3>¡Recibido!</h3>
-      <p>Gracias por tus datos. Te contactaremos en menos de 24 horas.</p>
+      <h3>¡Hemos recibido tu solicitud!</h3>
+      <p>Reserva ahora una auditoría estratégica gratuita para que podamos analizar tu negocio y detectar oportunidades de crecimiento.</p>
+      <div class="form-success-steps">
+        <p><strong>Qué ocurre después:</strong></p>
+        <p>→ Reservas una llamada de 30 minutos con nuestro equipo</p>
+        <p>→ Analizamos tu negocio y detectamos oportunidades concretas</p>
+        <p>→ Te explicamos exactamente cómo podemos ayudarte, sin compromiso</p>
+      </div>
+      <button
+        class="calendly-btn"
+        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/fluxxohq/30min'}); return false;"
+      >
+        📅 Reservar mi auditoría gratuita →
+      </button>
     </div>
   </div>
 </section>
@@ -81,7 +94,10 @@
       e.preventDefault();
       errorMsg?.classList.remove('visible');
       const submitBtn = form.querySelector('.form-submit') as HTMLButtonElement | null;
-      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Enviando...'; }
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Enviando...';
+      }
 
       try {
         const formData = new FormData(form);
@@ -101,7 +117,10 @@
         }
       } catch (err) {
         errorMsg?.classList.add('visible');
-        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Quiero que me contactéis →'; }
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Solicitar auditoría gratuita →';
+        }
       }
     });
   }

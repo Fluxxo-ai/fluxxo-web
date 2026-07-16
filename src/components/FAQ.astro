@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: "¿Para qué tipo de negocios es Fluxxo?",
-    a: "Trabajamos con cualquier negocio de servicios que quiera conseguir más clientes: despachos de abogados, clínicas, academias, inmobiliarias, asesorías, restaurantes y muchos más. Si tienes clientes, podemos ayudarte a conseguir más."
+    a: "Trabajamos con cualquier negocio de servicios que quiera conseguir más clientes: despachos de abogados, clínicas, academias, inmobiliarias, asesorías y muchos más. Si tienes clientes, podemos ayudarte a conseguir más."
   },
   {
     q: "¿Qué diferencia hay entre Fluxxo y una agencia de marketing tradicional?",
@@ -38,7 +38,9 @@ const faqs = [
             <span class="faq-q-text">{item.q}</span>
             <span class="faq-icon">+</span>
           </div>
-          <div class="faq-answer"><div class="faq-answer-inner">{item.a}</div></div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">{item.a}</div>
+          </div>
         </div>
       ))}
     </div>

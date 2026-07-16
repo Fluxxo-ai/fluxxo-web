@@ -5,7 +5,7 @@
     <div class="footer-top">
       <div>
         <div class="footer-wordmark">flu<em>xx</em>o</div>
-        <p class="footer-desc">Marketing digital automatizado para negocios que quieren crecer sin perder el tiempo.</p>
+        <p class="footer-desc">Marketing digital automatizado e inteligencia artificial para empresas que quieren conseguir más clientes.</p>
         <div class="footer-social">
           <a href="https://www.linkedin.com/company/fluxxoai" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn de Fluxxo">in</a>
           <a href="https://www.instagram.com/fluxxoai" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram de Fluxxo">ig</a>
@@ -18,7 +18,7 @@
           <a href="/#servicios" class="footer-link">Contenido para redes</a>
           <a href="/#servicios" class="footer-link">Gestión de reseñas</a>
           <a href="/#servicios" class="footer-link">Captación de leads</a>
-          <a href="/#servicios" class="footer-link">WhatsApp ventas</a>
+          <a href="/#servicios" class="footer-link">WhatsApp IA</a>
           <a href="/#servicios" class="footer-link">Publicidad digital</a>
         </div>
       </div>
@@ -28,7 +28,6 @@
           <a href="/" class="footer-link">Inicio</a>
           <a href="/nosotros/" class="footer-link">Nosotros</a>
           <a href="/#planes" class="footer-link">Precios</a>
-          <a href="/blog/" class="footer-link">Blog</a>
           <a href="/#contacto" class="footer-link">Contacto</a>
         </div>
       </div>
@@ -48,12 +47,12 @@
   </div>
 </footer>
 
-<div class="floating-cta" id="floatingCta">
-  <a href="/#contacto" class="floating-btn">
+<a href="/#contacto" class="floating-cta" id="floatingCta">
+  <span class="floating-btn">
     <span class="floating-btn-dot"></span>
-    Quiero más clientes →
-  </a>
-</div>
+    Solicitar auditoría gratuita →
+  </span>
+</a>
 
 <script>
   const floatingCta = document.getElementById('floatingCta');
@@ -63,7 +62,6 @@
     }
   });
 
-  // Scroll reveal animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
