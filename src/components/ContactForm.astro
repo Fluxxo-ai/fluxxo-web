@@ -70,7 +70,7 @@
       <p>Reserva ahora una auditoría estratégica gratuita para que podamos analizar tu negocio y detectar oportunidades de crecimiento.</p>
       <button
         class="calendly-btn"
-        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/fluxxohq/30min'}); return false;"
+        onclick="if(typeof Calendly !== 'undefined'){Calendly.initPopupWidget({url:'https://calendly.com/fluxxohq/30min'});}else{window.open('https://calendly.com/fluxxohq/30min','_blank');}return false;"
       >
         Reservar mi auditoría gratuita
       </button>
