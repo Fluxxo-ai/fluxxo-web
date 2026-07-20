@@ -58,6 +58,20 @@
         <label class="form-label" for="problema">¿Cuál es tu principal reto de marketing ahora mismo?</label>
         <input class="form-input" type="text" id="problema" name="problema" placeholder="Ej: No consigo clientes nuevos, no tengo tiempo para el marketing..." />
       </div>
+      <div class="form-group" style="margin-bottom:8px">
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
+          <input
+            type="checkbox"
+            name="rgpd"
+            id="rgpd"
+            required
+            style="margin-top:3px;flex-shrink:0;accent-color:#4D9EFF;width:16px;height:16px;cursor:pointer"
+          />
+          <span style="font-size:12px;color:#999999;line-height:1.6;font-weight:300">
+            He leído y acepto la <a href="/legal/privacidad/" style="color:#4D9EFF;text-decoration:underline" target="_blank">Política de privacidad</a>. Consiento el tratamiento de mis datos personales para gestionar mi solicitud y recibir información sobre los servicios de Fluxxo.
+          </span>
+        </label>
+      </div>
       <button class="form-submit" type="submit">Solicitar auditoría gratuita →</button>
       <p class="form-note">Sin compromiso · Te respondemos en menos de 24h · Tus datos están seguros</p>
       <p class="form-error" id="formError">Ha habido un problema al enviar el formulario. Inténtalo de nuevo o escríbenos directamente.</p>
