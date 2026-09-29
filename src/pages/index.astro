@@ -1,372 +1,282 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Nav from '../components/Nav.astro';
-import Footer from '../components/Footer.astro';
-import FAQ from '../components/FAQ.astro';
-import ContactForm from '../components/ContactForm.astro';
+// Home principal: publicidad digital para empresas y agencias.
+// La web de pymes está en src/pages/pymes.astro (fluxxoai.com/pymes/)
 ---
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Publicidad digital para empresas y agencias | Fluxxo</title>
+<meta name="description" content="Estrategia, ejecución y optimización de campañas en Google, Meta, TikTok, ChatGPT y programática. Paid media para empresas y agencias en España.">
+<link rel="canonical" href="https://fluxxoai.com/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:title" content="Publicidad digital para empresas y agencias | Fluxxo">
+<meta property="og:description" content="Estrategia, ejecución y optimización de campañas en Google, Meta, TikTok, ChatGPT y programática.">
+<meta property="og:url" content="https://fluxxoai.com/">
+<meta property="og:type" content="website">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script is:inline src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Google Tag Manager -->
+<script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5LG96ZPM');</script>
+<!-- Google Analytics 4 -->
+<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-DWERH2TNT7"></script>
+<script is:inline>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DWERH2TNT7');</script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style is:global>
+:root{--bg:#0A0A0A;--card:#111214;--card2:#15171a;--line:#22252b;--blue:#4D9EFF;--bone:#F8F5F0;--mute:#9aa0aa;--dim:#6b717b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--bone);font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.eyebrow{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+h2{font-size:clamp(28px,3.4vw,38px);font-weight:500;letter-spacing:-.02em;margin:12px 0 10px}
+.sub{color:var(--mute);font-size:17px;line-height:1.55;max-width:760px}
+section{padding:80px 0;border-top:1px solid var(--line)}
+.btn{display:inline-flex;align-items:center;gap:10px;border:1px solid #33363d;color:var(--bone);padding:14px 24px;border-radius:12px;font-size:16px;font-weight:500;transition:.2s;cursor:pointer;background:transparent;font-family:inherit}
+.btn:hover{border-color:var(--blue);color:#fff}
+.btn.primary{background:var(--blue);border-color:var(--blue);color:#0A0A0A}
+.btn.primary:hover{background:#6fb2ff}
 
-<Layout
-  title="Agencia de Marketing Automatizado e Inteligencia Artificial para Empresas | Fluxxo"
-  description="Captamos clientes, automatizamos procesos y optimizamos resultados mediante publicidad digital, automatización e IA. Desde 447€/mes. Sin permanencias."
->
-  <Nav />
+/* NAV */
+nav{position:sticky;top:0;z-index:20;background:rgba(10,10,10,.85);backdrop-filter:blur(14px)}
+nav .wrap{display:flex;align-items:center;gap:28px;height:78px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px}
+.wordmark{font-size:21px;font-weight:500;letter-spacing:-.04em;color:var(--bone)}
+.wordmark em{color:var(--blue);font-style:normal}
+.links{display:flex;gap:26px;font-size:15.5px;color:var(--mute);margin-left:12px}
+.links a:hover{color:var(--bone)}
+.pill{border:1px solid rgba(77,158,255,.6);color:var(--blue);border-radius:999px;padding:6px 14px;font-size:14px;transition:.2s}
+.pill:hover{background:rgba(77,158,255,.12)}
+nav .btn{margin-left:auto;padding:11px 22px}
+.pill,.btn,.links a{white-space:nowrap}
+nav .nav-cta{background:var(--blue);border-color:var(--blue);color:#0A0A0A;font-weight:600;border-radius:10px;padding:10px 20px;gap:9px}
+nav .nav-cta:hover{background:#6fb2ff;border-color:#6fb2ff;color:#0A0A0A}
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg">
-      <div class="hero-grid"></div>
-      <div class="hero-glow-1"></div>
-      <div class="hero-glow-2"></div>
-      <div class="hero-line hero-line-1"></div>
-      <div class="hero-line hero-line-2"></div>
-    </div>
-    <div class="hero-inner">
-      <div class="hero-left">
-        <h1 class="hero-h1">
-          Agencia de marketing<br />
-          automatizado e <span class="accent">inteligencia<br />artificial</span> para empresas<br />
-          que quieren conseguir<br />más clientes
-        </h1>
-        <p class="hero-sub">
-          Captamos clientes, automatizamos procesos y optimizamos resultados mediante <strong>publicidad digital, automatización e IA.</strong>
-        </p>
-        <div class="hero-btns">
-          <a href="#contacto" class="btn-primary">Solicitar auditoría gratuita →</a>
-          <a href="#servicios" class="btn-secondary">Ver servicios</a>
-        </div>
-      </div>
-      <div class="hero-metrics">
-        <div class="metric-card featured">
-          <div class="metric-value"><em>3</em>× más leads</div>
-          <div class="metric-label">Media en primeros 90 días</div>
-          <div class="metric-bar"><div class="metric-fill" style="width:75%"></div></div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-value">−<em>70</em>%</div>
-          <div class="metric-label">Coste vs agencia tradicional</div>
-          <div class="metric-bar"><div class="metric-fill" style="width:70%"></div></div>
-        </div>
-        <div class="metrics-small">
-          <div class="metric-small">
-            <div class="metric-small-value"><em>24</em>/7</div>
-            <div class="metric-small-label">Sistema activo</div>
-          </div>
-          <div class="metric-small">
-            <div class="metric-small-value"><em>48</em>h</div>
-            <div class="metric-small-label">Para empezar</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="scroll-hint">
-      <span class="scroll-hint-text">scroll</span>
-      <div class="scroll-hint-arrow">↓</div>
-    </div>
-  </section>
+/* HERO */
+.hero{padding:90px 0 70px;position:relative}
+.hero:before{content:"";position:absolute;right:-10%;top:-120px;width:720px;height:620px;background:radial-gradient(50% 50% at 50% 50%,rgba(77,158,255,.16),transparent 70%);pointer-events:none}
+.hero h1{position:relative;font-size:clamp(36px,5vw,56px);font-weight:500;letter-spacing:-.03em;line-height:1.08;max-width:760px}
+.hero h1 span{color:var(--blue)}
+.hero p{position:relative;color:var(--mute);font-size:18px;line-height:1.65;max-width:600px;margin:22px 0 32px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;position:relative}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:64px;position:relative}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 20px}
+.stat b{font-family:'DM Mono',monospace;font-weight:400;font-size:26px;color:var(--blue);display:block}
+.stat span{display:block;margin-top:10px;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
 
-  <!-- TICKER -->
-  <div class="ticker">
-    <div class="ticker-track">
-      <div class="ticker-item">
-        <em>Gestión de redes sociales</em><span class="ticker-sep">·</span>
-        Reputación online<span class="ticker-sep">·</span>
-        <em>Captación de leads</em><span class="ticker-sep">·</span>
-        Email marketing<span class="ticker-sep">·</span>
-        <em>Publicidad digital</em><span class="ticker-sep">·</span>
-        Análisis de competencia<span class="ticker-sep">·</span>
-        <em>WhatsApp IA</em><span class="ticker-sep">·</span>
-        SEO estratégico<span class="ticker-sep">·</span>
-        <em>Automatizaciones avanzadas</em><span class="ticker-sep">·</span>
-        Reporting mensual<span class="ticker-sep">·</span>
+/* CANALES */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:34px}
+.ch{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 18px;transition:.25s}
+.ch:hover{border-color:rgba(77,158,255,.45)}
+.ch h3{font-size:17px;font-weight:600;margin-bottom:12px;color:var(--blue)}
+.new{font-family:'DM Mono',monospace;font-size:11.5px;color:var(--blue);display:block;margin:-6px 0 12px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:13px;color:#c9cdd4;border:1px solid var(--line);background:var(--card2);border-radius:6px;padding:4px 8px}
+
+/* MARCAS */
+.lead-it{font-style:italic}
+.marquee{position:relative;overflow:hidden;margin-top:48px;padding:10px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.track{display:flex;align-items:center;gap:76px;width:max-content;animation:scroll 45s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.track img{flex:none;opacity:.65;transition:opacity .25s}
+.track img:hover{opacity:1}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* PARA QUIEN */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}
+.who{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 22px}
+.who .eyebrow{font-size:11.5px}
+.who h3{font-size:19px;font-weight:500;margin:12px 0 8px}
+.who p{color:var(--mute);line-height:1.6;font-size:15.5px}
+
+/* PROCESO */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px;text-align:center;position:relative}
+.steps:before{content:"";position:absolute;top:18px;left:12.5%;right:12.5%;height:1px;background:linear-gradient(90deg,var(--line),rgba(77,158,255,.4),var(--line))}
+.step .num{position:relative;width:38px;height:38px;margin:0 auto 18px;border:1px solid rgba(77,158,255,.7);border-radius:50%;display:grid;place-items:center;font-family:'DM Mono',monospace;font-size:12px;color:var(--blue);background:var(--bg)}
+.step h4{font-size:16px;font-weight:600;margin-bottom:6px}
+.step p{color:var(--mute);font-size:14.5px;line-height:1.5}
+
+/* CONTACTO */
+#contacto{text-align:center}
+#contacto .sub{margin:0 auto}
+form{max-width:580px;margin:32px auto 0;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 22px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{display:block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin:14px 0 6px}
+input,textarea{width:100%;background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:12px 14px;color:var(--bone);font:inherit;font-size:15px;outline:none;transition:.2s}
+input:focus,textarea:focus{border-color:var(--blue)}
+textarea{min-height:64px;resize:vertical}
+.consent{display:flex;gap:12px;align-items:flex-start;background:var(--card2);border-radius:10px;padding:14px;margin:16px 0;font-size:13.5px;color:var(--mute);line-height:1.5}
+.consent input{width:16px;height:16px;margin-top:2px;flex:none;accent-color:var(--blue)}
+.consent a{color:var(--blue)}
+form .btn{width:100%;justify-content:center;font-size:17px}
+.ferr{display:none;color:#ff7a7a;font-size:14px;text-align:center;margin-top:10px}.ferr.show{display:block}
+.fok{display:none;max-width:580px;margin:32px auto 0;background:var(--card);border:1px solid rgba(77,158,255,.5);border-radius:18px;padding:40px 26px}
+.fok.show{display:block}.fok-icon{width:48px;height:48px;border-radius:50%;background:rgba(77,158,255,.15);color:var(--blue);display:grid;place-items:center;font-size:22px;margin:0 auto 16px}
+.fok h3{font-size:22px;font-weight:500;margin-bottom:10px}.fok p{color:var(--mute);line-height:1.6;margin-bottom:22px}
+.fine{text-align:center;font-size:13px;color:var(--dim);margin-top:12px}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:50px 0 30px}
+.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px}
+
+.fgrid p{color:var(--dim);margin:14px 0 20px;line-height:1.6;max-width:340px}
+.social{display:flex;gap:10px}
+.social a{width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--line);background:var(--card);border-radius:10px;color:var(--mute);font-size:15px;transition:.2s}
+.social a:hover{border-color:var(--blue);color:var(--bone)}
+.fcol h5{font-family:'DM Mono',monospace;font-weight:400;font-size:11.5px;letter-spacing:.14em;color:var(--dim);margin-bottom:14px}
+.fcol a{display:block;color:#c9cdd4;margin-bottom:9px;font-size:15.5px}
+.fcol a:hover{color:var(--blue)}
+.fbottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;border-top:1px solid var(--line);margin-top:40px;padding-top:24px;font-family:'DM Mono',monospace;font-size:12.5px;color:var(--dim)}
+
+/* FLOATING CTA */
+.float{position:fixed;right:28px;bottom:28px;z-index:30;display:flex;align-items:center;gap:12px;background:var(--blue);color:#0A0A0A;font-weight:600;font-size:17px;padding:16px 26px;border-radius:999px;box-shadow:0 0 0 1px rgba(77,158,255,.4),0 10px 40px rgba(77,158,255,.35);transition:transform .25s,opacity .3s}
+.float:before{content:"";width:8px;height:8px;border-radius:50%;background:#0A0A0A;animation:pulse 1.8s ease-in-out infinite}
+.float:hover{transform:translateY(-2px)}
+.float.hide{opacity:0;pointer-events:none;transform:translateY(12px)}
+@keyframes pulse{50%{opacity:.35}}
+
+@media(max-width:760px){.links{display:none}.grid3,.fgrid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.steps:before{display:none}}
+@media(max-width:560px){.grid3,.grid2,.stats,.fgrid,.row{grid-template-columns:1fr}nav .pill{display:none}.float{right:16px;left:16px;justify-content:center}}
+</style>
+</head>
+<body id="top">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LG96ZPM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top" aria-label="Fluxxo"><svg width="30" height="30" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M3 13C3 7.5 6.8 3 13 3" stroke="#4D9EFF" stroke-width="2.2" stroke-linecap="round"/><path d="M3 13C3 18.5 6.8 23 13 23" stroke="#4D9EFF" stroke-width="2.2" stroke-linecap="round"/><path d="M13 3C18.5 3 21.5 7.5 21.5 13C21.5 18.5 18.5 23 13 23" stroke="#4D9EFF" stroke-width="2.2" stroke-linecap="round"/><circle cx="21.5" cy="13" r="2.5" fill="#4D9EFF"/></svg><span class="wordmark">flu<em>xx</em>o</span></a>
+  <div class="links">
+    <a href="#servicios">Servicios</a>
+    <a href="#experiencia">Experiencia</a>
+  </div>
+  <a class="pill" href="/pymes/">¿Eres una pyme?</a>
+  <a class="btn nav-cta" href="#contacto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Contacto</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1>Publicidad digital que<br><span>genera resultados medibles.</span></h1>
+  <p>Estrategia, ejecución y optimización de campañas en Google, Meta, TikTok, ChatGPT y plataformas programáticas. Equipo especializado, reporting transparente.</p>
+  <div class="ctas"><a class="btn primary" href="#contacto">Solicitar propuesta</a><a class="btn" href="#experiencia">Ver experiencia</a></div>
+  <div class="stats">
+    <div class="stat"><b>+8 años</b><span>de experiencia en paid media</span></div>
+    <div class="stat"><b>+15</b><span>marcas gestionadas</span></div>
+    <div class="stat"><b>+10M€</b><span>invertidos en campañas</span></div>
+  </div>
+</div></header>
+
+<section id="servicios"><div class="wrap">
+  <span class="eyebrow">Canales</span>
+  <h2>Todo el ecosistema de paid media.</h2>
+  <p class="sub">Gestionamos cada canal con estrategia propia y optimización continua basada en datos.</p>
+  <div class="grid3">
+    <div class="ch"><h3>Google Ads</h3><div class="tags"><span>Search</span><span>Display</span><span>Shopping</span><span>YouTube</span><span>Performance Max</span><span>Demand Gen</span></div></div>
+    <div class="ch"><h3>Meta Ads</h3><div class="tags"><span>Conversión</span><span>Awareness</span><span>Catálogo</span><span>Remarketing</span><span>Lead Ads</span></div></div>
+    <div class="ch"><h3>ChatGPT Ads</h3><span class="new">↗ Nuevo en España</span><div class="tags"><span>Búsqueda IA</span><span>Sponsored answers</span><span>Early access</span></div></div>
+    <div class="ch"><h3>TikTok Ads</h3><div class="tags"><span>In-Feed</span><span>TopView</span><span>Spark Ads</span><span>Branded Hashtag</span></div></div>
+    <div class="ch"><h3>Programática</h3><div class="tags"><span>Display</span><span>Vídeo</span><span>Entornos premium</span><span>DSP</span></div></div>
+    <div class="ch"><h3>Audio digital</h3><div class="tags"><span>Spotify Ads</span><span>Podcast ads</span><span>Audio programático</span></div></div>
+  </div>
+</div></section>
+
+<section id="experiencia"><div class="wrap">
+  <span class="eyebrow">Experiencia</span>
+  <h2>Marcas que han confiado en nuestro equipo.</h2>
+  <p class="sub lead-it">Nuestro equipo acumula años de experiencia gestionando campañas para algunas de las marcas más reconocidas de España.</p>
+</div>
+  <div class="marquee"><div class="track"><img src="/logos/marcas/lidl.png" alt="Lidl" style="height:54px"><img src="/logos/marcas/tous.png" alt="Tous" style="height:32px"><img src="/logos/marcas/isdin.png" alt="ISDIN" style="height:28px"><img src="/logos/marcas/mediamarkt.png" alt="MediaMarkt" style="height:30px"><img src="/logos/marcas/renfe.png" alt="Renfe" style="height:36px"><img src="/logos/marcas/porcelanosa.png" alt="Porcelanosa" style="height:24px"><img src="/logos/marcas/barcelona.png" alt="Ajuntament de Barcelona" style="height:34px"><img src="/logos/marcas/circuit-barcelona-catalunya.png" alt="Circuit de Barcelona-Catalunya" style="height:56px"><img src="/logos/marcas/gaes.png" alt="GAES" style="height:34px"><img src="/logos/marcas/macba.png" alt="MACBA" style="height:50px"><img src="/logos/marcas/delonghi.png" alt="De'Longhi" style="height:30px"><img src="/logos/marcas/lidl.png" alt="" style="height:54px" aria-hidden="true"><img src="/logos/marcas/tous.png" alt="" style="height:32px" aria-hidden="true"><img src="/logos/marcas/isdin.png" alt="" style="height:28px" aria-hidden="true"><img src="/logos/marcas/mediamarkt.png" alt="" style="height:30px" aria-hidden="true"><img src="/logos/marcas/renfe.png" alt="" style="height:36px" aria-hidden="true"><img src="/logos/marcas/porcelanosa.png" alt="" style="height:24px" aria-hidden="true"><img src="/logos/marcas/barcelona.png" alt="" style="height:34px" aria-hidden="true"><img src="/logos/marcas/circuit-barcelona-catalunya.png" alt="" style="height:56px" aria-hidden="true"><img src="/logos/marcas/gaes.png" alt="" style="height:34px" aria-hidden="true"><img src="/logos/marcas/macba.png" alt="" style="height:50px" aria-hidden="true"><img src="/logos/marcas/delonghi.png" alt="" style="height:30px" aria-hidden="true"></div></div>
+</section>
+
+<section id="para-quien"><div class="wrap">
+  <span class="eyebrow">Para quién</span>
+  <h2>¿Con quién trabajamos?</h2>
+  <div class="grid2">
+    <div class="who"><span class="eyebrow">01 — Empresas</span><h3>Equipos de marketing internos</h3><p>Empresas con equipo propio que necesitan un especialista externo en paid media para gestionar o escalar sus campañas digitales.</p></div>
+    <div class="who"><span class="eyebrow">02 — Agencias</span><h3>Agencias que buscan partner</h3><p>Agencias que quieren ampliar su oferta sin contratar internamente. Trabajamos bajo tu marca, de forma confidencial.</p></div>
+  </div>
+</div></section>
+
+<section id="proceso"><div class="wrap">
+  <span class="eyebrow">Proceso</span>
+  <h2>Cómo trabajamos.</h2>
+  <div class="steps">
+    <div class="step"><div class="num">01</div><h4>Briefing</h4><p>Objetivos, audiencia y contexto competitivo</p></div>
+    <div class="step"><div class="num">02</div><h4>Estrategia</h4><p>Canales, formatos, presupuesto y KPIs</p></div>
+    <div class="step"><div class="num">03</div><h4>Ejecución</h4><p>Activación y gestión de campañas</p></div>
+    <div class="step"><div class="num">04</div><h4>Optimización</h4><p>Análisis continuo y reporting detallado</p></div>
+  </div>
+</div></section>
+
+<section id="contacto"><div class="wrap">
+  <span class="eyebrow">Contacto</span>
+  <h2>¿Tienes un objetivo concreto?</h2>
+  <p class="sub">Cuéntanos el reto y te proponemos una estrategia en 48 horas. Sin compromiso.</p>
+  <form id="leadForm" name="contacto-empresas" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contacto-empresas">
+    <p style="display:none"><label>No rellenar <input name="bot-field"></label></p>
+    <div class="row">
+      <div><label>Nombre</label><input name="nombre" required placeholder="Tu nombre"></div>
+      <div><label>Empresa</label><input name="empresa" placeholder="Nombre de la empresa"></div>
+    </div>
+    <div class="row">
+      <div><label>Email</label><input name="email" type="email" required placeholder="tu@empresa.com"></div>
+      <div><label>Teléfono</label><input name="telefono" type="tel" placeholder="+34 600 000 000"></div>
+    </div>
+    <label>Objetivo principal</label><textarea name="objetivo" placeholder="Cuéntanos brevemente..."></textarea>
+    <div class="consent"><input type="checkbox" name="privacidad" required><span>He leído y acepto la <a href="/legal/privacidad/" target="_blank" rel="noopener">Política de privacidad</a>. Consiento el tratamiento de mis datos para gestionar mi solicitud y recibir información sobre los servicios de Fluxxo.</span></div>
+    <button type="submit" class="btn primary" id="submitBtn">Solicitar propuesta</button>
+    <p class="fine">Sin compromiso · Respuesta en menos de 24h</p>
+    <p class="ferr" id="formError">Ha habido un problema al enviar el formulario. Inténtalo de nuevo o escríbenos directamente.</p>
+  </form>
+  <div class="fok" id="formSuccess">
+    <div class="fok-icon">✓</div>
+    <h3>¡Hemos recibido tu solicitud!</h3>
+    <p>Te respondemos en menos de 24h. Si lo prefieres, reserva ya una llamada para hablar de tu objetivo.</p>
+    <a class="btn primary" href="https://calendly.com/fluxxohq/30min" target="_blank" rel="noopener" onclick="if(typeof Calendly!=='undefined'){Calendly.initPopupWidget({url:'https://calendly.com/fluxxohq/30min'});return false;}">Reservar una llamada</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div>
+      <a class="brand" href="#top" aria-label="Fluxxo"><svg width="30" height="30" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M3 13C3 7.5 6.8 3 13 3" stroke="#4D9EFF" stroke-width="2.2" stroke-linecap="round"/><path d="M3 13C3 18.5 6.8 23 13 23" stroke="#4D9EFF" stroke-width="2.2" stroke-linecap="round"/><path d="M13 3C18.5 3 21.5 7.5 21.5 13C21.5 18.5 18.5 23 13 23" stroke="#4D9EFF" stroke-width="2.2" stroke-linecap="round"/><circle cx="21.5" cy="13" r="2.5" fill="#4D9EFF"/></svg><span class="wordmark">flu<em>xx</em>o</span></a>
+      <p>Publicidad digital de alto rendimiento para empresas y agencias en España.</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/company/fluxxoai" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://www.instagram.com/fluxxoai" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+        <a href="https://www.facebook.com/fluxxoai" target="_blank" rel="noopener" aria-label="Facebook">fb</a>
       </div>
-      <div class="ticker-item">
-        <em>Gestión de redes sociales</em><span class="ticker-sep">·</span>
-        Reputación online<span class="ticker-sep">·</span>
-        <em>Captación de leads</em><span class="ticker-sep">·</span>
-        Email marketing<span class="ticker-sep">·</span>
-        <em>Publicidad digital</em><span class="ticker-sep">·</span>
-        Análisis de competencia<span class="ticker-sep">·</span>
-        <em>WhatsApp IA</em><span class="ticker-sep">·</span>
-        SEO estratégico<span class="ticker-sep">·</span>
-        <em>Automatizaciones avanzadas</em><span class="ticker-sep">·</span>
-        Reporting mensual<span class="ticker-sep">·</span>
-      </div>
+    </div>
+    <div class="fcol"><h5>SERVICIOS</h5>
+      <a href="#servicios">Google Ads</a><a href="#servicios">Meta Ads</a><a href="#servicios">ChatGPT Ads</a><a href="#servicios">TikTok Ads</a><a href="#servicios">Programática</a>
+    </div>
+    <div class="fcol"><h5>EMPRESA</h5>
+      <a href="#top">Inicio</a><a href="/pymes/">¿Eres una pyme?</a><a href="#contacto">Contacto</a>
+      <a href="/legal/aviso-legal/" target="_blank" rel="noopener">Aviso legal</a>
+      <a href="/legal/privacidad/" target="_blank" rel="noopener">Política de privacidad</a>
+      <a href="/legal/cookies/" target="_blank" rel="noopener">Política de cookies</a>
     </div>
   </div>
+  <div class="fbottom"><span>© 2026 Fluxxo AI · fluxxoai.com · España</span><span>Publicidad digital para empresas y agencias</span></div>
+</div></footer>
 
-  <!-- SERVICIOS -->
-  <section id="servicios" class="section">
-    <div class="section-inner">
-      <div class="section-tag reveal">Lo que hacemos</div>
-      <h2 class="section-title reveal">Todo el marketing de tu negocio,<br /><span class="dim">gestionado para ti.</span></h2>
-      <p class="section-sub reveal">Un sistema completo que capta clientes, cuida tu imagen online y mantiene activas tus redes sociales. Sin que tengas que dedicarle tiempo.</p>
-      <div class="services-grid reveal">
-        <div class="service-cell">
-          <div class="service-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-          </div>
-          <div class="service-name">Contenido para redes sociales</div>
-          <div class="service-desc">Publicaciones semanales para Instagram, LinkedIn, Facebook, TikTok y Google Business. Con textos, imágenes y vídeos incluidos</div>
-        </div>
-        <div class="service-cell">
-          <div class="service-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <div class="service-name">Gestión de reseñas y reputación</div>
-          <div class="service-desc">Monitorizamos y respondemos tus reseñas de Google en minutos. Detectamos valoraciones negativas al instante para actuar rápido</div>
-        </div>
-        <div class="service-cell">
-          <div class="service-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div class="service-name">Captación y seguimiento de leads</div>
-          <div class="service-desc">Respondemos a tus contactos en segundos, los cualificamos y agendamos llamadas automáticamente. Nunca pierdas una oportunidad</div>
-        </div>
-        <div class="service-cell">
-          <div class="service-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <div class="service-name">WhatsApp IA</div>
-          <div class="service-desc">Un asistente de IA disponible 24/7 en WhatsApp Business que responde dudas, envía información y agenda citas por ti</div>
-        </div>
-        <div class="service-cell">
-          <div class="service-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          </div>
-          <div class="service-name">Creatividades para anuncios</div>
-          <div class="service-desc">Generamos textos, imágenes y vídeos para tus campañas en Google, Meta, TikTok y ChatGPT Ads. Listos para publicar cada semana</div>
-        </div>
-        <div class="service-cell">
-          <div class="service-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          </div>
-          <div class="service-name">Análisis de competencia</div>
-          <div class="service-desc">Cada semana recibes un informe con lo que están haciendo tus competidores: sus anuncios, cambios en SEO y nuevas ofertas</div>
-        </div>
-        <div class="service-cell">
-          <div class="service-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-          </div>
-          <div class="service-name">Informe mensual de resultados</div>
-          <div class="service-desc">Cada mes recibes un resumen claro de todo lo conseguido: leads, publicaciones, reseñas y recomendaciones para el siguiente mes</div>
-        </div>
-        <div class="service-cell">
-          <div class="service-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div class="service-name">Email marketing</div>
-          <div class="service-desc">Newsletters, secuencias de bienvenida y campañas de email personalizadas para mantener el contacto con tus clientes</div>
-        </div>
-        <div class="service-cell">
-          <div class="service-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <div class="service-name">SEO estratégico</div>
-          <div class="service-desc">Artículos optimizados para que Google te encuentre, análisis de palabras clave y mejoras técnicas en tu web</div>
-        </div>
-        <div class="service-cell">
-          <div class="service-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          </div>
-          <div class="service-name">Gestión de publicidad digital</div>
-          <div class="service-desc">Gestionamos tus campañas de pago en Google, Meta, TikTok y ChatGPT para conseguir el máximo retorno de tu inversión publicitaria</div>
-        </div>
-      </div>
-    </div>
-  </section>
+<a class="float" id="float" href="#contacto">Solicitar auditoría gratuita</a>
 
-  <!-- RESULTADOS -->
-  <section id="resultados" class="section">
-    <div class="section-inner">
-      <div class="section-tag reveal">Resultados</div>
-      <h2 class="section-title reveal">Números que<br /><span class="dim">hablan por nosotros.</span></h2>
-      <p class="section-sub reveal">Resultados conseguidos con nuestros clientes en los primeros 90 días de activación del sistema.</p>
-      <div class="results-grid">
-        <div class="result-card reveal reveal-delay-1">
-          <div class="result-sector">Deporte y entretenimiento · Prisma Padel</div>
-          <div class="result-number">+<em>312</em>%</div>
-          <div class="result-desc">Incremento de inscripciones al evento en 45 días</div>
-          <div class="result-stats">
-            <div class="result-stat">Alcance orgánico antes <span>bajo</span></div>
-            <div class="result-stat">Alcance tras campaña <span class="accent">+18.000</span></div>
-            <div class="result-stat">Coste por inscripción <span class="positive">−54%</span></div>
-          </div>
-        </div>
-        <div class="result-card reveal reveal-delay-2">
-          <div class="result-sector">Sector salud · Clínica Dental</div>
-          <div class="result-number"><em>5</em>★</div>
-          <div class="result-desc">Valoración perfecta en Google mantenida con gestión activa de reseñas</div>
-          <div class="result-stats">
-            <div class="result-stat">Reseñas antes <span>23</span></div>
-            <div class="result-stat">Reseñas después <span class="accent">81</span></div>
-            <div class="result-stat">Tiempo de respuesta <span class="positive">2 min</span></div>
-          </div>
-        </div>
-        <div class="result-card reveal reveal-delay-3">
-          <div class="result-sector">Reformas del hogar · Gen Builders</div>
-          <div class="result-number">−<em>62</em>%</div>
-          <div class="result-desc">Reducción del coste de adquisición de cada nuevo cliente</div>
-          <div class="result-stats">
-            <div class="result-stat">Coste por cliente antes <span>340€</span></div>
-            <div class="result-stat">Coste por cliente después <span class="accent">129€</span></div>
-            <div class="result-stat">Retorno de la inversión <span class="positive">5.4×</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESO -->
-  <section class="section">
-    <div class="section-inner">
-      <div class="section-tag reveal">El proceso</div>
-      <h2 class="section-title reveal">Empiezas a ver resultados<br /><span class="dim">en menos de 48 horas.</span></h2>
-      <div class="process-grid">
-        <div class="process-step reveal reveal-delay-1">
-          <div class="step-circle">01</div>
-          <div class="step-title">Auditoría de tu negocio</div>
-          <div class="step-desc">Analizamos tu situación actual, tu competencia y las oportunidades de crecimiento específicas para tu sector.</div>
-        </div>
-        <div class="process-step reveal reveal-delay-2">
-          <div class="step-circle">02</div>
-          <div class="step-title">Configuramos tu sistema</div>
-          <div class="step-desc">Adaptamos todo al lenguaje de tu sector, tus competidores y tus objetivos específicos de captación y automatización.</div>
-        </div>
-        <div class="process-step reveal reveal-delay-3">
-          <div class="step-circle">03</div>
-          <div class="step-title">Tú apruebas todo</div>
-          <div class="step-desc">Revisas el primer ciclo antes de publicar nada. Nada sale sin tu visto bueno, siempre.</div>
-        </div>
-        <div class="process-step reveal reveal-delay-4">
-          <div class="step-circle">04</div>
-          <div class="step-title">El sistema trabaja solo</div>
-          <div class="step-desc">A partir de aquí, el sistema gestiona tu marketing 24/7. Tú recibes un informe mensual y te centras en tu negocio.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PLANES -->
-  <section id="planes" class="section">
-    <div class="section-inner">
-      <div class="section-tag reveal">Planes y precios</div>
-      <h2 class="section-title reveal">Una inversión que<br /><span class="dim">se paga sola.</span></h2>
-      <p class="section-sub reveal">Una agencia tradicional cobra entre 1.500€ y 4.000€/mes por servicios equivalentes. Nosotros lo hacemos mejor, más rápido y desde 447€/mes.</p>
-      <div class="plans-grid reveal">
-
-        <!-- LAUNCH -->
-        <div class="plan-card">
-          <div class="plan-head">
-            <div class="plan-name-label">Fluxxo Launch</div>
-            <div class="plan-tagline">Construye una presencia digital sólida y automatiza las tareas básicas de marketing.</div>
-            <div class="plan-price"><sup>€</sup>447<sub>/mes</sub></div>
-            <div class="plan-annual">→ 397€/mes pagando anualmente</div>
-            <div class="plan-save">Ahorra 600€/año</div>
-          </div>
-          <div class="plan-body">
-            <div class="plan-feat">Sesión estratégica inicial</div>
-            <div class="plan-feat">Redes sociales (Instagram, LinkedIn, Facebook)</div>
-            <div class="plan-feat">Gestión de reseñas y reputación</div>
-            <div class="plan-feat">Email marketing básico</div>
-            <div class="plan-feat">Informes mensuales de resultados</div>
-            <div class="plan-feat">Portal del cliente</div>
-            <div class="plan-feat">Soporte por email</div>
-          </div>
-          <p class="plan-cta-text">Ahorra tiempo y profesionaliza tu presencia digital.</p>
-          <a href="#contacto" class="plan-btn btn-plan-secondary">Empezar con Launch</a>
-        </div>
-
-        <!-- SCALE -->
-        <div class="plan-card featured">
-          <span class="popular-badge">El más elegido</span>
-          <div class="plan-head featured-head">
-            <div class="plan-name-label">Fluxxo Scale</div>
-            <div class="plan-tagline">Sistema de captación automatizada para empresas que quieren crecer de forma predecible.</div>
-            <div class="plan-price"><sup>€</sup>797<sub>/mes</sub></div>
-            <div class="plan-annual">→ 697€/mes pagando anualmente</div>
-            <div class="plan-save">Ahorra 1.200€/año</div>
-          </div>
-          <div class="plan-body">
-            <div class="plan-feat">Todo lo de Launch</div>
-            <div class="plan-feat">Captación de leads automatizada</div>
-            <div class="plan-feat">Creatividades para anuncios</div>
-            <div class="plan-feat">TikTok marketing</div>
-            <div class="plan-feat">Análisis de competencia semanal</div>
-            <div class="plan-feat">Email marketing avanzado con secuencias</div>
-            <div class="plan-feat">Seguimiento automatizado de leads</div>
-            <div class="plan-feat">Optimización continua de campañas</div>
-            <div class="plan-feat">Reunión estratégica mensual</div>
-          </div>
-          <p class="plan-cta-text">Genera oportunidades de negocio de forma constante.</p>
-          <a href="#contacto" class="plan-btn btn-plan-primary">Empezar con Scale</a>
-        </div>
-
-        <!-- DOMINATE -->
-        <div class="plan-card">
-          <div class="plan-head">
-            <div class="plan-name-label">Fluxxo Dominate</div>
-            <div class="plan-tagline">Sistema completo de crecimiento con captación, conversión y optimización avanzada.</div>
-            <div class="plan-price"><sup>€</sup>1.397<sub>/mes</sub></div>
-            <div class="plan-annual">→ 1.247€/mes pagando anualmente</div>
-            <div class="plan-save">Ahorra 1.800€/año</div>
-          </div>
-          <div class="plan-body">
-            <div class="plan-feat">Todo lo de Scale</div>
-            <div class="plan-feat">Gestión de Paid Ads (Google, Meta, TikTok y ChatGPT)</div>
-            <div class="plan-feat">WhatsApp IA 24/7</div>
-            <div class="plan-feat">SEO estratégico</div>
-            <div class="plan-feat">Dashboard de resultados en tiempo real</div>
-            <div class="plan-feat">Optimización continua de conversiones</div>
-            <div class="plan-feat">Reuniones estratégicas quincenales</div>
-            <div class="plan-feat">Auditoría trimestral de crecimiento</div>
-            <div class="plan-feat">Soporte prioritario</div>
-            <div class="plan-feat">Automatizaciones avanzadas</div>
-          </div>
-          <p class="plan-cta-text">Escala tu marketing con un sistema completo de captación y automatización.</p>
-          <a href="#contacto" class="plan-btn btn-plan-secondary">Empezar con Dominate</a>
-        </div>
-
-      </div>
-
-      <div class="addons-label">Servicios adicionales disponibles en cualquier plan</div>
-      <div class="addons-grid reveal">
-        <div class="addon"><div class="addon-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="addon-name">Captación de leads</div><div class="addon-price">+199€/mes</div></div></div>
-        <div class="addon"><div class="addon-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div><div class="addon-name">WhatsApp IA</div><div class="addon-price">+249€/mes</div></div></div>
-        <div class="addon"><div class="addon-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div><div class="addon-name">Creatividades para anuncios</div><div class="addon-price">+149€/mes</div></div></div>
-        <div class="addon"><div class="addon-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><line x1="12" y1="3" x2="12" y2="3"/><circle cx="12" cy="16" r="1"/></svg></div><div><div class="addon-name">Chatbot para tu web</div><div class="addon-price">+199€/mes</div></div></div>
-        <div class="addon"><div class="addon-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div><div class="addon-name">SEO estratégico</div><div class="addon-price">+199€/mes</div></div></div>
-        <div class="addon"><div class="addon-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div><div class="addon-name">Gestión publicidad digital</div><div class="addon-price">+299€/mes</div></div></div>
-      </div>
-    </div>
-  </section>
-
-  <FAQ />
-
-  <!-- CLIENTES -->
-  <section class="section clients-section">
-    <div class="section-inner">
-      <div class="section-tag reveal">Marcas que han confiado en nuestro equipo</div>
-      <div class="clients-grid reveal">
-        <div class="client-logo-item">
-          <img src="/logos/floridablanca.png" alt="Clínica Dental Floridablanca" class="client-logo-img" />
-        </div>
-        <div class="client-logo-item">
-          <img src="/logos/dr_rivera.png" alt="Dr. Pedro Rivera Clínica Dental" class="client-logo-img" />
-        </div>
-        <div class="client-logo-item">
-          <img src="/logos/gen_builders.png" alt="Gen Builders" class="client-logo-img" />
-        </div>
-        <div class="client-logo-item">
-          <img src="/logos/prisma.png" alt="Prisma Padel" class="client-logo-img" />
-        </div>
-        <div class="client-logo-item">
-          <img src="/logos/swisscolors.png" alt="Swisscolors" class="client-logo-img" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <ContactForm />
-  <Footer />
-</Layout>
+<script is:inline>
+// Envío del formulario (Netlify Forms) sin salir de la página
+(function(){
+  var form=document.getElementById('leadForm'),ok=document.getElementById('formSuccess'),err=document.getElementById('formError'),btn=document.getElementById('submitBtn');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();err.classList.remove('show');btn.disabled=true;btn.textContent='Enviando...';
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()})
+      .then(function(r){if(!r.ok)throw 0;form.style.display='none';ok.classList.add('show');
+        window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_submit_empresas'});})
+      .catch(function(){err.classList.add('show');btn.disabled=false;btn.textContent='Solicitar propuesta';});
+  });
+})();
+// Oculta el CTA flotante mientras el formulario está en pantalla para que no tape el botón de enviar
+const f=document.getElementById('float');
+new IntersectionObserver(e=>f.classList.toggle('hide',e[0].isIntersecting),{threshold:.25}).observe(document.querySelector('#contacto'));
+</script>
+</body>
+</html>
