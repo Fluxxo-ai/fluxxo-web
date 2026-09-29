@@ -1,7 +1,12 @@
 ---
+// Páginas legales y 404 son comunes a toda la web: su logo lleva a la home general.
+// El resto (pymes, nosotros, blog) forman parte de la sección de pymes.
+const path = Astro.url.pathname;
+const esComun = path.startsWith('/legal') || path.startsWith('/404');
+const logoHref = esComun ? '/' : '/pymes/';
 ---
 <nav class="nav" id="nav">
-  <a href="/pymes/" class="nav-logo">
+  <a href={logoHref} class="nav-logo">
     <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-label="Fluxxo logo">
       <path d="M3 13C3 7.5 6.8 3 13 3" stroke="#4D9EFF" stroke-width="2.2" stroke-linecap="round"/>
       <path d="M3 13C3 18.5 6.8 23 13 23" stroke="#4D9EFF" stroke-width="2.2" stroke-linecap="round"/>
@@ -14,6 +19,7 @@
     <a href="/pymes/#servicios" class="nav-link">Servicios</a>
     <a href="/pymes/#planes" class="nav-link">Precios</a>
     <a href="/pymes/#faq" class="nav-link">Preguntas</a>
+    <a href="/" class="nav-pill">¿Eres empresa o agencia?</a>
     <a href="/pymes/#contacto" class="nav-cta">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
         <rect x="3" y="5" width="18" height="14" rx="2"/>
@@ -23,6 +29,11 @@
     </a>
   </div>
 </nav>
+
+<style>
+  .nav-pill{font-size:13px;color:#4D9EFF;border:1px solid rgba(77,158,255,.6);border-radius:999px;padding:6px 14px;white-space:nowrap;text-decoration:none;transition:background .2s}
+  .nav-pill:hover{background:rgba(77,158,255,.12)}
+</style>
 
 <script>
   const nav = document.getElementById('nav');
