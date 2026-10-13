@@ -72,22 +72,16 @@
           </span>
         </label>
       </div>
-      <button class="form-submit" type="submit">Solicitar auditoría gratuita →</button>
+      <button class="form-submit" type="submit">Solicitar auditoría gratuita</button>
       <p class="form-note">Sin compromiso · Te respondemos en menos de 24h · Tus datos están seguros</p>
       <p class="form-error" id="formError">Ha habido un problema al enviar el formulario. Inténtalo de nuevo o escríbenos directamente.</p>
     </form>
 
-    <!-- Mensaje de éxito + Calendly -->
+    <!-- Mensaje de éxito -->
     <div class="form-success" id="formSuccess">
       <div class="form-success-icon">✓</div>
       <h3>¡Hemos recibido tu solicitud!</h3>
-      <p>Reserva ahora una auditoría estratégica gratuita para que podamos analizar tu negocio y detectar oportunidades de crecimiento.</p>
-      <button
-        class="calendly-btn"
-        onclick="if(typeof Calendly !== 'undefined'){Calendly.initPopupWidget({url:'https://calendly.com/fluxxohq/30min'});}else{window.open('https://calendly.com/fluxxohq/30min','_blank');}return false;"
-      >
-        Reservar mi auditoría gratuita
-      </button>
+      <p>Te contactaremos en menos de 24 horas para analizar tu negocio y detectar oportunidades de crecimiento.</p>
     </div>
   </div>
 </section>
@@ -127,7 +121,7 @@
         errorMsg?.classList.add('visible');
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.textContent = 'Solicitar auditoría gratuita →';
+          submitBtn.textContent = 'Solicitar auditoría gratuita';
         }
       }
     });

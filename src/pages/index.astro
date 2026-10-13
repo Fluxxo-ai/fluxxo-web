@@ -15,8 +15,6 @@
 <meta property="og:description" content="Estrategia, ejecución y optimización de campañas en Google, Meta, TikTok, ChatGPT y programática.">
 <meta property="og:url" content="https://fluxxoai.com/">
 <meta property="og:type" content="website">
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script is:inline src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <!-- Google Tag Manager -->
 <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5LG96ZPM');</script>
 <!-- Google Analytics 4 -->
@@ -112,21 +110,20 @@ textarea{min-height:64px;resize:vertical}
 .consent a{color:var(--blue)}
 form .btn{width:100%;justify-content:center;font-size:15px}
 .ferr{display:none;color:#ff7a7a;font-size:14px;text-align:center;margin-top:10px}.ferr.show{display:block}
-.fok{display:none;max-width:580px;margin:32px auto 0;background:var(--card);border:1px solid rgba(77,158,255,.5);border-radius:18px;padding:40px 26px}
+.fok{display:none;max-width:580px;margin:32px auto 0;background:var(--card);border:1px solid rgba(77,158,255,.5);border-radius:18px;padding:40px 26px;text-align:center}
 .fok.show{display:block}.fok-icon{width:48px;height:48px;border-radius:50%;background:rgba(77,158,255,.15);color:var(--blue);display:grid;place-items:center;font-size:22px;margin:0 auto 16px}
-.fok h3{font-size:22px;font-weight:500;margin-bottom:10px}.fok p{color:var(--mute);line-height:1.6;margin-bottom:22px}
+.fok h3{font-size:22px;font-weight:500;margin-bottom:10px}.fok p{color:var(--mute);line-height:1.6}
 .fine{text-align:center;font-size:13px;color:var(--dim);margin-top:12px}
 
 /* FOOTER */
 footer{border-top:1px solid var(--line);padding:50px 0 30px}
 .fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px}
-
 .fgrid p{color:var(--dim);margin:14px 0 20px;line-height:1.7;font-size:14px;max-width:340px}
 .social{display:flex;gap:10px}
 .social a{width:36px;height:36px;font-size:13px;display:grid;place-items:center;border:1px solid var(--line);background:var(--card);border-radius:10px;color:var(--mute);font-size:15px;transition:.2s}
 .social a:hover{border-color:var(--blue);color:var(--bone)}
 .fcol h5{font-family:'DM Mono',monospace;font-weight:400;font-size:11.5px;letter-spacing:.14em;color:var(--dim);margin-bottom:14px}
-.fcol a{display:block;color:#c9cdd4;margin-bottom:9px;font-size:14px}
+.fcol a{display:block;color:var(--soft);margin-bottom:9px;font-size:14px}
 .fcol a:hover{color:var(--blue)}
 .fbottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;border-top:1px solid var(--line);margin-top:40px;padding-top:24px;font-family:'DM Mono',monospace;font-size:12.5px;color:var(--dim)}
 
@@ -231,8 +228,7 @@ footer{border-top:1px solid var(--line);padding:50px 0 30px}
   <div class="fok" id="formSuccess">
     <div class="fok-icon">✓</div>
     <h3>¡Hemos recibido tu solicitud!</h3>
-    <p>Te respondemos en menos de 24h. Si lo prefieres, reserva ya una llamada para hablar de tu objetivo.</p>
-    <a class="btn primary" href="https://calendly.com/fluxxohq/30min" target="_blank" rel="noopener" onclick="if(typeof Calendly!=='undefined'){Calendly.initPopupWidget({url:'https://calendly.com/fluxxohq/30min'});return false;}">Reservar una llamada</a>
+    <p>Te respondemos en menos de 24h con una propuesta adaptada a tus objetivos.</p>
   </div>
 </div></section>
 
@@ -260,10 +256,9 @@ footer{border-top:1px solid var(--line);padding:50px 0 30px}
   <div class="fbottom"><span>© 2026 Fluxxo AI · fluxxoai.com · España</span><span>Publicidad digital para empresas y agencias</span></div>
 </div></footer>
 
-<a class="float" id="float" href="#contacto">Solicitar auditoría gratuita</a>
+<a class="float" id="float" href="#contacto">Solicitar propuesta</a>
 
 <script is:inline>
-// Envío del formulario (Netlify Forms) sin salir de la página
 (function(){
   var form=document.getElementById('leadForm'),ok=document.getElementById('formSuccess'),err=document.getElementById('formError'),btn=document.getElementById('submitBtn');
   form.addEventListener('submit',function(e){
@@ -274,7 +269,6 @@ footer{border-top:1px solid var(--line);padding:50px 0 30px}
       .catch(function(){err.classList.add('show');btn.disabled=false;btn.textContent='Solicitar propuesta';});
   });
 })();
-// Oculta el CTA flotante mientras el formulario está en pantalla para que no tape el botón de enviar
 const f=document.getElementById('float');
 new IntersectionObserver(e=>f.classList.toggle('hide',e[0].isIntersecting),{threshold:.25}).observe(document.querySelector('#contacto'));
 </script>
