@@ -6,7 +6,7 @@ icon: "📱"
 readTime: "8 min de lectura"
 pubDate: 2026-06-20
 featured: true
-draft: false
+draft: true
 ---
 
 Las clínicas que publican contenido de valor de forma constante en Instagram consiguen hasta un 40% más de consultas que las que no tienen presencia digital activa. No es magia: es consistencia, formato correcto y un mensaje que conecta con quien busca un profesional de salud cerca de casa.

@@ -5,6 +5,32 @@
 [build.environment]
   NODE_VERSION = "22"
 
+# La sección de pymes se ha retirado: todo va a la home de paid media
+[[redirects]]
+  from = "/pymes"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pymes/*"
+  to = "/"
+  status = 301
+  force = true
+
+# Artículo retirado (no encaja con el posicionamiento actual)
+[[redirects]]
+  from = "/blog/clinica-instagram"
+  to = "/blog/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/clinica-instagram/"
+  to = "/blog/"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/*"
   to = "/404"

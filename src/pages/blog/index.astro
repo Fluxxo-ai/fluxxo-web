@@ -11,16 +11,16 @@ const rest = sorted.filter((p) => p.id !== featured?.id);
 ---
 
 <Layout
-  title="Blog — Marketing digital y automatización para empresas | Fluxxo"
-  description="Artículos prácticos sobre captación de clientes, automatización de marketing e inteligencia artificial para pymes."
+  title="Blog de paid media y ChatGPT Ads | Fluxxo"
+  description="Guías y datos reales sobre ChatGPT Ads, Google Ads, Meta Ads y publicidad digital para empresas y agencias en España."
 >
   <Nav />
 
   <div class="blog-hero">
     <div class="blog-hero-inner">
       <div class="section-tag" style="margin-bottom:1.25rem">Blog</div>
-      <h1>Marketing digital y automatización<br /><span class="dim">para hacer crecer tu negocio.</span></h1>
-      <p>Artículos prácticos sobre cómo captar más clientes, automatizar tu marketing y aplicar la IA a tu negocio.</p>
+      <h1>Paid media y ChatGPT Ads<br /><span class="dim">explicados con datos reales.</span></h1>
+      <p>Guías prácticas, costes y aprendizajes de campañas en ChatGPT Ads, Google, Meta, TikTok y programática.</p>
     </div>
   </div>
 
@@ -33,7 +33,7 @@ const rest = sorted.filter((p) => p.id !== featured?.id);
             <div class="blog-tag">{featured.data.category}</div>
             <div class="blog-title-big">{featured.data.title}</div>
             <div class="blog-excerpt-big">{featured.data.excerpt}</div>
-            <div class="blog-meta"><span>Fluxxo Team</span><span>{featured.data.readTime}</span></div>
+            <div class="blog-meta"><span>Daniel Bagán</span><span>{featured.data.readTime}</span></div>
           </div>
         </a>
         <div class="blog-sidebar">
@@ -44,11 +44,18 @@ const rest = sorted.filter((p) => p.id !== featured?.id);
                 <div class="blog-tag" style="font-size:9px;margin-bottom:6px">{post.data.category}</div>
                 <div class="blog-title-sm">{post.data.title}</div>
                 <div class="blog-excerpt-sm">{post.data.excerpt}</div>
-                <div class="blog-meta-sm"><span>Fluxxo Team</span><span>{post.data.readTime}</span></div>
+                <div class="blog-meta-sm"><span>Daniel Bagán</span><span>{post.data.readTime}</span></div>
               </div>
             </a>
           ))}
         </div>
+      </div>
+    )}
+
+    {!featured && (
+      <div class="blog-empty" style="text-align:center;padding:4rem 1rem;color:var(--gray-1)">
+        <p style="font-size:17px;line-height:1.8">Estamos preparando los primeros artículos sobre ChatGPT Ads y paid media.</p>
+        <p style="margin-top:1.5rem"><a href="/#contacto" class="btn-primary" style="display:inline-flex">Habla con nosotros →</a></p>
       </div>
     )}
 
@@ -70,16 +77,6 @@ const rest = sorted.filter((p) => p.id !== featured?.id);
       </div>
     )}
 
-    <div class="newsletter-strip">
-      <div class="newsletter-left">
-        <h3>Recibe los mejores artículos <em>cada semana.</em></h3>
-        <p>Sin spam. Solo contenido útil para hacer crecer tu negocio.</p>
-      </div>
-      <div class="newsletter-form">
-        <input class="newsletter-input" type="email" placeholder="tu@negocio.com" />
-        <button class="newsletter-btn">Suscribirme →</button>
-      </div>
-    </div>
   </div>
 
   <Footer />

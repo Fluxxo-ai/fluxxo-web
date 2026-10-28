@@ -2,11 +2,28 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  url: 'https://fluxxoai.com/nosotros/',
+  inLanguage: 'es-ES',
+  about: { '@id': 'https://fluxxoai.com/#organization' },
+  mainEntity: {
+    '@type': 'Person',
+    '@id': 'https://fluxxoai.com/nosotros/#daniel-bagan',
+    name: 'Daniel Bagán',
+    jobTitle: 'Fundador y especialista en paid media',
+    worksFor: { '@id': 'https://fluxxoai.com/#organization', '@type': 'Organization', name: 'Fluxxo' },
+    knowsAbout: ['ChatGPT Ads', 'Google Ads', 'Meta Ads', 'TikTok Ads', 'Publicidad programática'],
+  },
+};
 ---
 
 <Layout
-  title="Nosotros — Fluxxo | Agencia de marketing automatizado e IA"
-  description="Conoce la historia, misión y valores de Fluxxo, la agencia de marketing digital automatizado para empresas en España."
+  title="Sobre Fluxxo: agencia de paid media y ChatGPT Ads | Fluxxo"
+  description="Fluxxo es una agencia de paid media en España especializada en ChatGPT Ads, fundada por Daniel Bagán, con más de 8 años gestionando campañas para grandes marcas."
+  schema={schema}
 >
   <Nav />
 
@@ -16,11 +33,11 @@ import Footer from '../components/Footer.astro';
       <div class="hero-glow-1"></div>
     </div>
     <div style="position:relative;z-index:2;max-width:1200px;margin:0 auto;width:100%">
-      <div class="section-tag" style="margin-bottom:1.25rem">Nuestra historia</div>
+      <div class="section-tag" style="margin-bottom:1.25rem">Sobre nosotros</div>
       <h1 style="font-size:clamp(40px,5vw,64px);font-weight:500;letter-spacing:-0.045em;line-height:1.05;margin-bottom:1rem">
-        Nacimos hartos de ver<br /><span style="color:var(--blue)">cómo las empresas pierden<br />clientes por falta de tiempo.</span>
+        Más de 8 años en paid media.<br /><span style="color:var(--blue)">Ahora, también<br />en ChatGPT Ads.</span>
       </h1>
-      <p style="font-size:17px;color:var(--gray-1);line-height:1.8;max-width:560px;font-weight:300">Agencias caras, contratos eternos, resultados que nunca llegan. Había que cambiar eso.</p>
+      <p style="font-size:17px;color:var(--gray-1);line-height:1.8;max-width:560px;font-weight:300">Fluxxo es una agencia de paid media para empresas y agencias en España, especializada en el canal publicitario más nuevo: los anuncios dentro de ChatGPT.</p>
     </div>
   </section>
 
@@ -28,27 +45,28 @@ import Footer from '../components/Footer.astro';
     <div class="section-inner">
       <div class="nosotros-grid">
         <div class="nosotros-left">
-          <p class="nosotros-mision">"El marketing inteligente no debería ser solo para las grandes empresas. <em>Cualquier negocio merece crecer.</em>"</p>
-          <p class="nosotros-body">Fluxxo nació de una frustración real. Demasiadas empresas en España, desde clínicas y despachos hasta academias e inmobiliarias, gastaban miles de euros en agencias que tardaban semanas en publicar un post, nunca explicaban qué hacían y no podían demostrar resultados.</p>
-          <p class="nosotros-body">Decidimos construir algo diferente. Un sistema que trabaja <strong>24 horas al día, 7 días a la semana</strong>, que entrega resultados desde la primera semana y que cuesta entre 3 y 5 veces menos que una agencia tradicional. Sin reuniones eternas. Sin contratos de permanencia. Sin excusas.</p>
+          <p class="nosotros-mision">"ChatGPT Ads es el primer canal publicitario realmente nuevo en años. <em>Queremos que las marcas lleguen antes que su competencia.</em>"</p>
+          <p class="nosotros-body">Fluxxo es una agencia de paid media fundada por <strong>Daniel Bagán</strong>. En más de 8 años gestionando campañas en Google, Meta, TikTok y programática, ha trabajado para marcas como Lidl, Tous, ISDIN, MediaMarkt o Renfe.</p>
+          <p class="nosotros-body">Desde septiembre de 2026 trabajamos con acceso a <strong>ChatGPT Ads</strong>, el formato publicitario de OpenAI que muestra anuncios dentro de las conversaciones. Ayudamos a las empresas a probar el canal con criterio: qué presupuesto tiene sentido, qué formatos funcionan y cómo medirlo junto al resto de canales.</p>
+          <p class="nosotros-body">Trabajamos con dos tipos de clientes: empresas con equipo de marketing propio que necesitan un especialista externo en paid media, y agencias que quieren ofrecer estos canales bajo su propia marca.</p>
           <div class="nosotros-firma">
-            <div class="firma-avatar">D</div>
+            <div class="firma-avatar">DB</div>
             <div>
-              <div class="firma-name">Daniel</div>
-              <div class="firma-role">Fundador · Fluxxo</div>
+              <div class="firma-name">Daniel Bagán</div>
+              <div class="firma-role">Fundador · Especialista en paid media</div>
             </div>
           </div>
         </div>
         <div class="valores-grid">
-          <div style="font-size:11px;font-weight:600;color:var(--gray-3);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px;font-family:var(--mono)">Nuestros valores</div>
+          <div style="font-size:11px;font-weight:600;color:var(--gray-3);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px;font-family:var(--mono)">Cómo trabajamos</div>
 
           <div class="valor-card">
             <div class="valor-icon">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
             </div>
             <div>
-              <div class="valor-title">Resultados por encima de todo</div>
-              <div class="valor-desc">No vendemos promesas. Si el sistema no te consigue más clientes, algo está mal y lo arreglamos. Los números mandan.</div>
+              <div class="valor-title">Resultados medibles</div>
+              <div class="valor-desc">Cada campaña arranca con KPIs acordados en el briefing. Optimizamos con datos, no con intuiciones.</div>
             </div>
           </div>
 
@@ -57,8 +75,8 @@ import Footer from '../components/Footer.astro';
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             </div>
             <div>
-              <div class="valor-title">Transparencia total</div>
-              <div class="valor-desc">Cada semana sabes exactamente qué se ha publicado, qué leads han entrado y qué resultados hay. Sin informes vacíos ni excusas.</div>
+              <div class="valor-title">Reporting transparente</div>
+              <div class="valor-desc">Sabes en todo momento dónde va cada euro de inversión y qué está devolviendo. Sin informes vacíos.</div>
             </div>
           </div>
 
@@ -67,8 +85,8 @@ import Footer from '../components/Footer.astro';
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
             <div>
-              <div class="valor-title">Tu tiempo es sagrado</div>
-              <div class="valor-desc">Montamos Fluxxo para que tú no tengas que dedicar horas al marketing. Si te estamos quitando tiempo, estamos fallando.</div>
+              <div class="valor-title">Una estrategia por canal</div>
+              <div class="valor-desc">Google, Meta, TikTok y ChatGPT funcionan distinto. No copiamos la misma campaña en todos: cada canal tiene su plan.</div>
             </div>
           </div>
 
@@ -77,8 +95,8 @@ import Footer from '../components/Footer.astro';
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
             </div>
             <div>
-              <div class="valor-title">Tecnología que trabaja para ti</div>
-              <div class="valor-desc">La IA no es una moda para nosotros. Es la herramienta que hace posible dar un servicio de primer nivel a un precio justo.</div>
+              <div class="valor-title">Pioneros en ChatGPT Ads</div>
+              <div class="valor-desc">Trabajamos el canal desde sus primeras semanas en España y compartimos en el blog lo que vamos aprendiendo.</div>
             </div>
           </div>
 
@@ -87,8 +105,8 @@ import Footer from '../components/Footer.astro';
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4D9EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </div>
             <div>
-              <div class="valor-title">Crecemos contigo</div>
-              <div class="valor-desc">No cobramos por horas ni por tareas. Cobramos porque tu negocio crece. Si no hay resultados, algo falla y lo arreglamos.</div>
+              <div class="valor-title">Confidencialidad para agencias</div>
+              <div class="valor-desc">Si trabajamos como tu partner, operamos bajo tu marca. El cliente es tuyo y la relación también.</div>
             </div>
           </div>
 
@@ -101,9 +119,9 @@ import Footer from '../components/Footer.astro';
     <div class="lead-glow"></div>
     <div class="lead-inner" style="text-align:center;position:relative;z-index:2">
       <div class="section-tag" style="display:inline-flex;margin-bottom:1.25rem">¿Hablamos?</div>
-      <h2 class="lead-title" style="margin-bottom:1rem">¿Quieres saber si<br />Fluxxo es para <em>ti?</em></h2>
-      <p class="lead-sub" style="margin-bottom:2rem">Cuéntanos tu situación y te decimos sin compromiso cómo podemos ayudarte a captar más clientes.</p>
-      <a href="/pymes/#contacto" class="btn-primary" style="display:inline-flex;margin:0 auto">Solicitar auditoría gratuita</a>
+      <h2 class="lead-title" style="margin-bottom:1rem">¿Quieres probar<br /><em>ChatGPT Ads?</em></h2>
+      <p class="lead-sub" style="margin-bottom:2rem">Cuéntanos tu objetivo y te proponemos una estrategia de paid media en 48 horas. Sin compromiso.</p>
+      <a href="/#contacto" class="btn-primary" style="display:inline-flex;margin:0 auto">Solicitar propuesta</a>
     </div>
   </section>
 

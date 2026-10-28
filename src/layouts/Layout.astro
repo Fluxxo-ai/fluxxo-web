@@ -5,10 +5,22 @@ interface Props {
   title: string;
   description: string;
   ogImage?: string;
+  ogType?: 'website' | 'article';
+  noindex?: boolean;
+  schema?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const { title, description, ogImage = '/og-default.jpg' } = Astro.props;
+const {
+  title,
+  description,
+  ogImage = '/og-default.jpg',
+  ogType = 'website',
+  noindex = false,
+  schema,
+} = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(ogImage, Astro.site);
+const schemaList = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
 
 const GTM_ID = 'GTM-5LG96ZPM';
 const GA4_ID = 'G-DWERH2TNT7';
@@ -21,20 +33,28 @@ const GA4_ID = 'G-DWERH2TNT7';
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
-  <link rel="canonical" href={canonicalURL} />
+  {noindex ? <meta name="robots" content="noindex, follow" /> : <link rel="canonical" href={canonicalURL} />}
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
   <!-- Open Graph -->
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonicalURL} />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content={new URL(ogImage, Astro.site)} />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:image" content={ogImageURL} />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="Fluxxo" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImageURL} />
+
+  <!-- Datos estructurados (schema.org) -->
+  {schemaList.map((item) => (
+    <script type="application/ld+json" set:html={JSON.stringify(item)} />
+  ))}
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
