@@ -4,7 +4,8 @@ seoTitle: "ChatGPT Ads: qué es y cómo anunciarse en ChatGPT (2026)"
 seoDescription: "Guía de ChatGPT Ads: desde cuándo hay anuncios en España, quién los ve, cómo funcionan y cómo anunciarse en ChatGPT paso a paso."
 excerpt: "ChatGPT Ads es la plataforma publicitaria de OpenAI para anunciarse dentro de ChatGPT. En España hay anuncios desde agosto de 2026. Te explicamos cómo funciona, quién ve los anuncios y cómo empezar, desde nuestra experiencia lanzando campañas."
 category: "ChatGPT Ads"
-icon: "💬"
+image: "/blog/chatgpt-ads.jpg"
+imageAlt: "Qué es ChatGPT Ads y cómo anunciarse en ChatGPT"
 readTime: "6 min de lectura"
 pubDate: 2026-10-28
 featured: true

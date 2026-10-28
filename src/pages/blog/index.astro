@@ -28,7 +28,7 @@ const rest = sorted.filter((p) => p.id !== featured?.id);
     {featured && (
       <div class="blog-featured">
         <a href={`/blog/${featured.id}/`} class="blog-card-big">
-          <div class="blog-thumb-big">{featured.data.icon}</div>
+          {featured.data.image && <img class="blog-thumb-img big" src={featured.data.image} alt={featured.data.imageAlt ?? featured.data.title} width="1200" height="630" />}
           <div class="blog-body-big">
             <div class="blog-tag">{featured.data.category}</div>
             <div class="blog-title-big">{featured.data.title}</div>
@@ -39,7 +39,7 @@ const rest = sorted.filter((p) => p.id !== featured?.id);
         <div class="blog-sidebar">
           {rest.slice(0, 3).map((post) => (
             <a href={`/blog/${post.id}/`} class="blog-card-sm">
-              <div class="blog-thumb-sm">{post.data.icon}</div>
+              {post.data.image && <img class="blog-thumb-img sm" src={post.data.image} alt="" loading="lazy" width="1200" height="630" />}
               <div class="blog-body-sm">
                 <div class="blog-tag" style="font-size:9px;margin-bottom:6px">{post.data.category}</div>
                 <div class="blog-title-sm">{post.data.title}</div>
@@ -65,7 +65,7 @@ const rest = sorted.filter((p) => p.id !== featured?.id);
         <div class="blog-grid-3">
           {rest.slice(3).map((post) => (
             <a href={`/blog/${post.id}/`} class="blog-card-mid">
-              <div class="blog-thumb-mid">{post.data.icon}</div>
+              {post.data.image && <img class="blog-thumb-img mid" src={post.data.image} alt="" loading="lazy" width="1200" height="630" />}
               <div class="blog-body-mid">
                 <div class="blog-tag">{post.data.category}</div>
                 <div class="blog-title-mid">{post.data.title}</div>

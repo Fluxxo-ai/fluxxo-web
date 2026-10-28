@@ -4,7 +4,8 @@ seoTitle: "Cuánto cuesta anunciarse en ChatGPT: datos reales | Fluxxo"
 seoDescription: "Datos reales de una campaña de ChatGPT Ads en España: CPC de 0,80–1€, CPM de 15–20€ y CTR de hasta el 3%. Qué significan y qué mueve el coste."
 excerpt: "CPC de 0,80–1€, CPM de 15–20€ y CTR de hasta el 3%: estos son los datos reales de una de nuestras primeras campañas de ChatGPT Ads en España, en el sector inmobiliario. Te explicamos qué significan y qué mueve el coste."
 category: "ChatGPT Ads"
-icon: "📊"
+image: "/blog/cuanto-cuesta-anunciarse-en-chatgpt.jpg"
+imageAlt: "Cuánto cuesta anunciarse en ChatGPT: datos reales"
 readTime: "5 min de lectura"
 pubDate: 2026-10-28
 featured: false

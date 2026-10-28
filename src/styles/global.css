@@ -295,7 +295,7 @@ html,body{overflow-x:clip}
 .article-body ol{margin:0 0 1.5rem;padding-left:1.25rem;display:flex;flex-direction:column;gap:10px}
 .article-body ol li{font-size:16px;line-height:1.75;color:var(--gray-1);font-weight:300}
 .article-body h3{font-size:19px;font-weight:500;color:var(--white);margin:2rem 0 .9rem}
-.article-body a{color:var(--blue)}
+.article-body a:not(.btn-primary){color:var(--blue)}
 .article-body hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0}
 
 /* Índice de contenidos de los artículos */
@@ -306,3 +306,7 @@ html,body{overflow-x:clip}
 .article-toc a{color:var(--gray-1);text-decoration:none}
 .article-toc a:hover{color:var(--blue)}
 .article-body h2{scroll-margin-top:90px}
+
+/* Portadas del blog */
+.article-cover-img{display:block;width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;border-radius:16px;border:0.5px solid var(--border);margin-bottom:2.5rem}
+.blog-thumb-img{display:block;width:100%;aspect-ratio:1200/630;height:auto;object-fit:cover;border-bottom:0.5px solid var(--border)}

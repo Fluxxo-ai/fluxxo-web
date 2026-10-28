@@ -35,7 +35,7 @@ const schema = {
   datePublished: post.data.pubDate.toISOString(),
   inLanguage: 'es-ES',
   mainEntityOfPage: articleUrl,
-  image: new URL('/og-default.jpg', Astro.site).toString(),
+  image: new URL(post.data.image ?? '/og-default.jpg', Astro.site).toString(),
   author: {
     '@type': 'Person',
     '@id': 'https://fluxxoai.com/nosotros/#daniel-bagan',
@@ -50,6 +50,7 @@ const schema = {
   title={post.data.seoTitle ?? `${post.data.title} | Blog Fluxxo`}
   description={post.data.seoDescription ?? post.data.excerpt}
   ogType="article"
+  ogImage={post.data.image}
   schema={schema}
 >
   <Nav />
@@ -71,7 +72,9 @@ const schema = {
 
   <div class="article-body-wrap">
     <article class="article-body">
-      <div class="article-cover">{post.data.icon}</div>
+      {post.data.image && (
+        <img class="article-cover-img" src={post.data.image} alt={post.data.imageAlt ?? post.data.title} width="1200" height="630" />
+      )}
       {toc.length > 2 && (
         <nav class="article-toc" aria-label="Índice del artículo">
           <div class="article-toc-title">En este artículo</div>
@@ -96,7 +99,7 @@ const schema = {
         <div class="blog-grid-3">
           {related.map((p) => (
             <a href={`/blog/${p.id}/`} class="blog-card-mid">
-              <div class="blog-thumb-mid">{p.data.icon}</div>
+              {p.data.image && <img class="blog-thumb-img mid" src={p.data.image} alt="" loading="lazy" width="1200" height="630" />}
               <div class="blog-body-mid">
                 <div class="blog-tag">{p.data.category}</div>
                 <div class="blog-title-mid">{p.data.title}</div>
