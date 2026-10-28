@@ -283,3 +283,26 @@ a{text-decoration:none;color:inherit}
 .client-logo-item{display:flex;align-items:center;justify-content:center;opacity:0.55;transition:opacity 0.3s ease}
 .client-logo-item:hover{opacity:1}
 .client-logo-img{height:44px;width:auto;max-width:160px;object-fit:contain;filter:brightness(10)}
+
+/* Evita scroll horizontal por elementos decorativos */
+html,body{overflow-x:clip}
+
+/* Tablas dentro de artículos del blog */
+.article-body table{width:100%;border-collapse:collapse;margin:0 0 1.75rem;font-size:14px;display:block;overflow-x:auto;border:1px solid var(--border);border-radius:12px}
+.article-body thead th{background:rgba(77,158,255,.06);color:var(--blue);font-weight:600;text-align:left}
+.article-body th,.article-body td{padding:12px 16px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top;line-height:1.55;color:var(--gray-1)}
+.article-body tbody tr:last-child td{border-bottom:none}
+.article-body ol{margin:0 0 1.5rem;padding-left:1.25rem;display:flex;flex-direction:column;gap:10px}
+.article-body ol li{font-size:16px;line-height:1.75;color:var(--gray-1);font-weight:300}
+.article-body h3{font-size:19px;font-weight:500;color:var(--white);margin:2rem 0 .9rem}
+.article-body a{color:var(--blue)}
+.article-body hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0}
+
+/* Índice de contenidos de los artículos */
+.article-toc{border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;margin:0 0 2.5rem;background:rgba(77,158,255,.03)}
+.article-toc-title{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:.75rem}
+.article-toc ol{margin:0;padding-left:1.25rem;display:flex;flex-direction:column;gap:6px}
+.article-toc li{font-size:14px;line-height:1.5;color:var(--gray-2)}
+.article-toc a{color:var(--gray-1);text-decoration:none}
+.article-toc a:hover{color:var(--blue)}
+.article-body h2{scroll-margin-top:90px}

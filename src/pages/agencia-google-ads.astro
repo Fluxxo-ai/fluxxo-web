@@ -1,0 +1,309 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import FAQ from '../components/FAQ.astro';
+
+const faqs = [
+  {
+    q: "¿Cuánto cuesta una agencia de Google Ads?",
+    a: "Trabajamos con un fee de gestión sobre la inversión publicitaria, sin permanencias. La inversión en Google va aparte y la pagas directamente a la plataforma. En la propuesta te lo detallamos para tu caso.",
+  },
+  {
+    q: "¿Qué diferencia hay entre SEM y Google Ads?",
+    a: "SEM (Search Engine Marketing) es la publicidad en buscadores en general. Google Ads es la plataforma de Google para hacerla y, en España, la más importante con diferencia.",
+  },
+  {
+    q: "¿Qué presupuesto necesito para empezar?",
+    a: "Depende del sector, de la competencia y del objetivo. En la propuesta te recomendamos una inversión inicial realista para conseguir datos suficientes y optimizar.",
+  },
+  {
+    q: "¿Solo trabajáis con empresas de Barcelona?",
+    a: "No. Tenemos base en Barcelona, pero trabajamos en remoto con empresas y agencias de toda España y Latinoamérica.",
+  },
+  {
+    q: "¿Trabajáis con agencias?",
+    a: "Sí. Gestionamos Google Ads como partner de agencias, bajo su marca y de forma confidencial.",
+  },
+  {
+    q: "¿Cuánto tiempo se tarda en ver resultados con Google Ads?",
+    a: "Las campañas de búsqueda empiezan a traer tráfico desde el primer día. Para que el algoritmo aprenda y la cuenta esté optimizada suelen hacer falta unas semanas de datos, más en campañas automáticas como Performance Max.",
+  },
+  {
+    q: "¿Qué es Performance Max y cuándo conviene usarla?",
+    a: "Performance Max es un tipo de campaña de Google que muestra anuncios en todas sus redes (búsqueda, YouTube, Display, Gmail, Discover y Maps) con una sola campaña automatizada. Funciona bien con buena medición de conversiones y suficiente volumen; sin control, puede gastar en tráfico de poca calidad.",
+  },
+  {
+    q: "¿Os encargáis de los anuncios y las landing pages?",
+    a: "Redactamos y optimizamos los anuncios de texto y te decimos qué mejorar en tus landing pages para convertir más. La producción de vídeos, banners o páginas nuevas la hace tu equipo o tu proveedor creativo, y nosotros los guiamos.",
+  },
+  {
+    q: "¿Hay permanencia?",
+    a: "No. Trabajamos sin permanencia: si seguimos juntos es porque las campañas funcionan.",
+  },
+];
+
+const pageUrl = 'https://fluxxoai.com/agencia-google-ads/';
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${pageUrl}#service`,
+    name: 'Gestión de campañas de Google Ads (SEM)',
+    serviceType: 'Publicidad en buscadores (SEM)',
+    url: pageUrl,
+    description: 'Estrategia, configuración y optimización de campañas de Google Ads: Search, Shopping, Performance Max, YouTube y Demand Gen.',
+    provider: { '@id': 'https://fluxxoai.com/#organization', '@type': 'Organization', name: 'Fluxxo' },
+    areaServed: [
+      { '@type': 'City', name: 'Barcelona' },
+      { '@type': 'Country', name: 'España' },
+      { '@type': 'Place', name: 'Latinoamérica' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://fluxxoai.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Agencia de Google Ads', item: pageUrl },
+    ],
+  },
+];
+---
+
+<Layout
+  title="Agencia de Google Ads (SEM) en Barcelona | Fluxxo"
+  description="Agencia de Google Ads y SEM en Barcelona. Gestionamos campañas de Search, Shopping, Performance Max y YouTube para empresas y agencias de toda España."
+  schema={schema}
+>
+  <Nav />
+
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-glow-1"></div>
+      <div class="hero-glow-2"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="section-tag" style="margin-bottom:1.25rem">Google Ads · SEM</div>
+        <h1 class="hero-h1">Agencia de<br /><span class="accent">Google Ads</span><br />en Barcelona</h1>
+        <p class="hero-sub">Campañas de búsqueda (SEM), Shopping, Performance Max y YouTube gestionadas por especialistas en paid media. Para <strong>empresas y agencias de toda España</strong> que quieren resultados medibles.</p>
+        <div class="hero-btns">
+          <a href="/#contacto" class="btn-primary">Solicitar propuesta →</a>
+          <a href="#servicio" class="btn-secondary">Qué incluye</a>
+        </div>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric-card featured">
+          <div class="metric-value">+<em>8</em> años</div>
+          <div class="metric-label">De experiencia en paid media</div>
+          <div class="metric-bar"><div class="metric-fill" style="width:80%"></div></div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">+<em>15</em>M€</div>
+          <div class="metric-label">Invertidos en campañas</div>
+          <div class="metric-bar"><div class="metric-fill" style="width:70%"></div></div>
+        </div>
+        <div class="metrics-small">
+          <div class="metric-small">
+            <div class="metric-small-value">+<em>27</em></div>
+            <div class="metric-small-label">Marcas gestionadas</div>
+          </div>
+          <div class="metric-small">
+            <div class="metric-small-value"><em>48</em>h</div>
+            <div class="metric-small-label">Para tu propuesta</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="intro">
+    <div class="section-inner">
+      <div class="section-tag reveal">Por qué una agencia especialista</div>
+      <h2 class="section-title reveal">Por qué contratar una agencia<br /><span class="dim">de Google Ads en Barcelona.</span></h2>
+      <div class="article-body cg-prose reveal">
+        <p><strong>Una agencia de Google Ads diseña, lanza y optimiza tus campañas en Google para que cada euro invertido se convierta en clientes.</strong> Eso incluye elegir las búsquedas adecuadas, estructurar la cuenta, medir las conversiones correctamente y ajustar pujas y anuncios cada semana.</p>
+        <p>Google Ads es la plataforma de SEM (publicidad en buscadores) más usada en España. También es una de las más fáciles de hacer mal: campañas automáticas sin control, conversiones mal medidas o presupuesto que se va en búsquedas que nunca compran. Nuestro trabajo es evitar ese desperdicio.</p>
+        <p>Somos una agencia de paid media con base en Barcelona, pero trabajamos en remoto con empresas de toda España y Latinoamérica. Y como también gestionamos <a href="/chatgpt-ads/">ChatGPT Ads</a> y Meta Ads, planificamos Google dentro de una estrategia completa, no como un canal aislado.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="servicio">
+    <div class="section-inner">
+      <div class="section-tag reveal">Qué incluye</div>
+      <h2 class="section-title reveal">Servicios de Google Ads<br /><span class="dim">y SEM que gestionamos.</span></h2>
+      <div class="services-grid cg-3 reveal">
+        <div class="service-cell">
+          <div class="service-name">Search (SEM)</div>
+          <div class="service-desc">Anuncios en los resultados de búsqueda de Google para captar a quien ya está buscando lo que vendes.</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-name">Performance Max</div>
+          <div class="service-desc">Campañas automatizadas con control: señales de audiencia, exclusiones y objetivos bien definidos.</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-name">Shopping</div>
+          <div class="service-desc">Campañas de producto para ecommerce, con el feed de Merchant Center optimizado.</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-name">YouTube</div>
+          <div class="service-desc">Vídeo para generar demanda y remarketing a usuarios que ya conocen tu marca.</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-name">Display y Demand Gen</div>
+          <div class="service-desc">Alcance y remarketing visual en la red de Google, Discover y Gmail.</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-name">Medición y conversiones</div>
+          <div class="service-desc">Configuración de conversiones, GA4 y Tag Manager para optimizar con datos reales.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="experiencia">
+    <div class="section-inner">
+      <div class="section-tag reveal">Experiencia</div>
+      <h2 class="section-title reveal">Especialistas en Google Ads<br /><span class="dim">con más de 8 años de experiencia.</span></h2>
+      <div class="article-body cg-prose reveal">
+        <p>Detrás de Fluxxo hay más de 8 años gestionando paid media para marcas como Lidl, Tous, ISDIN, MediaMarkt o Renfe. Esa experiencia es la que aplicamos a cada cuenta: estructura clara, medición fiable y optimización semanal.</p>
+        <p>Trabajamos con empresas que tienen equipo de marketing propio y con agencias que necesitan un partner especialista, de forma confidencial y bajo su marca.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="proceso">
+    <div class="section-inner">
+      <div class="section-tag reveal">Cómo trabajamos</div>
+      <h2 class="section-title reveal">Así trabaja nuestra<br /><span class="dim">agencia de Google Ads.</span></h2>
+      <div class="process-grid">
+        <div class="process-step reveal reveal-delay-1">
+          <div class="step-circle">01</div>
+          <div class="step-title">Auditoría</div>
+          <div class="step-desc">Revisamos tu cuenta, la medición y la competencia para detectar dónde se pierde dinero.</div>
+        </div>
+        <div class="process-step reveal reveal-delay-2">
+          <div class="step-circle">02</div>
+          <div class="step-title">Estrategia</div>
+          <div class="step-desc">Estructura, búsquedas objetivo, presupuesto y KPIs alineados con tu negocio.</div>
+        </div>
+        <div class="process-step reveal reveal-delay-3">
+          <div class="step-circle">03</div>
+          <div class="step-title">Lanzamiento y optimización</div>
+          <div class="step-desc">Activamos las campañas y las optimizamos cada semana.</div>
+        </div>
+        <div class="process-step reveal reveal-delay-4">
+          <div class="step-circle">04</div>
+          <div class="step-title">Reporting</div>
+          <div class="step-desc">Informes claros: inversión, conversiones y coste por resultado.</div>
+        </div>
+      </div>
+      <p class="section-sub reveal" style="margin-top:2.5rem"><strong>Precio:</strong> fee de gestión sobre la inversión publicitaria, sin permanencias ni costes ocultos. Te lo detallamos en la propuesta.</p>
+    </div>
+  </section>
+
+  <section class="section" id="errores">
+    <div class="section-inner">
+      <div class="section-tag reveal">Diagnóstico</div>
+      <h2 class="section-title reveal">Por qué tus campañas de<br /><span class="dim">Google Ads no funcionan.</span></h2>
+      <div class="article-body cg-prose reveal">
+        <p>Cuando auditamos una cuenta de Google Ads, casi siempre encontramos alguno de estos problemas. Todos tienen arreglo, y arreglarlos suele liberar presupuesto desde el primer mes.</p>
+        <ol>
+          <li><strong>Conversiones mal medidas.</strong> Si Google optimiza hacia clics, visitas o conversiones duplicadas, las pujas automáticas toman malas decisiones. Lo primero es medir bien.</li>
+          <li><strong>Búsquedas irrelevantes.</strong> Sin una buena lista de palabras clave negativas, el presupuesto se va en búsquedas que nunca van a comprar.</li>
+          <li><strong>Campañas automáticas sin control.</strong> Performance Max y las pujas inteligentes funcionan, pero necesitan señales, exclusiones y objetivos claros.</li>
+          <li><strong>Estructura desordenada.</strong> Demasiadas campañas con poco presupuesto cada una impiden que el algoritmo aprenda.</li>
+          <li><strong>Anuncios y landings que no conectan.</strong> Si el anuncio promete una cosa y la página enseña otra, el usuario se va y el coste por lead sube.</li>
+          <li><strong>Nadie mira la cuenta.</strong> Google Ads cambia cada semana: competencia, pujas, términos de búsqueda. Una cuenta sin optimización continua se degrada.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="tipos-campanas">
+    <div class="section-inner">
+      <div class="section-tag reveal">Tipos de campaña</div>
+      <h2 class="section-title reveal">Qué campaña de Google Ads<br /><span class="dim">necesita tu negocio.</span></h2>
+      <div class="article-body cg-prose reveal">
+        <h3>Campañas de búsqueda (SEM)</h3>
+        <p>Anuncios de texto que aparecen cuando alguien busca en Google lo que ofreces. Es la campaña con más intención de compra y, en casi todas las cuentas, la base sobre la que se construye el resto.</p>
+        <h3>Performance Max</h3>
+        <p>Una sola campaña que reparte el presupuesto entre búsqueda, YouTube, Display, Gmail, Discover y Maps. Es potente si la medición de conversiones es buena y se le dan las señales adecuadas.</p>
+        <h3>Google Shopping</h3>
+        <p>Para ecommerce: anuncios con foto, precio y tienda, alimentados desde el feed de Merchant Center. La calidad del feed marca la diferencia en el rendimiento.</p>
+        <h3>YouTube y Demand Gen</h3>
+        <p>Vídeo e imagen para generar demanda en quien todavía no te busca, y remarketing para quien ya te conoce. Funcionan muy bien combinadas con búsqueda.</p>
+        <h3>Display y remarketing</h3>
+        <p>Banners en la red de Display de Google para recuperar a usuarios que visitaron tu web y no convirtieron.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="leads-ecommerce">
+    <div class="section-inner">
+      <div class="section-tag reveal">Por objetivo</div>
+      <h2 class="section-title reveal">Google Ads para leads,<br /><span class="dim">B2B y ecommerce.</span></h2>
+      <div class="article-body cg-prose reveal">
+        <h3>Agencia Google Ads para generación de leads y B2B</h3>
+        <p>Si vendes servicios, el objetivo no es el clic: es el lead que acaba siendo cliente. Por eso conectamos las conversiones de Google Ads con tu CRM cuando es posible y optimizamos hacia los contactos de calidad, no hacia los formularios basura.</p>
+        <h3>Agencia Google Ads para ecommerce</h3>
+        <p>En tienda online trabajamos con el retorno de la inversión publicitaria (ROAS) como métrica principal, combinando Shopping, Performance Max y búsqueda de marca y de producto, con el feed optimizado.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="barcelona">
+    <div class="section-inner">
+      <div class="section-tag reveal">Dónde trabajamos</div>
+      <h2 class="section-title reveal">Agencia de Google Ads en Barcelona<br /><span class="dim">para toda España.</span></h2>
+      <div class="article-body cg-prose reveal">
+        <p>Fluxxo tiene su base en Barcelona, pero el trabajo de una agencia de Google Ads se hace en remoto: reuniones por videollamada, acceso compartido a los datos y reporting periódico. Por eso trabajamos con empresas y agencias de toda España y también de Latinoamérica.</p>
+        <p>Y si ya inviertes en otros canales, coordinamos Google Ads con <a href="/agencia-meta-ads/">Meta Ads</a> y con <a href="/chatgpt-ads/">ChatGPT Ads</a> para que cada euro vaya al canal donde más rinde.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="google-ads-vs-seo">
+    <div class="section-inner">
+      <div class="section-tag reveal">Google Ads o SEO</div>
+      <h2 class="section-title reveal">¿Google Ads o SEO?<br /><span class="dim">La respuesta corta: los dos.</span></h2>
+      <div class="article-body cg-prose reveal">
+        <p>Google Ads te da visibilidad inmediata y control total sobre el presupuesto: pagas por cada clic y puedes medir el retorno desde el primer día. El SEO tarda meses en dar resultados, pero el tráfico que consigue no se paga por clic.</p>
+        <p>Lo habitual es usar Google Ads para captar demanda desde ya y validar qué búsquedas convierten, y usar esos datos para decidir en qué invertir a largo plazo.</p>
+      </div>
+    </div>
+  </section>
+
+  <FAQ faqs={faqs} title="Preguntas frecuentes" subtitle="sobre Google Ads." />
+
+  <section class="lead-section" style="padding:5rem 2.5rem">
+    <div class="lead-glow"></div>
+    <div class="lead-inner" style="text-align:center;position:relative;z-index:2">
+      <div class="section-tag" style="display:inline-flex;margin-bottom:1.25rem">¿Hablamos?</div>
+      <h2 class="lead-title" style="margin-bottom:1rem">¿Hablamos de tus<br /><em>campañas?</em></h2>
+      <p class="lead-sub" style="margin-bottom:2rem">Cuéntanos tu objetivo y te proponemos una estrategia de Google Ads en 48 horas. Sin compromiso.</p>
+      <a href="/#contacto" class="btn-primary" style="display:inline-flex;margin:0 auto">Solicitar propuesta</a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .cg-prose { max-width: 760px; }
+  .cg-3 { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 900px) { .cg-3 { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .cg-3 { grid-template-columns: 1fr; } }
+</style>

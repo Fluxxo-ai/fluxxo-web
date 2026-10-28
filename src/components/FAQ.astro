@@ -1,5 +1,12 @@
 ---
-const faqs = [
+interface Props {
+  faqs?: { q: string; a: string }[];
+  tag?: string;
+  title?: string;
+  subtitle?: string;
+}
+
+const defaultFaqs = [
   {
     q: "¿Cuánto tiempo tarda en estar todo funcionando?",
     a: "48 horas desde que nos das la información de tu negocio. Rellenas un formulario de 20 minutos y en dos días el sistema está publicando contenido y gestionando tu reputación."
@@ -25,12 +32,19 @@ const faqs = [
     a: "Tienes acceso a un portal exclusivo donde puedes ver en todo momento el contenido preparado para la semana, las reseñas gestionadas, los contactos recibidos y el informe mensual completo con todos los resultados."
   }
 ];
+
+const {
+  faqs = defaultFaqs,
+  tag = 'Preguntas frecuentes',
+  title = 'Todo lo que necesitas',
+  subtitle = 'saber antes de empezar.',
+} = Astro.props;
 ---
 
 <section id="faq" class="section">
   <div class="section-inner">
-    <div class="section-tag reveal">Preguntas frecuentes</div>
-    <h2 class="section-title reveal">Todo lo que necesitas<br /><span class="dim">saber antes de empezar.</span></h2>
+    <div class="section-tag reveal">{tag}</div>
+    <h2 class="section-title reveal">{title}<br /><span class="dim">{subtitle}</span></h2>
     <div class="faq-list reveal">
       {faqs.map((item) => (
         <div class="faq-item">

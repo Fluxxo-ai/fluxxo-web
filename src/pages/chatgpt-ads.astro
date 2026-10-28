@@ -1,0 +1,260 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import FAQ from '../components/FAQ.astro';
+
+const faqs = [
+  {
+    q: '¿Qué es ChatGPT Ads?',
+    a: 'Es la plataforma publicitaria de OpenAI para mostrar anuncios dentro de ChatGPT. El anunciante define en qué tipo de conversaciones quiere aparecer y el anuncio se muestra como un banner nativo debajo de la respuesta, sin interrumpirla.',
+  },
+  {
+    q: '¿Se puede anunciar ya en ChatGPT desde España?',
+    a: 'Sí. En Fluxxo tenemos acceso a ChatGPT Ads desde septiembre de 2026 y ya hemos lanzado campañas con inversión real en España.',
+  },
+  {
+    q: '¿Cuánto cuesta anunciarse en ChatGPT?',
+    a: 'Depende mucho del sector, de la competencia y del tipo de conversación en el que quieras aparecer. En la propuesta te damos una estimación de costes para tu caso, basada en los datos de las campañas que ya hemos gestionado.',
+  },
+  {
+    q: '¿ChatGPT Ads sustituye a Google Ads?',
+    a: 'No. Lo vemos como un canal complementario. Google Ads captura búsquedas con intención clara; ChatGPT Ads llega a usuarios que están investigando y comparando opciones en una conversación. Lo ideal es planificarlos juntos.',
+  },
+  {
+    q: '¿Cuánto cobra Fluxxo por gestionar ChatGPT Ads?',
+    a: 'Trabajamos con un fee de gestión sobre la inversión publicitaria, sin permanencias. La inversión en la plataforma va aparte. En la propuesta te lo detallamos para tu caso.',
+  },
+  {
+    q: '¿Trabajáis con agencias?',
+    a: 'Sí. Si eres una agencia y quieres ofrecer ChatGPT Ads a tus clientes, podemos gestionar las campañas como partner bajo tu marca, de forma confidencial.',
+  },
+];
+
+const pageUrl = 'https://fluxxoai.com/chatgpt-ads/';
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${pageUrl}#service`,
+    name: 'Gestión de campañas de ChatGPT Ads',
+    serviceType: 'Publicidad en ChatGPT',
+    url: pageUrl,
+    description:
+      'Estrategia, configuración y optimización de campañas de ChatGPT Ads para empresas y agencias en España.',
+    provider: { '@id': 'https://fluxxoai.com/#organization', '@type': 'Organization', name: 'Fluxxo' },
+    areaServed: [
+      { '@type': 'Country', name: 'España' },
+      { '@type': 'Place', name: 'Latinoamérica' },
+    ],
+    offers: {
+      '@type': 'Offer',
+      description: 'Fee de gestión sobre la inversión publicitaria, sin permanencias.',
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://fluxxoai.com/' },
+      { '@type': 'ListItem', position: 2, name: 'ChatGPT Ads', item: pageUrl },
+    ],
+  },
+];
+---
+
+<Layout
+  title="Agencia de ChatGPT Ads en España | Fluxxo"
+  description="Agencia de ChatGPT Ads en España con campañas reales ya lanzadas. Estrategia, configuración y optimización de anuncios en ChatGPT."
+  schema={schema}
+>
+  <Nav />
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-glow-1"></div>
+      <div class="hero-glow-2"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="section-tag" style="margin-bottom:1.25rem">Nuevo canal en España</div>
+        <h1 class="hero-h1">
+          Agencia de<br /><span class="accent">ChatGPT Ads</span><br />en España
+        </h1>
+        <p class="hero-sub">
+          Ponemos tu marca dentro de las conversaciones de ChatGPT en las que tus clientes ya están comparando opciones. Con <strong>campañas reales ya lanzadas en España</strong>, no solo teoría.
+        </p>
+        <div class="hero-btns">
+          <a href="/#contacto" class="btn-primary">Solicitar propuesta →</a>
+          <a href="#que-es" class="btn-secondary">Cómo funciona</a>
+        </div>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric-card featured">
+          <div class="metric-value"><em>Early</em> access</div>
+          <div class="metric-label">Acceso a la plataforma desde septiembre de 2026</div>
+          <div class="metric-bar"><div class="metric-fill" style="width:85%"></div></div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">+<em>8</em> años</div>
+          <div class="metric-label">De experiencia en paid media</div>
+          <div class="metric-bar"><div class="metric-fill" style="width:60%"></div></div>
+        </div>
+        <div class="metrics-small">
+          <div class="metric-small">
+            <div class="metric-small-value"><em>48</em>h</div>
+            <div class="metric-small-label">Para tu propuesta</div>
+          </div>
+          <div class="metric-small">
+            <div class="metric-small-value"><em>360</em>º</div>
+            <div class="metric-small-label">Junto a Google y Meta</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ ES -->
+  <section class="section" id="que-es">
+    <div class="section-inner">
+      <div class="section-tag reveal">Qué es ChatGPT Ads</div>
+      <h2 class="section-title reveal">Cómo funcionan<br /><span class="dim">los anuncios en ChatGPT.</span></h2>
+      <div class="article-body cg-prose reveal">
+        <p><strong>ChatGPT Ads (también llamado OpenAI Ads) es la plataforma publicitaria de OpenAI.</strong> Permite anunciarse en ChatGPT mostrando anuncios a los usuarios de ChatGPT cuando la conversación encaja con lo que ofrece tu marca. Es el primer canal publicitario nuevo de verdad en años, y en España casi ninguna marca lo está usando todavía.</p>
+        <p>En las campañas que hemos lanzado, la segmentación funciona por contexto: describimos con un prompt el tipo de conversaciones en las que queremos aparecer (por ejemplo, alguien que compara zonas para comprar una vivienda) y el anuncio se muestra como un <strong>banner nativo debajo de la respuesta</strong>. No interrumpe al usuario ni modifica lo que responde ChatGPT.</p>
+        <p>La diferencia con otros canales está en el momento: el usuario no está haciendo una búsqueda rápida ni haciendo scroll, está investigando y tomando una decisión. Por eso funciona especialmente bien en sectores con decisiones meditadas. Si quieres el detalle completo, lo explicamos en nuestra <a href="/blog/chatgpt-ads/">guía de ChatGPT Ads</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section class="section" id="experiencia">
+    <div class="section-inner">
+      <div class="section-tag reveal">Experiencia real</div>
+      <h2 class="section-title reveal">Ya hemos invertido<br /><span class="dim">en ChatGPT Ads en España.</span></h2>
+      <div class="article-body cg-prose reveal">
+        <p>No hablamos de ChatGPT Ads de oídas. Hemos lanzado campañas con inversión real y objetivo de conversiones en España, así que sabemos cómo se configura la segmentación por contexto, cómo medir los resultados y qué esperar en costes.</p>
+        <p>Cada sector se comporta distinto, por eso no prometemos cifras genéricas. <strong>En la propuesta te enseñamos los datos de nuestras campañas</strong> y una estimación adaptada a tu sector y a tu objetivo. Si quieres hacerte una idea antes, en el blog compartimos <a href="/blog/cuanto-cuesta-anunciarse-en-chatgpt/">los datos de una de nuestras primeras campañas</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUIÉN -->
+  <section class="section" id="para-quien">
+    <div class="section-inner">
+      <div class="section-tag reveal">Para quién</div>
+      <h2 class="section-title reveal">Cuándo tiene sentido<br /><span class="dim">invertir en ChatGPT Ads.</span></h2>
+      <div class="services-grid cg-4 reveal">
+        <div class="service-cell">
+          <div class="service-name">Decisiones meditadas</div>
+          <div class="service-desc">Inmobiliario, viajes, finanzas, educación, salud privada o B2B: sectores donde el cliente investiga y compara antes de decidir.</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-name">Marcas que quieren llegar primero</div>
+          <div class="service-desc">Hoy casi no hay competencia en España. Quien entre antes aprende el canal con costes más bajos.</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-name">Equipos que ya invierten en paid media</div>
+          <div class="service-desc">Empresas que ya trabajan Google y Meta y quieren abrir un canal nuevo medido con el mismo rigor.</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-name">Agencias</div>
+          <div class="service-desc">Agencias que quieren ofrecer ChatGPT Ads a sus clientes sin montar un equipo propio. Trabajamos bajo tu marca.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARATIVA -->
+  <section class="section" id="comparativa">
+    <div class="section-inner">
+      <div class="section-tag reveal">Comparativa</div>
+      <h2 class="section-title reveal">ChatGPT Ads frente a<br /><span class="dim">Google Ads y Meta Ads.</span></h2>
+      <div class="cg-table-wrap reveal">
+        <table class="cg-table">
+          <thead>
+            <tr><th></th><th>ChatGPT Ads</th><th>Google Ads (Search)</th><th>Meta Ads</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Momento del usuario</td><td>Investiga y compara en una conversación</td><td>Busca algo concreto</td><td>Navega por su feed</td></tr>
+            <tr><td>Segmentación</td><td>Por contexto de la conversación</td><td>Por palabras clave</td><td>Por audiencias e intereses</td></tr>
+            <tr><td>Formato</td><td>Banner nativo bajo la respuesta</td><td>Anuncio de texto en resultados</td><td>Imagen, vídeo o carrusel</td></tr>
+            <tr><td>Competencia en España</td><td>Muy baja (canal nuevo)</td><td>Alta</td><td>Alta</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-sub reveal" style="margin-top:1.5rem">No es uno u otro. Lo planificamos junto al resto de canales para que cada euro vaya donde rinde más.</p>
+    </div>
+  </section>
+
+  <!-- QUÉ INCLUYE -->
+  <section class="section" id="servicio">
+    <div class="section-inner">
+      <div class="section-tag reveal">Qué incluye</div>
+      <h2 class="section-title reveal">Así trabaja nuestra<br /><span class="dim">agencia de ChatGPT Ads.</span></h2>
+      <div class="process-grid">
+        <div class="process-step reveal reveal-delay-1">
+          <div class="step-circle">01</div>
+          <div class="step-title">Estrategia</div>
+          <div class="step-desc">Definimos objetivos, presupuesto y en qué conversaciones tiene sentido que aparezca tu marca.</div>
+        </div>
+        <div class="process-step reveal reveal-delay-2">
+          <div class="step-circle">02</div>
+          <div class="step-title">Configuración y medición</div>
+          <div class="step-desc">Montamos la campaña y la medición de conversiones para saber qué resultados trae el canal.</div>
+        </div>
+        <div class="process-step reveal reveal-delay-3">
+          <div class="step-circle">03</div>
+          <div class="step-title">Optimización</div>
+          <div class="step-desc">Ajustamos contextos, mensajes y pujas según los datos. Cada semana, no cada trimestre.</div>
+        </div>
+        <div class="process-step reveal reveal-delay-4">
+          <div class="step-circle">04</div>
+          <div class="step-title">Reporting</div>
+          <div class="step-desc">Resultados claros y comparados con tus otros canales de paid media.</div>
+        </div>
+      </div>
+      <p class="section-sub reveal" style="margin-top:2.5rem"><strong>Precio:</strong> fee de gestión sobre la inversión publicitaria, sin permanencias ni costes ocultos. Te lo detallamos en la propuesta.</p>
+    </div>
+  </section>
+
+  <FAQ faqs={faqs} title="Preguntas frecuentes" subtitle="sobre ChatGPT Ads." />
+
+  <!-- CTA -->
+  <section class="lead-section" style="padding:5rem 2.5rem">
+    <div class="lead-glow"></div>
+    <div class="lead-inner" style="text-align:center;position:relative;z-index:2">
+      <div class="section-tag" style="display:inline-flex;margin-bottom:1.25rem">¿Hablamos?</div>
+      <h2 class="lead-title" style="margin-bottom:1rem">Llega antes que tu<br /><em>competencia.</em></h2>
+      <p class="lead-sub" style="margin-bottom:2rem">Cuéntanos tu objetivo y te proponemos una estrategia de ChatGPT Ads en 48 horas. Sin compromiso.</p>
+      <a href="/#contacto" class="btn-primary" style="display:inline-flex;margin:0 auto">Solicitar propuesta</a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .cg-prose { max-width: 760px; }
+  .cg-4 { grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 900px) { .cg-4 { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .cg-4 { grid-template-columns: 1fr; } }
+  .cg-table-wrap { overflow-x: auto; border: 1px solid var(--border, #22252b); border-radius: 14px; }
+  .cg-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 620px; }
+  .cg-table th, .cg-table td { text-align: left; padding: 14px 18px; border-bottom: 1px solid var(--border, #22252b); vertical-align: top; line-height: 1.5; }
+  .cg-table thead th { font-weight: 600; color: var(--blue); background: rgba(77,158,255,.06); }
+  .cg-table tbody td:first-child { color: var(--gray-3, #6b717b); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; }
+  .cg-table tbody tr:last-child td { border-bottom: none; }
+  .cg-table td { color: var(--gray-1, #ccc); }
+</style>

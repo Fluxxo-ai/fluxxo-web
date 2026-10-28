@@ -1,0 +1,225 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import FAQ from '../components/FAQ.astro';
+
+const faqs = [
+  {
+    q: "¿Qué diferencia hay entre Facebook Ads, Instagram Ads y Meta Ads?",
+    a: "Son lo mismo: Meta Ads es la plataforma desde la que se gestionan los anuncios de Facebook, Instagram, Messenger y la red de audiencias de Meta.",
+  },
+  {
+    q: "¿Cuánto cuesta una agencia de Meta Ads?",
+    a: "Trabajamos con un fee de gestión sobre la inversión publicitaria, sin permanencias. La inversión en Meta va aparte. En la propuesta te lo detallamos para tu caso.",
+  },
+  {
+    q: "¿Hacéis las creatividades?",
+    a: "Nos centramos en la estrategia, la configuración y la optimización de campañas. Trabajamos con tus creatividades o con tu equipo creativo, y te indicamos qué formatos y mensajes probar.",
+  },
+  {
+    q: "¿Es mejor Meta Ads o Google Ads?",
+    a: "Depende del objetivo. Google Ads capta a quien ya está buscando; Meta Ads genera demanda en quien todavía no te conoce. Lo habitual es combinarlos.",
+  },
+  {
+    q: "¿Trabajáis con empresas fuera de Barcelona?",
+    a: "Sí. Tenemos base en Barcelona y trabajamos en remoto con empresas y agencias de toda España y Latinoamérica.",
+  },
+  {
+    q: "¿Trabajáis con agencias?",
+    a: "Sí. Gestionamos Meta Ads como partner de agencias, bajo su marca y de forma confidencial.",
+  },
+];
+
+const pageUrl = 'https://fluxxoai.com/agencia-meta-ads/';
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${pageUrl}#service`,
+    name: 'Gestión de campañas de Meta Ads (Facebook e Instagram)',
+    serviceType: 'Publicidad en redes sociales',
+    url: pageUrl,
+    description: 'Estrategia, configuración y optimización de campañas de Meta Ads en Facebook e Instagram: conversiones, Lead Ads, catálogo y remarketing.',
+    provider: { '@id': 'https://fluxxoai.com/#organization', '@type': 'Organization', name: 'Fluxxo' },
+    areaServed: [
+      { '@type': 'City', name: 'Barcelona' },
+      { '@type': 'Country', name: 'España' },
+      { '@type': 'Place', name: 'Latinoamérica' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://fluxxoai.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Agencia de Meta Ads', item: pageUrl },
+    ],
+  },
+];
+---
+
+<Layout
+  title="Agencia de Meta Ads: Facebook e Instagram Ads | Fluxxo"
+  description="Agencia de Meta Ads en Barcelona. Gestionamos campañas de Facebook e Instagram Ads para captar leads y ventas, para empresas y agencias de toda España."
+  schema={schema}
+>
+  <Nav />
+
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-glow-1"></div>
+      <div class="hero-glow-2"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="section-tag" style="margin-bottom:1.25rem">Meta Ads · Facebook e Instagram</div>
+        <h1 class="hero-h1">Agencia de<br /><span class="accent">Meta Ads</span><br />para empresas</h1>
+        <p class="hero-sub">Campañas de Facebook e Instagram Ads orientadas a <strong>leads y ventas</strong>, con medición fiable y optimización continua. Para empresas y agencias de toda España.</p>
+        <div class="hero-btns">
+          <a href="/#contacto" class="btn-primary">Solicitar propuesta →</a>
+          <a href="#servicio" class="btn-secondary">Qué incluye</a>
+        </div>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric-card featured">
+          <div class="metric-value">+<em>8</em> años</div>
+          <div class="metric-label">De experiencia en paid media</div>
+          <div class="metric-bar"><div class="metric-fill" style="width:80%"></div></div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">+<em>15</em>M€</div>
+          <div class="metric-label">Invertidos en campañas</div>
+          <div class="metric-bar"><div class="metric-fill" style="width:70%"></div></div>
+        </div>
+        <div class="metrics-small">
+          <div class="metric-small">
+            <div class="metric-small-value">+<em>27</em></div>
+            <div class="metric-small-label">Marcas gestionadas</div>
+          </div>
+          <div class="metric-small">
+            <div class="metric-small-value"><em>48</em>h</div>
+            <div class="metric-small-label">Para tu propuesta</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="intro">
+    <div class="section-inner">
+      <div class="section-tag reveal">Por qué una agencia especialista</div>
+      <h2 class="section-title reveal">Por qué contratar una<br /><span class="dim">agencia de Meta Ads.</span></h2>
+      <div class="article-body cg-prose reveal">
+        <p><strong>Una agencia de Meta Ads planifica, lanza y optimiza tus anuncios en Facebook e Instagram para conseguir clientes, no solo alcance.</strong> Meta es la plataforma con más capacidad para generar demanda: llega a gente que aún no te está buscando.</p>
+        <p>La diferencia entre una campaña que funciona y una que quema presupuesto suele estar en tres cosas: un objetivo bien elegido, una medición correcta (píxel y API de conversiones) y una estrategia de pruebas constante con audiencias y creatividades.</p>
+        <p>Nos centramos en la estrategia, la configuración y la optimización. Si tienes equipo creativo, trabajamos con él; si no, te decimos qué formatos y mensajes probar. Y lo coordinamos con <a href="/agencia-google-ads/">Google Ads</a> y <a href="/chatgpt-ads/">ChatGPT Ads</a> para que los canales sumen.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="servicio">
+    <div class="section-inner">
+      <div class="section-tag reveal">Qué incluye</div>
+      <h2 class="section-title reveal">Servicios de Facebook Ads<br /><span class="dim">e Instagram Ads.</span></h2>
+      <div class="services-grid cg-3 reveal">
+        <div class="service-cell">
+          <div class="service-name">Campañas de conversión</div>
+          <div class="service-desc">Optimizadas para ventas o leads de calidad, no para clics baratos.</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-name">Lead Ads</div>
+          <div class="service-desc">Formularios nativos de Facebook e Instagram conectados a tu CRM para responder rápido.</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-name">Catálogo y Advantage+</div>
+          <div class="service-desc">Anuncios dinámicos de producto para ecommerce a partir de tu catálogo.</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-name">Remarketing</div>
+          <div class="service-desc">Impactamos a quien ya visitó tu web o interactuó con tu marca.</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-name">Awareness y alcance</div>
+          <div class="service-desc">Campañas para dar a conocer tu marca en tu público objetivo.</div>
+        </div>
+        <div class="service-cell">
+          <div class="service-name">Píxel y API de conversiones</div>
+          <div class="service-desc">Medición fiable para que el algoritmo de Meta optimice con datos reales.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="experiencia">
+    <div class="section-inner">
+      <div class="section-tag reveal">Experiencia</div>
+      <h2 class="section-title reveal">Especialistas en Meta Ads<br /><span class="dim">con más de 8 años de experiencia.</span></h2>
+      <div class="article-body cg-prose reveal">
+        <p>Detrás de Fluxxo hay más de 8 años gestionando paid media para marcas como Lidl, Tous, ISDIN, MediaMarkt o Renfe. Esa experiencia es la que aplicamos a cada cuenta: estructura clara, medición fiable y optimización semanal.</p>
+        <p>Trabajamos con empresas que tienen equipo de marketing propio y con agencias que necesitan un partner especialista, de forma confidencial y bajo su marca.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="proceso">
+    <div class="section-inner">
+      <div class="section-tag reveal">Cómo trabajamos</div>
+      <h2 class="section-title reveal">Así trabaja nuestra<br /><span class="dim">agencia de Meta Ads.</span></h2>
+      <div class="process-grid">
+        <div class="process-step reveal reveal-delay-1">
+          <div class="step-circle">01</div>
+          <div class="step-title">Auditoría</div>
+          <div class="step-desc">Revisamos tu cuenta publicitaria, el píxel y los resultados actuales.</div>
+        </div>
+        <div class="process-step reveal reveal-delay-2">
+          <div class="step-circle">02</div>
+          <div class="step-title">Estrategia</div>
+          <div class="step-desc">Objetivos, audiencias, presupuesto y plan de pruebas.</div>
+        </div>
+        <div class="process-step reveal reveal-delay-3">
+          <div class="step-circle">03</div>
+          <div class="step-title">Lanzamiento y optimización</div>
+          <div class="step-desc">Activamos las campañas y optimizamos cada semana.</div>
+        </div>
+        <div class="process-step reveal reveal-delay-4">
+          <div class="step-circle">04</div>
+          <div class="step-title">Reporting</div>
+          <div class="step-desc">Leads, ventas y coste por resultado, explicado con claridad.</div>
+        </div>
+      </div>
+      <p class="section-sub reveal" style="margin-top:2.5rem"><strong>Precio:</strong> fee de gestión sobre la inversión publicitaria, sin permanencias ni costes ocultos. Te lo detallamos en la propuesta.</p>
+    </div>
+  </section>
+
+  <FAQ faqs={faqs} title="Preguntas frecuentes" subtitle="sobre Meta Ads." />
+
+  <section class="lead-section" style="padding:5rem 2.5rem">
+    <div class="lead-glow"></div>
+    <div class="lead-inner" style="text-align:center;position:relative;z-index:2">
+      <div class="section-tag" style="display:inline-flex;margin-bottom:1.25rem">¿Hablamos?</div>
+      <h2 class="lead-title" style="margin-bottom:1rem">¿Hablamos de tus<br /><em>campañas?</em></h2>
+      <p class="lead-sub" style="margin-bottom:2rem">Cuéntanos tu objetivo y te proponemos una estrategia de Meta Ads en 48 horas. Sin compromiso.</p>
+      <a href="/#contacto" class="btn-primary" style="display:inline-flex;margin:0 auto">Solicitar propuesta</a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .cg-prose { max-width: 760px; }
+  .cg-3 { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 900px) { .cg-3 { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .cg-3 { grid-template-columns: 1fr; } }
+</style>

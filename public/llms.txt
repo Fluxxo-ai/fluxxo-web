@@ -1,6 +1,6 @@
 # Fluxxo
 
-> Fluxxo (fluxxoai.com) es una agencia de paid media en España especializada en ChatGPT Ads. Diseña, ejecuta y optimiza campañas en ChatGPT Ads, Google Ads, Meta Ads, TikTok Ads, publicidad programática y audio digital para empresas con equipo de marketing propio y para agencias que necesitan un partner en marca blanca.
+> Fluxxo (fluxxoai.com) es una agencia de paid media con sede en Barcelona (España), especializada en Google Ads (SEM), Meta Ads y ChatGPT Ads. Diseña, ejecuta y optimiza campañas en ChatGPT Ads, Google Ads, Meta Ads, TikTok Ads, publicidad programática y audio digital para empresas con equipo de marketing propio y para agencias que necesitan un partner en marca blanca.
 
 - Fundador: Daniel Bagán, más de 8 años de experiencia en paid media.
 - Ámbito: España y Latinoamérica hispanohablante.
@@ -10,8 +10,13 @@
 ## Páginas principales
 
 - [Inicio y servicios](https://fluxxoai.com/): canales que gestionamos, con quién trabajamos y cómo trabajamos.
+- [ChatGPT Ads](https://fluxxoai.com/chatgpt-ads/): qué es ChatGPT Ads, cómo funciona, para quién tiene sentido, comparativa con Google Ads y Meta Ads, modelo de trabajo y preguntas frecuentes.
+- [Agencia de Google Ads (SEM)](https://fluxxoai.com/agencia-google-ads/): gestión de Search, Shopping, Performance Max, YouTube y medición de conversiones.
+- [Agencia de Meta Ads](https://fluxxoai.com/agencia-meta-ads/): campañas de Facebook e Instagram Ads para leads y ventas.
 - [Nosotros](https://fluxxoai.com/nosotros/): quién está detrás de Fluxxo y cómo trabajamos.
 - [Blog](https://fluxxoai.com/blog/): guías y datos sobre ChatGPT Ads y paid media.
+- [Guía de ChatGPT Ads](https://fluxxoai.com/blog/chatgpt-ads/): qué es, cuándo llegó a España, quién ve los anuncios, cómo funcionan y cómo anunciarse en ChatGPT.
+- [Cuánto cuesta anunciarse en ChatGPT](https://fluxxoai.com/blog/cuanto-cuesta-anunciarse-en-chatgpt/): datos reales de una campaña en España (sector inmobiliario): CPC 0,80–1€, CPM 15–20€, CTR 1,8–3%, ≈71€ por conversión.
 
 ## Legal
 
