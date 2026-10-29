@@ -28,12 +28,12 @@ import CookieConsent from '../components/CookieConsent.astro';
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ProfessionalService",
+      "@type": ["Organization", "ProfessionalService"],
       "@id": "https://fluxxoai.com/#organization",
       "name": "Fluxxo",
       "alternateName": "Fluxxo AI",
       "url": "https://fluxxoai.com/",
-      "logo": "https://fluxxoai.com/favicon.svg",
+      "logo": {"@type": "ImageObject", "url": "https://fluxxoai.com/favicon.svg"},
       "image": "https://fluxxoai.com/og-default.jpg",
       "description": "Agencia de paid media en Barcelona especializada en Google Ads (SEM), Meta Ads, ChatGPT Ads, TikTok Ads y publicidad programática para empresas y agencias de toda España.",
       "address": {"@type": "PostalAddress", "addressLocality": "Barcelona", "addressRegion": "Cataluña", "addressCountry": "ES"},
