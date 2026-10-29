@@ -1,0 +1,56 @@
+---
+// Banner de cookies: primera capa con "Aceptar" y "Rechazar" al mismo nivel (criterio AEPD).
+// Se puede volver a abrir con cualquier enlace que tenga data-cookie-settings.
+---
+<div id="fx-cookies" class="fx-cookies" role="dialog" aria-live="polite" aria-label="Consentimiento de cookies" hidden>
+  <div class="fx-cookies-inner">
+    <p class="fx-cookies-text">
+      Usamos cookies analíticas de Google Analytics para medir el uso de la web y mejorarla. Solo se activan si las aceptas.&nbsp;<a href="/legal/cookies/">Política de cookies</a>
+    </p>
+    <div class="fx-cookies-btns">
+      <button type="button" class="fx-cookies-btn" data-cookie-choice="denied">Rechazar</button>
+      <button type="button" class="fx-cookies-btn" data-cookie-choice="granted">Aceptar</button>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  .fx-cookies{position:fixed;left:16px;right:16px;bottom:16px;z-index:1000;display:flex;justify-content:center;font-family:'DM Sans',system-ui,sans-serif}
+  .fx-cookies[hidden]{display:none}
+  .fx-cookies-inner{max-width:880px;width:100%;background:#111214;border:1px solid #2a2d33;border-radius:14px;padding:18px 20px;display:flex;align-items:center;gap:20px;box-shadow:0 12px 40px rgba(0,0,0,.5)}
+  .fx-cookies-text{margin:0;flex:1;font-size:14px;line-height:1.6;color:#cccccc;font-weight:400}
+  .fx-cookies-text a{color:#4D9EFF;text-decoration:underline}
+  .fx-cookies-btns{display:flex;gap:10px;flex-shrink:0}
+  .fx-cookies-btn{min-width:120px;padding:11px 20px;border-radius:7px;border:1px solid #4D9EFF;background:transparent;color:#F8F5F0;font:600 14px 'DM Sans',system-ui,sans-serif;cursor:pointer;transition:background .2s}
+  .fx-cookies-btn:hover{background:rgba(77,158,255,.15)}
+  .fx-cookies-open .floating-cta,.fx-cookies-open #float{display:none!important}
+  @media (max-width:640px){.fx-cookies-inner{flex-direction:column;align-items:stretch;gap:14px}.fx-cookies-btns .fx-cookies-btn{flex:1;min-width:0}}
+</style>
+
+<script is:inline>
+  (function () {
+    var box = document.getElementById('fx-cookies');
+    if (!box) return;
+    var KEY = 'fx_cookie_consent';
+    var saved = null;
+    try { saved = localStorage.getItem(KEY); } catch (e) {}
+    var root = document.documentElement;
+    function show(v){ box.hidden = !v; root.classList.toggle('fx-cookies-open', v); }
+    if (saved !== 'granted' && saved !== 'denied') show(true);
+    box.addEventListener('click', function (e) {
+      var choice = e.target && e.target.getAttribute('data-cookie-choice');
+      if (!choice) return;
+      try { localStorage.setItem(KEY, choice); localStorage.setItem(KEY + '_date', new Date().toISOString()); } catch (err) {}
+      show(false);
+      if (choice === 'granted') { if (window.fxLoadGA) window.fxLoadGA(); }
+      else if (saved === 'granted') { location.reload(); }
+      saved = choice;
+    });
+    document.addEventListener('click', function (e) {
+      var t = e.target && e.target.closest ? e.target.closest('[data-cookie-settings]') : null;
+      if (!t) return;
+      e.preventDefault();
+      show(true);
+    });
+  })();
+</script>

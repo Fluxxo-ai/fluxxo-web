@@ -1,5 +1,7 @@
 ---
 // Home principal: agencia de paid media y ChatGPT Ads para empresas y agencias.
+import AnalyticsHead from '../components/AnalyticsHead.astro';
+import CookieConsent from '../components/CookieConsent.astro';
 // La antigua web de pymes está archivada en src/pages/_pymes.astro (no se publica; /pymes/ redirige aquí).
 ---
 <!doctype html>
@@ -68,11 +70,10 @@
   ]
 }
 </script>
+<!-- Google Analytics 4: solo tras aceptar cookies -->
+<AnalyticsHead />
 <!-- Google Tag Manager -->
 <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5LG96ZPM');</script>
-<!-- Google Analytics 4 -->
-<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-DWERH2TNT7"></script>
-<script is:inline>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DWERH2TNT7');</script>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style is:global>
 :root{--bg:#080808;--card:#111214;--card2:#15171a;--line:#22252b;--blue:#4D9EFF;--bone:#F8F5F0;--mute:#999999;--soft:#CCCCCC;--dim:#6b717b}
@@ -309,6 +310,7 @@ footer{border-top:1px solid var(--line);padding:50px 0 30px}
       <a href="/legal/aviso-legal/" target="_blank" rel="noopener">Aviso legal</a>
       <a href="/legal/privacidad/" target="_blank" rel="noopener">Política de privacidad</a>
       <a href="/legal/cookies/" target="_blank" rel="noopener">Política de cookies</a>
+      <a href="#" data-cookie-settings>Configurar cookies</a>
     </div>
   </div>
   <div class="fbottom"><span>© 2026 Fluxxo AI · fluxxoai.com · España</span><span>Publicidad digital para empresas y agencias</span></div>
@@ -323,12 +325,13 @@ footer{border-top:1px solid var(--line);padding:50px 0 30px}
     e.preventDefault();err.classList.remove('show');btn.disabled=true;btn.textContent='Enviando...';
     fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()})
       .then(function(r){if(!r.ok)throw 0;form.style.display='none';ok.classList.add('show');
-        window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_submit_empresas'});})
+        window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_submit_empresas'});if(typeof gtag==='function'){gtag('event','generate_lead',{form_name:'contacto-empresas',page_path:location.pathname});}})
       .catch(function(){err.classList.add('show');btn.disabled=false;btn.textContent='Solicitar propuesta';});
   });
 })();
 const f=document.getElementById('float');
 new IntersectionObserver(e=>f.classList.toggle('hide',e[0].isIntersecting),{threshold:.25}).observe(document.querySelector('#contacto'));
 </script>
+<CookieConsent />
 </body>
 </html>
