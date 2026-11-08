@@ -99,7 +99,7 @@ const schema = {
         <div class="blog-grid-3">
           {related.map((p) => (
             <a href={`/blog/${p.id}/`} class="blog-card-mid">
-              {p.data.image && <img class="blog-thumb-img mid" src={p.data.image} alt="" loading="lazy" width="1200" height="630" />}
+              {p.data.image && <img class="blog-thumb-img mid" src={p.data.image} alt={p.data.imageAlt ?? p.data.title} loading="lazy" width="1200" height="630" />}
               <div class="blog-body-mid">
                 <div class="blog-tag">{p.data.category}</div>
                 <div class="blog-title-mid">{p.data.title}</div>
