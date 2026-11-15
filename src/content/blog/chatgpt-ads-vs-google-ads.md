@@ -131,7 +131,7 @@ No. Según OpenAI, las respuestas son independientes de los anuncios, que aparec
 
 ---
 
-Si quieres saber si ChatGPT Ads encaja en tu negocio o cómo combinarlo con tus campañas actuales, [cuéntanos tu caso y te preparamos una propuesta de ChatGPT Ads](/chatgpt-ads/). Y si lo que necesitas es ordenar o escalar tu cuenta de búsqueda, mira nuestro servicio de [agencia de Google Ads](/agencia-google-ads/).
+Si quieres saber si ChatGPT Ads encaja en tu negocio o cómo combinarlo con tus campañas actuales, cuéntanos tu caso y, como [agencia de ChatGPT Ads](/chatgpt-ads/), te preparamos una propuesta. Y si lo que necesitas es ordenar o escalar tu cuenta de búsqueda, mira nuestro servicio de [agencia de Google Ads](/agencia-google-ads/).
 
 **Fuentes:**
 - [PPC Land: OpenAI abre el Ads Manager de ChatGPT con puja por CPC](https://ppc.land/openai-opens-chatgpt-ads-manager-to-all-us-businesses-with-cpc-bidding/)

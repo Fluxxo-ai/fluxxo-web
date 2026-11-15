@@ -14,6 +14,7 @@ const blog = defineCollection({
     imageAlt: z.string().optional(),
     readTime: z.string(),
     pubDate: z.date(),
+    updatedDate: z.date().optional(),
     featured: z.boolean().default(false),
     draft: z.boolean().default(false),
   }),

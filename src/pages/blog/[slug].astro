@@ -26,6 +26,10 @@ const formattedDate = post.data.pubDate.toLocaleDateString('es-ES', {
   day: 'numeric', month: 'long', year: 'numeric',
 });
 
+const formattedUpdated = post.data.updatedDate?.toLocaleDateString('es-ES', {
+  day: 'numeric', month: 'long', year: 'numeric',
+});
+
 const articleUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
 const schema = {
   '@context': 'https://schema.org',
@@ -33,6 +37,7 @@ const schema = {
   headline: post.data.title,
   description: post.data.excerpt,
   datePublished: post.data.pubDate.toISOString(),
+  dateModified: (post.data.updatedDate ?? post.data.pubDate).toISOString(),
   inLanguage: 'es-ES',
   mainEntityOfPage: articleUrl,
   image: new URL(post.data.image ?? '/og-default.jpg', Astro.site).toString(),
@@ -64,6 +69,7 @@ const schema = {
         <a href="/nosotros/">Daniel Bagán</a>
         <span class="article-meta-sep">·</span>
         <span>{formattedDate}</span>
+        {formattedUpdated && (<><span class="article-meta-sep">·</span><span>Actualizado el {formattedUpdated}</span></>)}
         <span class="article-meta-sep">·</span>
         <span>{post.data.readTime}</span>
       </div>

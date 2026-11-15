@@ -2,17 +2,18 @@
 title: "ChatGPT Ads: qué es, cómo funciona y cómo anunciarse en ChatGPT (guía 2026)"
 seoTitle: "ChatGPT Ads: qué es y cómo anunciarse en ChatGPT (2026)"
 seoDescription: "Guía de ChatGPT Ads: desde cuándo hay anuncios en España, quién los ve, cómo funcionan y cómo anunciarse en ChatGPT paso a paso."
-excerpt: "ChatGPT Ads es la plataforma publicitaria de OpenAI para anunciarse dentro de ChatGPT. En España hay anuncios desde agosto de 2026. Te explicamos cómo funciona, quién ve los anuncios y cómo empezar, desde nuestra experiencia lanzando campañas."
+excerpt: "ChatGPT Ads es la plataforma publicitaria de OpenAI para anunciarse dentro de ChatGPT. En España hay anuncios desde agosto de 2026. Te explicamos qué es, cómo funciona, qué formatos y pujas hay y cómo empezar. Actualizada con las novedades de noviembre de 2026."
 category: "ChatGPT Ads"
 image: "/blog/chatgpt-ads.jpg"
 imageAlt: "Qué es ChatGPT Ads y cómo anunciarse en ChatGPT"
-readTime: "6 min de lectura"
+readTime: "7 min de lectura"
 pubDate: 2026-10-28
+updatedDate: 2026-11-15
 featured: true
 draft: false
 ---
 
-**ChatGPT Ads es la plataforma publicitaria de OpenAI para mostrar anuncios dentro de ChatGPT.** En España, los anuncios aparecen desde el 24 de agosto de 2026 a los usuarios del plan gratuito y de ChatGPT Go. Se muestran debajo de la respuesta, claramente etiquetados, cuando la conversación encaja con lo que ofrece el anunciante.
+**ChatGPT Ads es la plataforma publicitaria de OpenAI para mostrar anuncios dentro de ChatGPT.** En España, los anuncios aparecen desde el 24 de agosto de 2026 a los usuarios del plan gratuito y de ChatGPT Go. Se muestran debajo de la respuesta, claramente etiquetados, cuando la conversación encaja con lo que ofrece el anunciante. Desde noviembre, las campañas nuevas pujan por objetivo de coste por conversión (Target CPA) o por clic (Target CPC).
 
 En Fluxxo tenemos acceso a la plataforma desde septiembre de 2026 y ya hemos lanzado campañas con inversión real en España. En esta guía te contamos qué es, cómo funciona y cómo empezar, con lo que hemos aprendido por el camino.
 
@@ -33,6 +34,8 @@ OpenAI ha ido abriendo la publicidad por fases a lo largo de 2026:
 | 17 de agosto de 2026 | Llegada a México y Brasil |
 | 24 de agosto de 2026 | Llegada a 31 países europeos, entre ellos España |
 | 21 de octubre de 2026 | Ampliación a 89 países, entre ellos Argentina, Chile, Colombia y Perú |
+| 26 de octubre de 2026 | Anuncios con varias imágenes, en beta abierta |
+| 5 de noviembre de 2026 | Nuevo sistema de pujas: Target CPA y Target CPC |
 
 Para una marca española es una buena noticia doble: puede anunciarse en España y, con la misma estrategia, en buena parte de Latinoamérica.
 
@@ -53,6 +56,8 @@ Aun así, el plan gratuito es el que usa la mayoría de la gente, así que el p�
 
 El anuncio se muestra **debajo de la respuesta de ChatGPT**, separado y etiquetado como patrocinado. En nuestras campañas hemos trabajado con un formato de **banner nativo**: un bloque que se integra visualmente en la conversación sin interrumpirla.
 
+Los formatos están cambiando rápido. En octubre OpenAI empezó a probar tarjetas más anchas e imágenes más grandes en escritorio e imágenes a ancho completo en móvil, sin que el anunciante tenga que cambiar nada. Desde el 26 de octubre, además, hay **anuncios con varias imágenes** (de 4 a 6 imágenes cuadradas) en beta abierta para todos los anunciantes.
+
 OpenAI insiste en dos reglas importantes. Los anuncios **no cambian lo que responde ChatGPT**: no se puede pagar para que el asistente recomiende tu marca. Y **los anunciantes no ven las conversaciones** de los usuarios.
 
 ### Cómo se segmenta
@@ -65,7 +70,9 @@ Bien hecho, esto permite una segmentación muy fina por intención. Mal hecho (d
 
 ### Cómo se paga
 
-La plataforma permite comprar por **CPM** (coste por mil impresiones) y por **CPC** (coste por clic). En el piloto de Estados Unidos, el CPM de partida fue de 60 dólares. En España, los costes que hemos visto han sido bastante más bajos: los contamos con detalle en [cuánto cuesta anunciarse en ChatGPT](/blog/cuanto-cuesta-anunciarse-en-chatgpt/).
+La plataforma empezó vendiendo por **CPM** (coste por mil impresiones) y en mayo de 2026 añadió el **CPC** (coste por clic). En el piloto de Estados Unidos, el CPM de partida fue de 60 dólares.
+
+El cambio más reciente llegó el 5 de noviembre: las campañas nuevas pujan con **Target CPA** (un coste objetivo por conversión) o **Target CPC** (un coste objetivo por clic), y las antiguas pujas máximas desaparecen. Las campañas que ya estaban activas pasarán automáticamente al nuevo sistema el 1 de enero de 2027. Para usar Target CPA hace falta medir conversiones con el píxel de OpenAI o con su API de conversiones. En España, los costes que hemos visto han sido bastante más bajos: los contamos con detalle en [cuánto cuesta anunciarse en ChatGPT](/blog/cuanto-cuesta-anunciarse-en-chatgpt/).
 
 ## Cómo anunciarse en ChatGPT paso a paso
 
@@ -73,7 +80,7 @@ La plataforma permite comprar por **CPM** (coste por mil impresiones) y por **CP
 2. **Define el objetivo y la medición.** Decide si buscas tráfico, leads o ventas, y configura el seguimiento de conversiones antes de lanzar. Sin medición no hay optimización.
 3. **Describe los contextos.** Escribe las conversaciones en las que quieres aparecer, con detalle y desde el punto de vista del usuario. Prueba varios grupos de contextos para ver cuál rinde mejor.
 4. **Prepara el anuncio.** Un mensaje claro que conecte con lo que el usuario está preguntando. Aquí no compites por llamar la atención en un feed: compites por ser útil en ese momento.
-5. **Fija presupuesto y puja.** Empieza con un presupuesto que te permita conseguir datos suficientes, y elige CPM o CPC según tu objetivo.
+5. **Fija presupuesto y puja.** Empieza con un presupuesto que te permita conseguir datos suficientes. Si buscas leads o ventas y tienes la medición lista, Target CPA; si buscas tráfico, Target CPC. Ten en cuenta que el objetivo y el evento de conversión no se pueden cambiar una vez creada la campaña.
 6. **Optimiza cada semana.** Ajusta los contextos que no convierten, refuerza los que sí y compara los resultados con tus otros canales.
 
 ## Para qué empresas tiene sentido
@@ -107,8 +114,12 @@ No son excluyentes. Lo que mejor funciona es usar [Google Ads](/agencia-google-a
 
 **¿Cuánto cuesta anunciarse en ChatGPT?** Depende del sector y de la competencia. Puedes ver datos reales de una campaña nuestra en España en [este artículo](/blog/cuanto-cuesta-anunciarse-en-chatgpt/).
 
+**¿Qué formatos de anuncio hay en ChatGPT?** El formato principal es un bloque patrocinado bajo la respuesta, separado de ella. Desde octubre de 2026 también hay anuncios con varias imágenes, en beta abierta, y OpenAI está probando tarjetas más grandes.
+
+**¿Cómo se puja en ChatGPT Ads?** Desde el 5 de noviembre de 2026, las campañas nuevas usan Target CPA (coste objetivo por conversión) o Target CPC (coste objetivo por clic). Las campañas anteriores pasan a este sistema el 1 de enero de 2027.
+
 ---
 
-Si quieres probar ChatGPT Ads con alguien que ya ha lanzado campañas en España, [te preparamos una propuesta en 48 horas](/chatgpt-ads/).
+Si prefieres que lo gestione una [agencia de ChatGPT Ads](/chatgpt-ads/) que ya ha lanzado campañas en España, te preparamos una propuesta en 48 horas.
 
-**Fuentes:** [PPC Land: ChatGPT Ads llega a 89 países](https://ppc.land/advertisers-in-26-more-countries-gain-chatgpt-ads-bringing-the-total-to-89/) · [Xataka: anuncios en ChatGPT en España](https://www.xataka.com/robotica-e-ia/oficial-chatgpt-anuncios-llegara-a-espana-proximo-lunes-24-agosto) · [Techlicious: reglas de los anuncios en ChatGPT](https://www.techlicious.com/blog/ads-in-chatgpt-free-and-budget-plans-privacy-safety/)
+**Fuentes:** [PPC Land: ChatGPT Ads llega a 89 países](https://ppc.land/advertisers-in-26-more-countries-gain-chatgpt-ads-bringing-the-total-to-89/) · [Xataka: anuncios en ChatGPT en España](https://www.xataka.com/robotica-e-ia/oficial-chatgpt-anuncios-llegara-a-espana-proximo-lunes-24-agosto) · [Techlicious: reglas de los anuncios en ChatGPT](https://www.techlicious.com/blog/ads-in-chatgpt-free-and-budget-plans-privacy-safety/) · [OpenAI: nuevas formas de comprar anuncios en ChatGPT](https://openai.com/index/new-ways-to-buy-chatgpt-ads/) · [Search Engine Roundtable: nuevos formatos visuales](https://www.seroundtable.com/openai-chatgpt-ads-updates-42321.html) · [Search Engine Roundtable: anuncios más anchos y multiimagen](https://www.seroundtable.com/chatgpt-ads-update-42427.html) · [Zoopa: novedades de ChatGPT Ads en noviembre de 2026](https://zoopa.es/en/geo-ai-visibility/chatgpt-ads-news-november-2026/)

@@ -75,6 +75,6 @@ La clave es empezar con un presupuesto que permita conseguir datos suficientes, 
 
 ---
 
-Si quieres una estimación de costes para tu sector, [te preparamos una propuesta de ChatGPT Ads en 48 horas](/chatgpt-ads/).
+Si quieres una estimación de costes para tu sector, como [agencia de ChatGPT Ads](/chatgpt-ads/) te preparamos una propuesta en 48 horas.
 
 **Fuentes:** [PPC Land: modelos de compra y CPM del piloto en EE. UU.](https://ppc.land/advertisers-in-26-more-countries-gain-chatgpt-ads-bringing-the-total-to-89/)
