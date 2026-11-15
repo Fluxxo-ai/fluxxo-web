@@ -42,16 +42,16 @@ La elección no depende del canal "de moda", sino de **dónde está tu cliente y
 
 ## ¿Cuánto se invierte en paid media en España?
 
-Según el [Estudio de Inversión Publicitaria en Medios Digitales de IAB Spain y PwC](https://www.puromarketing.com/66/216793/inversion-publicitaria-digital-marca-nuevo-maximo-2025-62112-millones-euros-crecimiento), publicado en febrero de 2026, la publicidad digital en España alcanzó en 2025 los **6.211 millones de euros**, un 11,2% más que el año anterior. Los dos grandes bloques del paid media se llevan la mayor parte:
+Según el [Estudio de Inversión Publicitaria en Medios Digitales de IAB Spain y PwC](https://ppc.land/spains-digital-ad-market-hits-eu6-2bn-and-ctv-just-changed-everything/), publicado en febrero de 2026, la publicidad digital en España alcanzó en 2025 los **6.211 millones de euros**, un 11,2% más que el año anterior. Los dos grandes bloques del paid media se llevan la mayor parte:
 
-| Canal (España, 2025) | Inversión | Crecimiento anual |
-| --- | --- | --- |
-| Search | 1.992,6 M€ | +32,1% |
-| Redes sociales | 1.832,5 M€ | +29,5% |
-| Display (sin redes sociales) | 1.225,9 M€ | — |
-| TV conectada | 174,9 M€ | +48,4% |
+| Canal (España, 2025) | Inversión | Peso en la inversión digital | Crecimiento anual |
+| --- | --- | --- | --- |
+| Search | 1.992,6 M€ | 32,1% | +11,3% |
+| Redes sociales | 1.832,5 M€ | 29,5% | +13,2% |
+| Display (sin redes sociales) | 1.225,9 M€ | 19,7% | +1,4% |
+| TV conectada | 174,9 M€ | 2,8% | +48,4% |
 
-Search y redes sociales suman más del 60% de toda la inversión digital. Y la tendencia sigue: en la [segunda oleada del estudio](https://marketing4ecommerce.net/search-y-redes-sociales-dominan-la-inversion-en-publicidad-digital-en-espana-mientras-la-tv-conectada-se-dispara/), IAB Spain prevé que la inversión digital de 2026 se sitúe entre 6.600 y 6.800 millones, con search (32%) y redes sociales (29,7%) a la cabeza.
+Search y redes sociales suman más del 60% de toda la inversión digital y crecen por encima de la media; la TV conectada es lo que más rápido crece, aunque todavía pesa poco. Y la tendencia sigue: en la [segunda oleada del estudio](https://marketing4ecommerce.net/search-y-redes-sociales-dominan-la-inversion-en-publicidad-digital-en-espana-mientras-la-tv-conectada-se-dispara/), IAB Spain prevé que la inversión digital de 2026 se sitúe entre 6.600 y 6.800 millones, con search (32%) y redes sociales (29,7%) a la cabeza.
 
 A esa lista se ha sumado en 2026 un canal nuevo: la publicidad en asistentes de IA. Si quieres saber cómo funciona, lo explicamos en nuestra [guía de ChatGPT Ads](/blog/chatgpt-ads/).
 
@@ -100,7 +100,7 @@ Hay tres modelos habituales y ninguno es mejor en todos los casos:
 
 ### Qué pedirle a una agencia de paid media
 
-- **Que las cuentas publicitarias sean tuyas.** Si un día cambias de proveedor, el histórico y los datos se quedan contigo.
+- **Acceso a los datos.** Que puedas ver en todo momento los resultados de las campañas y que quede claro desde el principio qué pasa con el histórico si un día cambias de proveedor.
 - **Transparencia en la inversión.** Debes ver lo que se paga a cada plataforma y lo que se paga por la gestión, por separado.
 - **Informes que hablen de negocio**, no solo de clics e impresiones.
 - **Claridad sobre qué incluye.** En Fluxxo, por ejemplo, nos ocupamos de la estrategia, la configuración, la medición y la optimización de las campañas; la producción creativa (vídeos, sesiones de fotos) la aporta la marca o su equipo creativo.
@@ -129,4 +129,4 @@ Por eso, con presupuestos ajustados suele ser mejor **concentrarse en un solo ca
 
 ¿Quieres saber qué canales de paid media tienen sentido para tu empresa? En [Fluxxo](/) trabajamos [Google Ads](/agencia-google-ads/), [Meta Ads](/agencia-meta-ads/), [ChatGPT Ads](/chatgpt-ads/), TikTok Ads y LinkedIn Ads para empresas y agencias de España y Latinoamérica. Cuéntanos tu caso y te proponemos un plan en 48 horas.
 
-**Fuentes:** [IAB Spain y PwC: Estudio de Inversión Publicitaria en Medios Digitales 2026 (vía PuroMarketing)](https://www.puromarketing.com/66/216793/inversion-publicitaria-digital-marca-nuevo-maximo-2025-62112-millones-euros-crecimiento) · [IAB Spain: segunda oleada del estudio de inversión 2026 (vía Marketing4eCommerce)](https://marketing4ecommerce.net/search-y-redes-sociales-dominan-la-inversion-en-publicidad-digital-en-espana-mientras-la-tv-conectada-se-dispara/)
+**Fuentes:** [IAB Spain y PwC: Estudio de Inversión Publicitaria en Medios Digitales 2026 (vía PPC Land)](https://ppc.land/spains-digital-ad-market-hits-eu6-2bn-and-ctv-just-changed-everything/) · [IAB Spain: segunda oleada del estudio de inversión 2026 (vía Marketing4eCommerce)](https://marketing4ecommerce.net/search-y-redes-sociales-dominan-la-inversion-en-publicidad-digital-en-espana-mientras-la-tv-conectada-se-dispara/)

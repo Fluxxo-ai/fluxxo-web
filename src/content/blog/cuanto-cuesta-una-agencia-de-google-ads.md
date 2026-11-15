@@ -90,7 +90,7 @@ Dos agencias pueden cobrar lo mismo y hacer trabajos muy distintos. Antes de com
 - **Estructura de campañas:** qué tipos de campaña se usan (Search, Performance Max, Shopping, YouTube, Demand Gen) y por qué.
 - **Optimización continua:** pujas, términos de búsqueda negativos, anuncios, extensiones y presupuesto, con una frecuencia concreta.
 - **Informes y reuniones:** cada cuánto, con qué métricas y si se habla de negocio (leads, ventas, coste por adquisición) o solo de clics.
-- **Propiedad de la cuenta:** la cuenta de Google Ads debe estar a tu nombre. Si dejas la agencia, el histórico tiene que quedarse contigo.
+- **Acceso y transparencia:** que puedas ver la cuenta y sus resultados, y que quede claro desde el principio qué pasa con el histórico si un día cambias de agencia.
 
 Y pregunta también qué **no** incluye. Es habitual que la producción creativa (vídeos, diseño de banners, fotografía) o el desarrollo de landing pages se presupuesten aparte.
 
